@@ -5,11 +5,17 @@ body {
     background-color: #f4f4f4;
 }
 
+
 header {
+    display: flex;
+    align-items: center;
     background-color: #3d93aa65;
     color: #000000;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
+}
+#fetch-data-btn {
+    margin-left: 20px; /* Adjust the space between the heading and the button */
 }
 
 main {
