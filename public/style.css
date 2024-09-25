@@ -58,3 +58,29 @@ tr:nth-child(even) {
 .gray {
     background-color: #e0e0e0;
 }
+
+/* Basic button styling */
+.button {
+    background-color: #025a80; /* Green background */
+    border: rgb(1, 48, 68);
+    color: white; /* White text */
+    padding: 25px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    border-radius: 12px;
+  }
+  
+  /* Change color on hover */
+  .button:hover {
+    background-color: #50888c; /* Darker green */
+  }
+  
+  /* Change color on click  */
+  .button:active {
+    background-color: #025a80; /* Even darker green */
+  }

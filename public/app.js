@@ -14,7 +14,6 @@ async function requestData() {
 
 async function createTable() {
     try {
-        
         const race = await requestData()
         const tableContainer = document.getElementById('table-container')
         const table = document.createElement('table')
@@ -82,7 +81,6 @@ async function createTable() {
         tableContainer.appendChild(table)
 
     } catch (error) {
-        // Access denied or fetch failed
         console.error('Error:', error)
     }
 } 
@@ -110,7 +108,27 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         await createTable()
 
-    } catch (err){
-        console.error('Error fDOMContentLoaded:', err)
+    } catch (error){
+        console.error('Error fDOMContentLoaded:', error)
     }
 })
+
+//for automatic table refresh
+async function refreshTable() {
+    try {
+        //to remove the old table if it exists
+        const oldTable = document.getElementById('last_table')
+        if (oldTable) {
+            oldTable.remove()
+        }
+        console.log("refreshed")
+        await createTable()
+
+    } catch (error) {
+        console.error('Error refreshing table:', error);
+    }
+}
+
+// Set interval to refresh table every 5 minutes
+setInterval(refreshTable, 300000); // 300000 milliseconds = 5 minutes
+
