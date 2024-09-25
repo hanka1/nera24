@@ -1,0 +1,17 @@
+{
+  "name": "nera24",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
+  }
+}
