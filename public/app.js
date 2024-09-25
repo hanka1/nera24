@@ -1,13 +1,13 @@
 async function requestData() {
     try {
         await document.requestStorageAccess()
-        // Access granted
+        // access granted
         const response = await fetch('/refresh')
         const data = await response.json()
-        // Process data
+        // process data
         return data
     } catch (error) {
-        // Access denied or fetch failed
+        // access denied or fetch failed
         console.error('Error:', error)
     }
 }
@@ -18,10 +18,11 @@ async function createTable() {
         const race = await requestData()
         const tableContainer = document.getElementById('table-container')
         const table = document.createElement('table')
+        table.id = 'last_table'
         table.style.borderCollapse = 'collapse'
         const headerRow = document.createElement('tr')
 
-        // Create table headers
+        // create table headers
         race.forEach(team => {
             const th = document.createElement('th')
             th.colSpan = 5
@@ -32,7 +33,7 @@ async function createTable() {
         })
         table.appendChild(headerRow)
 
-        // Create sub-headers
+        // create sub-headers
         const subHeaderRow = document.createElement('tr')
         race.forEach(() => {
             ['Name', 'Start', 'Buoy', 'End', 'km'].forEach((text, index) => {
@@ -46,7 +47,7 @@ async function createTable() {
         })
         table.appendChild(subHeaderRow)
 
-        // Create table rows
+        // create table rows
         const maxRows = Math.max(...race.map(team => team.race_records.length))
         for (let i = 0; i < maxRows; i++) {
             const row = document.createElement('tr')
@@ -62,7 +63,7 @@ async function createTable() {
                     if (index === 0 ) {
                         td.style.borderLeft = '2px solid #00273265'
                     }
-                    // Set row color based on buoyTimes
+                    // set row color based on buoyTimes
                     if (record.buoyTimes) {
                         if (record.buoyTimes.red) {
                             td.style.backgroundColor = '#FFCCCB'
@@ -89,7 +90,13 @@ async function createTable() {
 //respond to btn clic
 document.getElementById('fetch-data-btn').addEventListener('click', async () => {
     try {
-        
+
+        //to remove the old table if it exists
+        const oldTable = document.getElementById('last_table')
+        if (oldTable) {
+            oldTable.remove()
+        }
+
         await createTable()
 
     } catch (error) {
