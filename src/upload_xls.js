@@ -29,7 +29,16 @@ export default {
         } catch (err) {
             console.log(err)
         }
-    }
+    },
+    createJSONfromRacers: () => {
+        try {
+            
+            return readXlsFile(config.PATH_TO_RACERS)
+
+        } catch (err) {
+            console.log(err)
+        }
+    },
 }
 
 function readXlsFile (path){
@@ -59,3 +68,11 @@ function readXlsFile (path){
   },
 
  */
+
+  
+  /*team_name": "01 SOLO",
+            "team_id": 5, 
+            "total_km": 80,
+            "race_records": [
+                { "racer_name
+                 */

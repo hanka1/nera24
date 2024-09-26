@@ -10,8 +10,15 @@ import upload_xls from './src/upload_xls.js'
 
 const app = express();
 const port = config.ApiPort
+
+//array of zones objects{ zone: 'red', tracker: '231', time: '09/24/2023 10:41:30' }
+//zones: reg, green, start, finish
 const xls_data_zone_events = upload_xls.createJSONfromZones()
-console.log(xls_data_zone_events)
+//console.log(xls_data_zone_events)
+
+//list of teams and racers
+const racers_list = upload_xls.createJSONfromRacers()
+//console.log(racers_list)
 
 // Define __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
