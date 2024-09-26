@@ -1,12 +1,12 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import fetch from "node-fetch"
+import fs from "fs"
+
 
 import config from './src/config.js';
-import uploadData from './uploadData.js'
-
-//const a = async () => { await fetch('/refresh') } 
-//const b = async () => { await response.json() } 
+import uploadData from './src/uploadData.js'
 
 const app = express();
 const port = config.ApiPort;
@@ -14,7 +14,6 @@ const port = config.ApiPort;
 // Define __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 
 
 // Serve static files from the 'public' directory
