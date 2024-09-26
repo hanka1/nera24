@@ -1,8 +1,9 @@
 import express from 'express'
-//import fs from 'fs'
 import { promises as fs } from 'fs'
+import { fileURLToPath } from 'url'
 import path from 'path'
-import { fileURLToPath } from 'url';
+
+//to upload data from json file to FE
 
 const router = express.Router()
 // Define __dirname for ES modules

@@ -4,12 +4,14 @@ import { fileURLToPath } from 'url';
 import fetch from "node-fetch"
 import fs from "fs"
 
-
 import config from './src/config.js';
-import uploadData from './src/uploadData.js'
+import uploadData from './src/upload_from_json.js'
+import upload_xls from './src/upload_xls.js'
 
 const app = express();
-const port = config.ApiPort;
+const port = config.ApiPort
+const xls_data_zone_events = upload_xls.createJSONfromZones()
+console.log(xls_data_zone_events)
 
 // Define __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -30,8 +32,8 @@ app.get('/', (req, res) => {
         console.error('Error serving index.html:', error);
         res.status(500).send('Internal Server Error');
     }
-});
+})
 
 app.listen(port, () => {
     console.log(`Server running at http://${config.url}:${port}/`);
-});
+})
