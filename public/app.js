@@ -25,7 +25,7 @@ async function createTable() {
         race.forEach(team => {
             const th = document.createElement('th')
             th.colSpan = 5
-            th.textContent = team.team_name + "  /  " + team.total_km  + " km"
+            th.textContent = team.team_name + ":  " + team.total_km  + " km"
             th.style.borderLeft = '2px solid #00273265'
             th.style.borderTop = '2px solid #00273265'
             headerRow.appendChild(th)
@@ -35,7 +35,7 @@ async function createTable() {
         // create sub-headers
         const subHeaderRow = document.createElement('tr')
         race.forEach(() => {
-            ['Name', 'Start', 'Buoy', 'End', 'km'].forEach((text, index) => {
+            ['Name', 'Start', 'Buoy', 'Finish', 'km'].forEach((text, index) => {
                 const th = document.createElement('th')
                 th.textContent = text
                 if (index === 0 ) {
