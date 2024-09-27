@@ -1,24 +1,14 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import fetch from "node-fetch"
-import fs from "fs"
-
 import config from './src/config.js';
 import uploadData from './src/upload_from_json.js'
-import upload_xls from './src/upload_xls.js'
+
 
 const app = express();
 const port = config.ApiPort
 
-//array of zones objects{ zone: 'red', tracker: '231', time: '09/24/2023 10:41:30' }
-//zones: reg, green, start, finish
-const xls_data_zone_events = upload_xls.createJSONfromZones()
-//console.log(xls_data_zone_events)
 
-//list of teams and racers
-const racers_list = upload_xls.createJSONfromRacers()
-//console.log(racers_list)
 
 // Define __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -28,6 +18,7 @@ const __dirname = path.dirname(__filename);
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+//to send data to FE
 app.use("/refresh", uploadData)
 
 

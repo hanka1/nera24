@@ -16,7 +16,7 @@ export default {
                 if ( typ == 'Vjezd do zóny'){
                     let excel_row  = {
                         zone: parse.parseZone(el['Zóna']),
-                        tracker: el.Objekt,
+                        tracker: parseInt(el.Objekt),
                         time: parse.parseTime(el['Čas']),
                     }
                     //console.log(excel_row)
@@ -32,7 +32,7 @@ export default {
     },
     createJSONfromRacers: () => {
         try {
-            
+
             return readXlsFile(config.PATH_TO_RACERS)
 
         } catch (err) {
@@ -69,10 +69,3 @@ function readXlsFile (path){
 
  */
 
-  
-  /*team_name": "01 SOLO",
-            "team_id": 5, 
-            "total_km": 80,
-            "race_records": [
-                { "racer_name
-                 */

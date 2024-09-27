@@ -2,6 +2,7 @@ import express from 'express'
 import { promises as fs } from 'fs'
 import { fileURLToPath } from 'url'
 import path from 'path'
+import upload_race_events from './upload_race_events.js'
 
 //to upload data from json file to FE
 
@@ -13,17 +14,21 @@ const __dirname = path.dirname(__filename);
 
 router.get("/", async (req, res) => {
     try {
-        const race_data = await uploadData()
-        res.json(race_data.race);
+        //const race_data = await uploadData()//for testing
+        const race_data = await upload_race_events.createListForFE()//for online
+        //console.log(race_data)
+        res.json(race_data)
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error", error: error.message });
     }
 });
 
+//upload data for test from json file
 async function uploadData() {
     try {
         const data = await fs.readFile('./src/data.json', 'utf8')
-        return JSON.parse(data)
+        const result = JSON.parse(data)
+        return result.race
 
     } catch (err) {
         console.log(err)
