@@ -25,7 +25,7 @@ async function createTable() {
         race.forEach(team => {
             const th = document.createElement('th')
             th.colSpan = 5
-            th.textContent = team.team_name + ":  " + team.total_km  + " km"
+            th.textContent = team.team_name + ":  " + Math.round(team.total_km * 10) / 10  + " km"
             th.style.borderLeft = '2px solid #00273265'
             th.style.borderTop = '2px solid #00273265'
             headerRow.appendChild(th)

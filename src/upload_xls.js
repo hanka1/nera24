@@ -3,7 +3,7 @@ import parse from './parse.js'
 import config from './config.js'
 
 export default {
-    //upload data from zonehist.xls
+    //upload data from excel zonehist.xls
     createJSONfromZones: () => {
         try {
             const zone_hist_json = []
@@ -11,17 +11,15 @@ export default {
 
             json_file.forEach( el => {
 
-                let typ = el['Typ události']
-
-                if ( typ == 'Vjezd do zóny'){
-                    let excel_row  = {
+                let excel_row  = {
                         zone: parse.parseZone(el['Zóna']),
                         tracker: parseInt(el.Objekt),
                         time: parse.parseTime(el['Čas']),
+                        time_xls_format: el['Čas']
                     }
-                    //console.log(excel_row)
-                    zone_hist_json.push(excel_row )
-                }     
+
+                zone_hist_json.push(excel_row )
+    
             })
 
             return zone_hist_json
@@ -30,9 +28,10 @@ export default {
             console.log(err)
         }
     },
+
+    //upload data from excel races.xls
     createJSONfromRacers: () => {
         try {
-
             return readXlsFile(config.PATH_TO_RACERS)
 
         } catch (err) {

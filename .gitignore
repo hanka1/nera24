@@ -4,3 +4,5 @@
 /0v1/*
 /0_uloz/*
 *zonehist*
+src/data/*
+**test*.js

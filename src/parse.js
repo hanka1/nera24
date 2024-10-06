@@ -2,12 +2,8 @@ export default {
     parseTime: (time) => {
         try {
 
-            const jsDate = excelDateToJSDate(time);
-            //console.log(time)
-            //console.log(jsDate)
-            const formattedDate = formatDate(jsDate);
-
-            //console.log(formattedDate); // Output: "09/23/2024 15:57:35"
+            const jsDate = excelDateToJSDate(time)
+            const formattedDate = formatDate(jsDate)
             return formattedDate
 
         } catch (err) {
@@ -36,17 +32,19 @@ export default {
 function excelDateToJSDate(serial) {
     try {
         // Excel's epoch starts on January 1, 1900
-        const excelEpoch = new Date(1899, 11, 30); // December 30, 1899
-        const days = Math.floor(serial);
-        const milliseconds = (serial - days) * 24 * 60 * 60 * 1000;
-        const date = new Date(excelEpoch.getTime() + days * 24 * 60 * 60 * 1000 + milliseconds);
+        let date = new Date((serial - (25567 + 2)) * 24 * 60 * 60 * 1000)
+        
+        //25567 -> number of days from January 1, 1900, to January 1, 1970 (the Unix epoch). 
+        //+ 2 -> accounts for Excel’s incorrect leap year calculation for the year 1900 (Excel incorrectly treats 1900 as a leap year).
+        //24 * 60 * 60 -> is the number of seconds in a day (24 hours * 60 minutes * 60 seconds).
+        //1000 -> miliseconds
         
         // Check if the date is valid
         if (isNaN(date.getTime())) {
             throw new Error('Invalid date conversion');
         }
     
-    return date;
+        return date;
 
     } catch (err){
         console.log(err)
@@ -56,24 +54,35 @@ function excelDateToJSDate(serial) {
 
 function formatDate(date) {
     try {
-
         if (!(date instanceof Date)) {
             throw new TypeError('Expected a Date object');
         }
-        
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        const hours = String(date.getHours()).padStart(2, '0');
-        const minutes = String(date.getMinutes()).padStart(2, '0');
-        const seconds = String(date.getSeconds()).padStart(2, '0');
-        return `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
+
+        // Get the UTC time
+        const utcYear = date.getUTCFullYear()
+        const utcMonth = date.getUTCMonth()
+        const utcDay = date.getUTCDate()
+        const utcHours = date.getUTCHours()
+        const utcMinutes = date.getUTCMinutes()
+        const utcSeconds = date.getUTCSeconds()
+
+        // Calculate the CEST time (UTC - 2 hours)
+        const cestDate = new Date(Date.UTC(utcYear, utcMonth, utcDay, utcHours - 2, utcMinutes, utcSeconds))
+
+        const year = cestDate.getFullYear()
+        const month = String(cestDate.getMonth() + 1).padStart(2, '0')
+        const day = String(cestDate.getDate()).padStart(2, '0')
+        const hours = String(cestDate.getHours()).padStart(2, '0')
+        const minutes = String(cestDate.getMinutes()).padStart(2, '0')
+        const seconds = String(cestDate.getSeconds()).padStart(2, '0')
+
+        return `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`
 
     } catch (err) {
         console.log(err)
     }
-   
 }
+
 
 
 
