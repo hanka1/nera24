@@ -14,6 +14,8 @@ async function requestData() {
 
 async function createTable() {
     try {
+        updateLapLengths()
+
         const race = await requestData()
         const tableContainer = document.getElementById('table-container')
         const table = document.createElement('table')
@@ -35,7 +37,7 @@ async function createTable() {
         // create sub-headers
         const subHeaderRow = document.createElement('tr')
         race.forEach(() => {
-            ['Name', 'Start', 'Buoy', 'Finish', 'km'].forEach((text, index) => {
+            ['Name', 'Start', 'Buoy', 'Finish', 'Time'].forEach((text, index) => {
                 const th = document.createElement('th')
                 th.textContent = text
                 if (index === 0 ) {
@@ -52,7 +54,7 @@ async function createTable() {
             const row = document.createElement('tr')
             race.forEach(team => {
                 const record = team.race_records[i] || {};
-                ['racer_name', 'startTime', 'buoyTimes', 'endTime', 'lapDistance'].forEach((key, index) => {
+                ['racer_name', 'startTime', 'buoyTimes', 'endTime', 'lapTime'].forEach((key, index) => {
                     const td = document.createElement('td')
                     if (key === 'buoyTimes') {
                         td.textContent = Object.values(record[key] || {}).join(', ')
@@ -85,6 +87,16 @@ async function createTable() {
     }
 } 
 
+// Function to add lap lengths in the HTML
+function updateLapLengths() {
+    try {
+    document.getElementById('lapG').textContent = `green buoy 12,8 km`
+    document.getElementById('lapR').textContent = `red buoy 4,8 km`
+    } catch (error) {
+        console.error('Error fetching data:', error)
+    }
+}
+
 //respond to btn clic
 document.getElementById('fetch-data-btn').addEventListener('click', async () => {
     try {
@@ -95,6 +107,7 @@ document.getElementById('fetch-data-btn').addEventListener('click', async () => 
             oldTable.remove()
         }
 
+        updateLapLengths();
         await createTable()
 
     } catch (error) {

@@ -103,6 +103,7 @@ function createLapsRecords (tracker) {
                     buoyTimes: { [color] : tracker.race_events[i + 1].time },
                     endTime: tracker.race_events[i + 2].time, 
                     lapDistance: color == "red" ? 4.8 : ("green" ? 12.8 : 0),
+                    lapTime: calculateTimeDifference(tracker.race_events[i].time, tracker.race_events[i + 2].time),
                     team_id: tracker.team_id
                 })
             } tracker.race_events.splice(i, 3)
@@ -113,6 +114,36 @@ function createLapsRecords (tracker) {
     } catch (err) {
         console.log(err)
     }
+}
+
+function calculateTimeDifference(startTime, endTime) {
+    try {   
+        let start = new Date(startTime)
+        let end = new Date(endTime)
+    
+        // to calculate the difference in milliseconds
+        let differenceInMs = end - start
+    
+        // milliseconds to minutes
+        let differenceInMinutes = differenceInMs / (1000 * 60)
+    
+        // hours and remaining minutes
+        let hours = Math.floor(differenceInMinutes / 60)
+        let minutes = differenceInMinutes % 60;
+        minutes = Math.round(minutes)
+        if (minutes < 10) {
+            minutes = '0' + minutes;
+        }
+        if (minutes == 60) {
+            minutes = '00'
+            hours +=1
+        }
+    
+        return `${hours}:${minutes}`
+
+} catch (err) {
+    console.log(err)
+}
 }
 
 

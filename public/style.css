@@ -14,6 +14,27 @@ header {
     padding: 2rem;
     text-align: center;
 }
+
+#lap-container {
+    flex-direction: column;
+    display: flex;
+    align-items: left;
+    text-align: left;
+    justify-content: left;
+    margin-top: 10px;
+    padding-left: 2rem;
+}
+
+#lapG {
+    margin-top: 10px;
+    color: green; /* Green color for green lap */
+}
+
+#lapR {
+    margin-top: 10px;
+    color: red; /* Red color for red lap */
+}
+
 #fetch-data-btn {
     margin-left: 20px; /* Adjust the space between the heading and the button */
 }
