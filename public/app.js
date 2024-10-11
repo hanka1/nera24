@@ -49,14 +49,14 @@ async function createTable() {
         table.appendChild(subHeaderRow)
 
         // create table rows
-        const maxRows = Math.max(...race.map(team => team.race_records.length))
+        const maxRows = Math.max(...race.map(team => team.lap_records.length))
         for (let i = 0; i < maxRows; i++) {
             const row = document.createElement('tr')
             race.forEach(team => {
-                const record = team.race_records[i] || {};
-                ['racer_name', 'startTime', 'buoyTimes', 'endTime', 'lapTime'].forEach((key, index) => {
+                const record = team.lap_records[i] || {};
+                ['racer_name', 'start_time', 'buoy_time', 'finish_time', 'lap_time'].forEach((key, index) => {
                     const td = document.createElement('td')
-                    if (key === 'buoyTimes') {
+                    if (key === 'buoy_time') {
                         td.textContent = Object.values(record[key] || {}).join(', ')
                     } else {
                         td.textContent = record[key] || ''
@@ -64,13 +64,13 @@ async function createTable() {
                     if (index === 0 ) {
                         td.style.borderLeft = '2px solid #00273265'
                     }
-                    // set row color based on buoyTimes
-                    if (record.buoyTimes) {
-                        if (record.buoyTimes.red) {
+                    // set row color based on buoy_time
+                    if (record.buoy_time) {
+                        if (record.buoy_time.red) {
                             td.style.backgroundColor = '#FFCCCB'
-                        } else if (record.buoyTimes.green) {
+                        } else if (record.buoy_time.green) {
                             td.style.backgroundColor = '#D9EBB8'
-                        } else if (record.buoyTimes.gray) {
+                        } else if (record.buoy_time.gray) {
                             td.style.backgroundColor = 'lightgray'
                             td.style.color = 'gray'
                         }

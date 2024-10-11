@@ -1,17 +1,18 @@
 //DATA FORMAT upload_from_json.js
 // to be send from BE to FE
-const race_data = [ //array of teams
+const result_race_data = [ //array of teams
   {
     team_name: '1 Martin',
     team_id: 1,
     total_km: 57.6,
-    race_records: [ //array of laps for each team
+    lap_records: [ //array of laps for each team
         {
             racer_name: 'Martin 232', //string
-            startTime: '09/28/2024 10:31:43', //date and time lap strat
-            buoyTimes: { green: '09/28/2024 11:55:53' }, //buoy color and time
-            endTime: '09/28/2024 12:49:42',//date nad time lap finish
-            lapDistance: 12.8, //number km per lap
+            start_time: '09/28/2024 10:31:43', //date and time lap strat
+            buoy_time: { green: '09/28/2024 11:55:53' }, //buoy color and time
+            finish_time: '09/28/2024 12:49:42',//date nad time lap finish
+            lap_distance: 4.8, //lap lenght
+            lap_time: '0:50', //one completed lap time
             team_id: 1 // unique number
         }, // .... for each lap one object
     ]
@@ -44,15 +45,16 @@ const racers_list = [ //array of racers, in one team can be more racers
 //array (one for each racer) of arrays (one for each processed lapp event)
 const laps_array = [[{ 
     racer_name: 'Milan 244',
-    startTime: '09/29/2024 09:24:10',
-    buoyTimes:  { green: '09/28/2024 11:55:53' },
-    endTime: '09/29/2024 10:05:50',
-    lapDistance: 4.8,
+    start_time: '09/29/2024 09:24:10',
+    buoy_time:  { green: '09/28/2024 11:55:53' },
+    finish_time: '09/29/2024 10:05:50',
+    lap_distance: 4.8,
+    lap_time: '1:55',
     team_id: 31
   }
 ], [{},{},{}], [{},{},{},{},{}], [{},{},{}],]
 
-const teams = race_data //teams are return to be resend to FE as race_data
+const teams = result_race_data //teams are return to be resend to FE as result_race_data
 
 const tracker = { //one object from all_tracker_events_arr
     tracker_id: 239,

@@ -6,8 +6,8 @@ const router = express.Router()
 //to upload data from  prepared json to FE
 router.get("/", async (req, res) => {
     try {
-        const race_data = await upload_race_events.createListForFE()
-        res.json(race_data)
+        const result_race_data = await upload_race_events.createListForFE()
+        res.json(result_race_data)
 
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error", error: error.message })

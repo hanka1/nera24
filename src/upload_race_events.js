@@ -37,13 +37,13 @@ function createRowsForFETable(teams, laps_array) {
             tracker_laps_arr.forEach( lap => {
                 let team_index = teams.findIndex(team => team.team_id == lap.team_id)
                 
-                teams[team_index].race_records.push(lap)
-                teams[team_index].total_km = parseFloat(teams[team_index].total_km) + parseFloat(lap.lapDistance)
+                teams[team_index].lap_records.push(lap)
+                teams[team_index].total_km = parseFloat(teams[team_index].total_km) + parseFloat(lap.lap_distance)
             })
         })
 
         teams.forEach ( team => {
-            team.race_records.sort((a, b) => new Date(a.startTime) - new Date(b.startTime))
+            team.lap_records.sort((a, b) => new Date(a.start_time) - new Date(b.start_time))
         })
 
         return teams
@@ -85,7 +85,7 @@ function processRaceEvents (xlx_events, racer_arr) {
     }
 }
 
-//for each tracker (racer) proccess events to create rows (complete laps) to be ready to be added to team (team.race_data)
+//for each tracker (racer) proccess events to create rows (complete laps) to be ready to be added to team (team.result_race_data)
 function createLapsRecords (tracker) {
     try {   
         let laps_arr = []
@@ -99,11 +99,11 @@ function createLapsRecords (tracker) {
                 
                 laps_arr.push({
                     racer_name: tracker.name ? tracker.name : tracker.tracker_id,
-                    startTime: tracker.race_events[i].time,
-                    buoyTimes: { [color] : tracker.race_events[i + 1].time },
-                    endTime: tracker.race_events[i + 2].time, 
-                    lapDistance: color == "red" ? 4.8 : ("green" ? 12.8 : 0),
-                    lapTime: calculateTimeDifference(tracker.race_events[i].time, tracker.race_events[i + 2].time),
+                    start_time: tracker.race_events[i].time,
+                    buoy_time: { [color] : tracker.race_events[i + 1].time },
+                    finish_time: tracker.race_events[i + 2].time, 
+                    lap_distance: color == "red" ? 4.8 : ("green" ? 12.8 : 0),
+                    lap_time: calculateTimeDifference(tracker.race_events[i].time, tracker.race_events[i + 2].time),
                     team_id: tracker.team_id
                 })
             } tracker.race_events.splice(i, 3)
@@ -116,10 +116,10 @@ function createLapsRecords (tracker) {
     }
 }
 
-function calculateTimeDifference(startTime, endTime) {
+function calculateTimeDifference(start_time, finish_time) {
     try {   
-        let start = new Date(startTime)
-        let end = new Date(endTime)
+        let start = new Date(start_time)
+        let end = new Date(finish_time)
     
         // to calculate the difference in milliseconds
         let differenceInMs = end - start
@@ -173,7 +173,7 @@ function solveDoubleBuoys (tracker) {
                 if (array[i+1] &&
                     (array[i].zone == "green" || array[i].zone == "red") && 
                     ( array[i + 1].zone == "green" || array[i + 1].zone == "red")){
-                    let a, b = [{}, {}] //TODO gray lap records
+                    let [a, b] = [{}, {}] //TODO gray lap records
                     if (array[i].zone == "red")
                         a = array.splice(i, 1)
                     else 
@@ -341,7 +341,7 @@ function createTeamsArr (racers_list) {
                     team_name: racer.team_id + " " + racer.team,
                     team_id: parseInt(racer.team_id), 
                     total_km: 0,
-                    race_records: []
+                    lap_records: []
                 })
         }) 
         
