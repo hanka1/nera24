@@ -5,7 +5,7 @@ import config from './src/config.js';
 import uploadData from './src/upload_from_json.js'
 
 const app = express();
-const port = config.ApiPort
+const port = config.API_PORT
 
 // Define __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -28,5 +28,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Server running at http://${config.url}:${port}/`);
+    console.log(`Server running at http://${config.API_URL}:${port}/`);
 })

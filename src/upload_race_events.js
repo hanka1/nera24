@@ -7,6 +7,7 @@ export default {
         try {
 
             //to apload data from xlsx files - event array and sorted racers array
+            //TODO xls_data_zone_events = await createJSONfromZonesEventsOniWeb()
             const xls_data_zone_events = upload_xls.createJSONfromZones()//zones: reg, green, start, finish 
             const racers_list = upload_xls.createJSONfromRacers()// [] racers array
             

@@ -1,9 +1,10 @@
 import XLSX from 'xlsx'
 import parse from './parse.js'
 import config from './config.js'
+import upload from './upload_data_from_oni_web.js'
 
 export default {
-    //upload data from excel zonehist.xls
+    //upload data from excel zonehist.xls - to be replaced with direct upload from oni web page
     createJSONfromZones: () => {
         try {
             const zone_hist_json = []
@@ -22,6 +23,18 @@ export default {
     
             })
 
+            return zone_hist_json
+
+        } catch (err) {
+            console.log(err)
+        }
+    },
+
+    //upload data from excel zonehist.xls - to be replaced with direct upload from oni web page
+    createJSONfromZonesEventsOniWeb: async () => {
+        try {
+            ///upload data directly from oni web page
+            const zone_hist_json = await upload.getZoneEvents()
             return zone_hist_json
 
         } catch (err) {
