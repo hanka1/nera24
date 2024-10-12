@@ -6,6 +6,9 @@ export default {
     //load races and team from xls file //TODO reload from NERA 24 web pages
     PATH_TO_RACERS: "./src/data/racers.xlsx",  
 
+    //load data for laps if racer forgot tracker or tracker is broken down 
+    PATH_TO_MISSING_LAPS: "./src/data/missing_laps.xlsx",  //TODO reload from NERA 24 web pages
+
     //TODO reload from web pages
     START_TIME: '09/28/2024 10:30:00',
 

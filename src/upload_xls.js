@@ -51,6 +51,16 @@ export default {
             console.log(err)
         }
     },
+
+    //upload data from excel missing_laps.xlsx
+    uploadTrackerMissingLap: () => {
+        try {
+            return readXlsFile(config.PATH_TO_MISSING_LAPS)
+
+        } catch (err) {
+            console.log(err)
+        }
+    },
 }
 
 function readXlsFile (path){

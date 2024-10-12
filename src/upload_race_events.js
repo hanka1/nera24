@@ -85,6 +85,9 @@ function processRaceEvents (xlx_events, racer_arr) {
             laps_array.push(tracker_laps_arr)      
         })
 
+        let missing_laps_arr = loadTrackerMissingData()
+        laps_array.push(missing_laps_arr)
+
         return laps_array
 
     } catch (err) {
@@ -123,6 +126,37 @@ function createLapsRecords (tracker) {
     }
 }
 
+function loadTrackerMissingData(){
+    try {
+        let missing_laps_array = []
+        let array = upload_xls.uploadTrackerMissingLap()
+        if (array.lenght == 0)
+            return []
+        
+
+        array.forEach(record => {
+            //console.log(record.color)
+            //console.log(typeof(record.color))
+            //let color = (record.color == "green" || record.color == ("red")) ? record.color : "grey"
+            missing_laps_array.push({
+                racer_name: (record.name && record.tracker_id )? (record.name + " " +record.tracker_id ): "",
+                start_time: record.start_time,
+                buoy_time: { [record.buoy_color]: " " },
+                finish_time: record.finish_time, 
+                lap_distance: record.buoy_color == "red" ? 4.8 : ("green" ? 12.8 : 0),
+                lap_time: calculateTimeDifference(record.start_time, record.finish_time),
+                team_id: record.team_id
+            })
+
+        })
+
+        return missing_laps_array
+
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 function calculateTimeDifference(start_time, finish_time) {
     try {   
         let start = new Date(start_time)
@@ -148,9 +182,9 @@ function calculateTimeDifference(start_time, finish_time) {
     
         return `${hours}:${minutes}`
 
-} catch (err) {
-    console.log(err)
-}
+    } catch (err) {
+        console.log(err)
+    }
 }
 
 
