@@ -6,17 +6,23 @@ export default {
     createListForFE: async () => { //for fata format see interface.js
         try {
 
-            //to apload data from xlsx files - event array and sorted racers array
-            //TODO xls_data_zone_events = await createJSONfromZonesEventsOniWeb()
-            const xls_data_zone_events = upload_xls.createJSONfromZones()//zones: reg, green, start, finish 
+            // [] racers array
             const racers_list = upload_xls.createJSONfromRacers()// [] racers array
+  
+            //to apload data from xlsx files - event array and sorted racers array
+            const xls_data_zone_events = upload_xls.createJSONfromZones()//zones: reg, green, start, finish
+
+            //to apload data from oni web pages //TODO to config oni_data_zone_events vs xls_data_zone_events
+            const oni_data_zone_events = await upload_xls.createJSONfromZonesEventsOniWeb(racers_list)
+
             
             //to fill teams data with teams headings
             let teams = createTeamsArr(racers_list) // [] teams array, which will return after is finished
             
             //to process race events to laps array
             //event from xlsx table to be sorted and processed to complete laps
-            const laps_array = processRaceEvents(xls_data_zone_events, racers_list)
+            //todo oni_data_zone_events instead of xls_data_zone_events
+            const laps_array = processRaceEvents(oni_data_zone_events, racers_list) //xls_data_zone_events
             
             //to add lapps array to teams - assign racers laps to teams
             teams = createRowsForFETable(teams, laps_array)

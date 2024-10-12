@@ -31,10 +31,10 @@ export default {
     },
 
     //upload data from excel zonehist.xls - to be replaced with direct upload from oni web page
-    createJSONfromZonesEventsOniWeb: async () => {
+    createJSONfromZonesEventsOniWeb: async (racers_list) => {
         try {
             ///upload data directly from oni web page
-            const zone_hist_json = await upload.getZoneEvents()
+            const zone_hist_json = await upload.getZoneEvents(racers_list)
             return zone_hist_json
 
         } catch (err) {

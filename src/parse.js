@@ -1,9 +1,18 @@
 export default {
+    parseTimeUnit: (timeunit) => {
+        try {
+
+            return formatDate(new Date(timeunit), 0)
+
+        } catch (err) {
+            console.log(err)
+        }
+    },
     parseTime: (time) => {
         try {
 
             const jsDate = excelDateToJSDate(time)
-            const formattedDate = formatDate(jsDate)
+            const formattedDate = formatDate(jsDate, 2)
             return formattedDate
 
         } catch (err) {
@@ -52,7 +61,7 @@ function excelDateToJSDate(serial) {
 
 }
 
-function formatDate(date) {
+function formatDate(date, utc_xls_deduct) {
     try {
         if (!(date instanceof Date)) {
             throw new TypeError('Expected a Date object');
@@ -67,7 +76,7 @@ function formatDate(date) {
         const utcSeconds = date.getUTCSeconds()
 
         // Calculate the CEST time (UTC - 2 hours)
-        const cestDate = new Date(Date.UTC(utcYear, utcMonth, utcDay, utcHours - 2, utcMinutes, utcSeconds))
+        const cestDate = new Date(Date.UTC(utcYear, utcMonth, utcDay, utcHours - utc_xls_deduct, utcMinutes, utcSeconds))
 
         const year = cestDate.getFullYear()
         const month = String(cestDate.getMonth() + 1).padStart(2, '0')
