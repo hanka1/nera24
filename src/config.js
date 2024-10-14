@@ -12,13 +12,20 @@ export default {
     //TODO reload from web pages
     START_TIME: '09/28/2024 10:30:00',
 
-    //upload race data from trackers from oni web pages
-    LOADED_EVENT_MAP: new Map([
+    //to set "xls", "web" - choose xls table or oni web to upload race events data from trackers
+    SET_XLS_OR_WEB_EVENTS_LOADING: "xls", 
+
+    //upload race events tracker data from xls file 
+    PATH_TO_ZONEHIST: "./src/data/zonehist.xlsx",
+    
+    //upload race events tracker data from oni web page
+    LOADED_EVENT_MAP: new Map([ //id from oni web pages - TODO update before 2025
         [6153, "green"],
         [6152, "red"],
         [6151, "start"],
         [6261, "finish"]
     ]),
+
     ONI_URL: "http://www.onisystem.net/ws/inetg/inetg",
     ONI_HEADERS:  {
         'Content-Type': 'application/soap+xml; charset=utf-8',
@@ -45,8 +52,7 @@ export default {
             </soap:Envelope>;
         `,
 
-    //reload race events from xls file - TODO? alternative?
-    PATH_TO_ZONEHIST: "./src/data/zonehist.xlsx",
+
 
 }
 

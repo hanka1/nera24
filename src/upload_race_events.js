@@ -8,26 +8,25 @@ export default {
 
             // [] racers array
             const racers_list = upload_xls.createJSONfromRacers()// [] racers array
+
+            //to upload trackers all events data: [] incl. zones: reg, green, start, finish
+            const zone_events = config.SET_XLS_OR_WEB_EVENTS_LOADING == "xls" 
+                                    //from xlsx files
+                                    ? upload_xls.createJSONfromZones()
+                                    //from oni web pages 
+                                    : await upload_xls.createJSONfromZonesEventsOniWeb(racers_list)
   
-            //to apload data from xlsx files - event array and sorted racers array
-            const xls_data_zone_events = upload_xls.createJSONfromZones()//zones: reg, green, start, finish
-
-            //to apload data from oni web pages //TODO to config oni_data_zone_events vs xls_data_zone_events
-            const oni_data_zone_events = await upload_xls.createJSONfromZonesEventsOniWeb(racers_list)
-
-            
             //to fill teams data with teams headings
             let teams = createTeamsArr(racers_list) // [] teams array, which will return after is finished
             
             //to process race events to laps array
-            //event from xlsx table to be sorted and processed to complete laps
-            //todo oni_data_zone_events instead of xls_data_zone_events
-            const laps_array = processRaceEvents(oni_data_zone_events, racers_list) //xls_data_zone_events
+            //event from xlsx table or oni web pages to be sorted and processed to complete laps
+            const laps_array = processRaceEvents(zone_events, racers_list) 
             
             //to add lapps array to teams - assign racers laps to teams
             teams = createRowsForFETable(teams, laps_array)
   
-            //return teams_and_events //its return for test
+            //return all teams with all their laps
             return teams
 
         } catch (err) {
@@ -61,7 +60,7 @@ function createRowsForFETable(teams, laps_array) {
 }
 
 //race events from xlsx table to be sorted and processed to complete laps
-function processRaceEvents (xlx_events, racer_arr) {
+function processRaceEvents (zone_events, racer_arr) {
     try { 
         let laps_array = []  
         
@@ -69,7 +68,7 @@ function processRaceEvents (xlx_events, racer_arr) {
         let all_tracker_events_arr = createAllTrakerEventsArr(racer_arr) //[{ tracker_id: 231, team_id: 12, name: 'Hanka 231', race_events: [] },...]
 
         //add all race events to racer tracker id == to sort events to groups with the same tracker id
-        all_tracker_events_arr = fillAllRaceEvents(xlx_events, all_tracker_events_arr)
+        all_tracker_events_arr = fillAllRaceEvents(zone_events, all_tracker_events_arr)
      
         //for each tracker to sort all events (in all_tracker_events_arr.race_events array ac. time)
         all_tracker_events_arr = sortAllRaceEvents(all_tracker_events_arr)
@@ -331,9 +330,9 @@ function sortAllRaceEvents (all_tracker_events_arr) {
 
 //add all race events to racer tracker id => sort events to groups with the same tracker id
 //to fill all_tracker_events_arr.race_events
-function fillAllRaceEvents (xlx_events, all_tracker_events_arr) {
+function fillAllRaceEvents (zone_events, all_tracker_events_arr) {
     try {  
-        xlx_events.forEach( event => {
+        zone_events.forEach( event => {
             event.tracker = parseInt(event.tracker)
             let event_list_index = all_tracker_events_arr.findIndex( el => el.tracker_id == event.tracker)
             //console.log(event_list_index)
