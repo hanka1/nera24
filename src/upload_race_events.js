@@ -1,5 +1,5 @@
 import upload_xls from './upload_xls.js'
-import config from "./config.js"
+import config from './config.js'
 
 export default {
     //upload and process data from zonehist.xls
@@ -52,13 +52,39 @@ function createRowsForFETable(teams, laps_array) {
             team.lap_records.sort((a, b) => new Date(a.start_time) - new Date(b.start_time))
         })
 
-        return teams
+        const last_20 = getLast20(teams, laps_array)
+
+        return { teams: teams, last_20: last_20 }
         
     } catch (err) {
         console.log(err)
     }
 }
 
+//to get last 20 finished laps
+function getLast20(teams, laps_array) {
+    try {  
+        const flat_laps = laps_array.flat()
+        flat_laps.sort((a, b) => new Date(b.finish_time) - new Date(a.finish_time))
+        teams.sort((a, b) => new Date(b.total_km) - new Date(a.total_km))
+        teams.forEach((team, i) => {
+            team.order = i + 1
+        })
+
+        const last20laps = flat_laps.slice(0, 20)
+        last20laps.forEach( lap => {
+            const team = teams.find(team => team.team_id == lap.team_id)
+            lap.total_km = team.total_km
+            lap.team_name = team.team_name
+            lap.order = team.order
+        })
+
+        return last20laps
+        
+    } catch (err) {
+        console.log(err)
+    }
+}
 //race events from xlsx table to be sorted and processed to complete laps
 function processRaceEvents (zone_events, racer_arr) {
     try { 
@@ -132,7 +158,6 @@ function loadTrackerMissingData(){
         if (array.lenght == 0)
             return []
         
-
         array.forEach(record => {
             //console.log(record.color)
             //console.log(typeof(record.color))

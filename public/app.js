@@ -12,7 +12,55 @@ async function requestData(path) {
     }
 }
 
-async function createTable(path) {
+async function createOnlineTable(path) {
+    try {
+
+        const racers = await requestData(path)
+        // Create a table element
+        const table = document.createElement('table')
+        table.id = 'last_table'
+        table.style.borderCollapse = 'collapse';
+
+        // Create and append the header row
+        const headerRow = document.createElement('tr');
+        const headers = ['Racer Name', 'Start Time', 'Buoy Time', 'Finish Time', 'Lap Distance', 'Lap Time', 'Team ID', 'Total KM', 'Team Name', 'Order'];
+        
+        headers.forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            th.style.borderBottom = '1px solid black'; // Border between rows
+            headerRow.appendChild(th);
+        });
+
+        table.appendChild(headerRow);
+
+        // Create and append rows for each racer
+        racers.forEach(racer => {
+            const row = document.createElement('tr');
+
+            Object.keys(racer).forEach(key => {
+                const td = document.createElement('td');
+                if (typeof racer[key] === 'object') {
+                    td.textContent = JSON.stringify(racer[key]);
+                } else {
+                    td.textContent = racer[key];
+                }
+                row.appendChild(td);
+            });
+
+            table.appendChild(row);
+        });
+
+        // Append the table to the container
+        const tableContainer = document.getElementById('table-container');
+        tableContainer.appendChild(table)
+
+    } catch (error) {
+        console.error('Error:', error)
+    }
+} 
+
+async function createSummaryTable(path) {
     try {
         updateLapLengths()
 
@@ -108,7 +156,7 @@ document.getElementById('summary-data-btn').addEventListener('click', async () =
         }
 
         updateLapLengths();
-        await createTable('/api/summary')
+        await createSummaryTable('/api/summary')
 
     } catch (error) {
         console.error('Error fetching data:', error)
@@ -125,8 +173,7 @@ document.getElementById('online-data-btn').addEventListener('click', async () =>
             oldTable.remove()
         }
 
-        updateLapLengths();
-        await createTable('/api/online')
+        await createOnlineTable('/api/online')
 
     } catch (error) {
         console.error('Error fetching data:', error)
@@ -136,14 +183,34 @@ document.getElementById('online-data-btn').addEventListener('click', async () =>
 //respond to page load
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        await createTable(path = '/api' + window.location.pathname);
+        //to remove the old table if it exists
+        const oldTable = document.getElementById('last_table')
+        if (oldTable) {
+            oldTable.remove()
+        }
+
+        // Determine the endpoint path based on the URL
+        let path;
+        if (window.location.pathname === '/summary') {
+            path = '/api/summary'
+            await createSummaryTable(path)
+        } else if (window.location.pathname === '/online') {
+            path = '/api/online'
+            await createOnlineTable(path)
+        } else {
+            path = '/api' // Default to the main endpoint
+            await createSummaryTable(path)
+        }
+
+        // Fetch and display data
+        
     } catch (error) {
         console.error('Error in DOMContentLoaded:', error);
     }
 })
 
-//for automatic table refresh
-async function refreshTable() {
+//for automatic table summary
+async function refreshSummaryTable() {
     try {
         //to remove the old table if it exists
         const oldTable = document.getElementById('last_table')
@@ -151,13 +218,13 @@ async function refreshTable() {
             oldTable.remove()
         }
         console.log("refreshed")
-        await createTable()
+        await createSummaryTable()
 
     } catch (error) {
         console.error('Error refreshing table:', error);
     }
 }
 
-// Set interval to refresh table every 5 minutes
-setInterval(refreshTable, 300000); // 300000 milliseconds = 5 minutes
+// Set interval to summary table every 5 minutes
+setInterval(refreshSummaryTable, 300000); // 300000 milliseconds = 5 minutes
 
