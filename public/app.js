@@ -1,8 +1,8 @@
-async function requestData() {
+async function requestData(path) {
     try {
         await document.requestStorageAccess()
         // access granted
-        const response = await fetch('/refresh')
+        const response = await fetch(path)
         const data = await response.json()
         // process data
         return data
@@ -12,11 +12,11 @@ async function requestData() {
     }
 }
 
-async function createTable() {
+async function createTable(path) {
     try {
         updateLapLengths()
 
-        const race = await requestData()
+        const race = await requestData(path)
         const tableContainer = document.getElementById('table-container')
         const table = document.createElement('table')
         table.id = 'last_table'
@@ -98,7 +98,7 @@ function updateLapLengths() {
 }
 
 //respond to btn clic
-document.getElementById('fetch-data-btn').addEventListener('click', async () => {
+document.getElementById('summary-data-btn').addEventListener('click', async () => {
     try {
 
         //to remove the old table if it exists
@@ -108,7 +108,25 @@ document.getElementById('fetch-data-btn').addEventListener('click', async () => 
         }
 
         updateLapLengths();
-        await createTable()
+        await createTable('/api/summary')
+
+    } catch (error) {
+        console.error('Error fetching data:', error)
+    }
+})
+
+//respond to btn clic
+document.getElementById('online-data-btn').addEventListener('click', async () => {
+    try {
+
+        //to remove the old table if it exists
+        const oldTable = document.getElementById('last_table')
+        if (oldTable) {
+            oldTable.remove()
+        }
+
+        updateLapLengths();
+        await createTable('/api/online')
 
     } catch (error) {
         console.error('Error fetching data:', error)
@@ -118,11 +136,9 @@ document.getElementById('fetch-data-btn').addEventListener('click', async () => 
 //respond to page load
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-
-        await createTable()
-
-    } catch (error){
-        console.error('Error fDOMContentLoaded:', error)
+        await createTable(path = '/api' + window.location.pathname);
+    } catch (error) {
+        console.error('Error in DOMContentLoaded:', error);
     }
 })
 

@@ -35,7 +35,11 @@ header {
     color: red; /* Red color for red lap */
 }
 
-#fetch-data-btn {
+#summary-data-btn {
+    margin-left: 20px; /* Adjust the space between the heading and the button */
+}
+
+#online-data-btn {
     margin-left: 20px; /* Adjust the space between the heading and the button */
 }
 
@@ -82,19 +86,20 @@ tr:nth-child(even) {
 
 /* Basic button styling */
 .button {
-    background-color: #025a80; /* Green background */
-    border: rgb(1, 48, 68);
-    color: white; /* White text */
-    padding: 25px 45px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition */
-    border-radius: 12px;
-  }
+    background-color: #025a80; /* Sets the background color to a specific shade of blue */
+    border: rgb(1, 48, 68); /* Sets the border color to a darker shade of blue */
+    color: white; /* Sets the text color to white */
+    padding: 10px 20px; /* Adds 20px padding on the top and bottom, and 45px on the left and right */
+    text-align: center; /* Centers the text within the button */
+    text-decoration: none; /* Removes any text decoration (like underlines) */
+    display: inline-block; /* Makes the element an inline-block, allowing it to have both inline and block properties */
+    font-size: 20px; /* Sets the font size to 20 pixels */
+    margin: 1px 1px; /* Adds a margin of 4px on the top and bottom, and 2px on the left and right */
+    cursor: pointer; /* Changes the cursor to a pointer when hovered over */
+    transition: background-color 0.3s ease; /* Adds a smooth transition effect for the background color change over 0.3 seconds */
+    border-radius: 12px; /* Rounds the corners of the button with a 12px radius */
+}
+
   
   /* Change color on hover */
   .button:hover {
