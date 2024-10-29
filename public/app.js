@@ -19,36 +19,51 @@ async function createOnlineTable(path) {
         // Create a table element
         const table = document.createElement('table')
         table.id = 'last_table'
-        table.style.borderCollapse = 'collapse';
+        table.style.borderCollapse = 'collapse'
 
         // Create and append the header row
         const headerRow = document.createElement('tr');
-        const headers = ['Racer Name', 'Start Time', 'Buoy Time', 'Finish Time', 'Lap Distance', 'Lap Time', 'Team ID', 'Total KM', 'Team Name', 'Order'];
+        const headers = [
+            { text: 'Order', class: 'left-align' },
+            { text: 'Team (number)', class: 'team-name' },
+            { text: 'Name (tracker)', class: 'racer-name' },
+            { text: 'Total km', class: 'total-km' },
+            { text: 'Finish', class: 'center-align' },
+            { text: 'Last lap', class: 'center-align' }
+        ]
         
-        headers.forEach(headerText => {
-            const th = document.createElement('th');
-            th.textContent = headerText;
-            th.style.borderBottom = '1px solid black'; // Border between rows
-            headerRow.appendChild(th);
+        headers.forEach(header => {
+            const th = document.createElement('th')
+            th.textContent = header.text
+            th.className = header.class
+            th.style.borderBottom = '2px solid #00273265' // Border between rows
+            headerRow.appendChild(th)
         });
 
         table.appendChild(headerRow);
 
         // Create and append rows for each racer
-        racers.forEach(racer => {
-            const row = document.createElement('tr');
+        racers.forEach(racer_all_info => {
+            const row = document.createElement('tr')
+            const racer = {
+                order: racer_all_info.order + ".",
+                team_name: racer_all_info.team_name + " (" +  racer_all_info.team_id + ")" ,
+                racer_name: racer_all_info.racer_name + " (" +  racer_all_info.tracker_id + ")" ,
+                total_km: Math.round(racer_all_info.total_km * 10) / 10  + " km" ,
+                finish_time: racer_all_info.finish_time.split(' ')[1],
+                lap_time: racer_all_info.lap_time
+            }
+           
 
-            Object.keys(racer).forEach(key => {
-                const td = document.createElement('td');
-                if (typeof racer[key] === 'object') {
-                    td.textContent = JSON.stringify(racer[key]);
-                } else {
-                    td.textContent = racer[key];
-                }
-                row.appendChild(td);
+            Object.keys(racer).forEach((key, index) => {
+                const td = document.createElement('td')
+                td.style.borderBottom = '2px solid #00273265'
+                td.className = headers[index].class; // Apply the same class as header
+                td.textContent = racer[key]
+                row.appendChild(td)
             });
 
-            table.appendChild(row);
+            table.appendChild(row)
         });
 
         // Append the table to the container
@@ -156,6 +171,8 @@ document.getElementById('summary-data-btn').addEventListener('click', async () =
         }
 
         updateLapLengths();
+        
+        window.location.href = '/summary'
         await createSummaryTable('/api/summary')
 
     } catch (error) {
@@ -172,7 +189,7 @@ document.getElementById('online-data-btn').addEventListener('click', async () =>
         if (oldTable) {
             oldTable.remove()
         }
-
+        window.location.href = '/online'
         await createOnlineTable('/api/online')
 
     } catch (error) {
@@ -197,6 +214,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else if (window.location.pathname === '/online') {
             path = '/api/online'
             await createOnlineTable(path)
+
+            setInterval(() => {
+                if (document.getElementById('last_table')) {
+                    refreshOnlineTable();
+                }
+            }, 10 * 1000); 
+
         } else {
             path = '/api' // Default to the main endpoint
             await createSummaryTable(path)
@@ -217,8 +241,24 @@ async function refreshSummaryTable() {
         if (oldTable) {
             oldTable.remove()
         }
-        console.log("refreshed")
-        await createSummaryTable()
+        //console.log("refreshed")
+        await createSummaryTable('/api/summary')
+
+    } catch (error) {
+        console.error('Error refreshing table:', error);
+    }
+}
+
+//for automatic table summary
+async function refreshOnlineTable() {
+    try {
+        //to remove the old table if it exists
+        const oldTable = document.getElementById('last_table')
+        if (oldTable) {
+            oldTable.remove()
+        }
+        //console.log("refreshed")
+        await createOnlineTable('/api/online')
 
     } catch (error) {
         console.error('Error refreshing table:', error);
@@ -226,5 +266,8 @@ async function refreshSummaryTable() {
 }
 
 // Set interval to summary table every 5 minutes
-setInterval(refreshSummaryTable, 300000); // 300000 milliseconds = 5 minutes
+//setInterval(refreshSummaryTable, 300000); // 300000 milliseconds = 5 minutes
+
+// Set interval to summary table every 5 minutes
+//setInterval(refreshOnlineTable, 10000); // 10 seconds
 

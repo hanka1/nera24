@@ -41,6 +41,7 @@ function createRowsForFETable(teams, laps_array) {
 
         laps_array.forEach( tracker_laps_arr => {
             tracker_laps_arr.forEach( lap => {
+                //console.log(lap)
                 let team_index = teams.findIndex(team => team.team_id == lap.team_id)
                 
                 teams[team_index].lap_records.push(lap)
@@ -134,6 +135,7 @@ function createLapsRecords (tracker) {
                 
                 laps_arr.push({
                     racer_name: tracker.name ? tracker.name : tracker.tracker_id,
+                    tracker_id: tracker.tracker_id,
                     start_time: tracker.race_events[i].time,
                     buoy_time: { [color] : tracker.race_events[i + 1].time },
                     finish_time: tracker.race_events[i + 2].time, 
@@ -163,7 +165,8 @@ function loadTrackerMissingData(){
             //console.log(typeof(record.color))
             //let color = (record.color == "green" || record.color == ("red")) ? record.color : "grey"
             missing_laps_array.push({
-                racer_name: (record.name && record.tracker_id )? (record.name + " " +record.tracker_id ): "",
+                racer_name: record.name ? record.name : "",
+                tracker_id: record.tracker_id ? record.tracker_id :  "",
                 start_time: record.start_time,
                 buoy_time: { [record.buoy_color]: " " },
                 finish_time: record.finish_time, 
@@ -381,7 +384,7 @@ function createAllTrakerEventsArr (racer_arr) {
             all_tracker_events_arr.push({ //{ tracker_id: 232, race_events: [] },
                 tracker_id: parseInt(racer.tracker_id),
                 team_id: parseInt(racer.team_id),
-                name: racer.name + " " +  racer.tracker_id,
+                name: racer.name,
                 race_events: []
             })
         ) 
@@ -403,7 +406,7 @@ function createTeamsArr (racers_list) {
 
             if (! teams_and_events.find(team => team.team_id == racer.team_id ))
                 teams_and_events.push({
-                    team_name: racer.team_id + " " + racer.team,
+                    team_name: racer.team,
                     team_id: parseInt(racer.team_id), 
                     total_km: 0,
                     lap_records: []

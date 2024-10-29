@@ -51,6 +51,28 @@ main {
     overflow-x: auto;
 }
 
+.left-align {
+    text-align: left;
+}
+
+.total-km {
+    color: rgba(8, 55, 75, 0.825);
+    text-align: right;
+}
+
+.racer-name {
+    text-align: left;
+}
+
+.team-name {
+    color: rgba(8, 55, 75, 0.825);
+    text-align: left;
+}
+
+.center-align {
+    text-align: center;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
