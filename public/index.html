@@ -8,23 +8,43 @@
 </head>
 <body>
     <header>
-        <h1>Nera 24 Race    <br/></h1><br/>
+        <h1><br/>Nera 24 Race    <br/></h1><br/>
         <!-- Placeholders for lap lengths -->
-        <div id="lap-container">
-            <div id="lapG"><br/></div><br/>
-            <div id="lapR"></div>
-        </div>
-
-        <button id="online-data-btn" class="button">Online table</button> 
-        <button id="summary-data-btn" class="button">Summary table</button>
-        
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link" data-target="home">Home</a></li>
+                <li><a href="#online" class="nav-link" data-target="online">Online</a></li>
+                <li><a href="#summary" class="nav-link" data-target="summary">Summary</a></li>
+                <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <div id="table-container">
-            <!-- Table will be dynamically generated here -->
-        </div>
+        <section id="home" class="content-section">
+            <h2>Home</h2>
+            <p>Welcome to the Home page!</p>
+        </section>
+        <section id="online" class="content-section" style="display: none;">
+            <div id="table-container-online">
+                <!-- Table will be dynamically generated here -->
+            </div>
+        </section>
+        <section id="summary" class="content-section" style="display: none;">
+            <h2>Summary</h2>
+            <div id="table-container-summary">
+                <!-- Table will be dynamically generated here -->
+            </div>
+        </section>
+        <section id="contact" class="content-section" style="display: none;">
+            <h2>Contact</h2>
+            <p>How to contact us.</p>
+        </section>
+
     </main>
+    <script src="app_nav_bar.js"></script>
     <script src="app.js"></script>
+    <script src="tables.js"></script>
+
 
 </body>
 </html>
