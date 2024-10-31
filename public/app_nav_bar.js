@@ -46,27 +46,31 @@ function removeOldTable() {
     }
 }
 
+let refreshInterval;
+
 async function fetchDataAndUpdateTable(targetId) {
+    // Clear the existing interval if any
+    if (refreshInterval) {
+        clearInterval(refreshInterval)
+    }
 
     if (targetId === 'summary') {
         await createSummaryTable('/api/summary')
-    
     } else if (targetId === 'online') {
         await createOnlineTable('/api/online')
-        // automaticaly update
-        setInterval(() => {
+
+        // Automatically update every 20 seconds
+        refreshInterval = setInterval(() => {
             if (document.getElementById('last_table')) {
-                refreshOnlineTable()
+                refreshOnlineTable();
             }
-        }, 20 * 1000) //each 20 s
-   
-    } else if (targetId === 'home') {
-        await createHomeTable(path) //TODO
-
+        }, 20 * 1000);
+    } else if (targetId === 'info') {
+        // TODO: Decide what will be there
+        console.log("To decide what will be there")
     } else if (targetId === 'contact') {
-        await createContactTable('/api/contact')//TODO
-
+        await createContactTable('/api/contact') // TODO
     } else {
-        await createSummaryTable('/api/home') // Default endpoint
+        await createSummaryTable('/api/info') // Default endpoint
     }
 }
