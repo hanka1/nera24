@@ -260,9 +260,18 @@ main {
         padding: 0.3em 0.5em; /* Reduced padding */
         font-size: 0.9em;
     }
+
+    .language-switcher button {
+        font-size: 0.9em;
+    }
+    
+    .language-switcher button img.flag-icon {
+        width: 0.8em;
+        height: 0.8em;
+    }
     
     main {
-        padding-top: 120px; /* Adjust for fixed header */
+        padding-top: 140px; /* Adjust for fixed header */
         padding-left: 5px;
         font-size: 80%;
     }
@@ -282,9 +291,19 @@ main {
         padding: 0.2em 0.4em; /* Further reduced padding */
         font-size: 0.8em;
     }
+
+
+    .language-switcher button {
+        font-size: 0.9em;
+    }
+    
+    .language-switcher button img.flag-icon {
+        width: 0.8em;
+        height: 0.8em;
+    }
     
     main {
-        padding-top: 120px; /* Adjust for fixed header */
+        padding-top: 140px; /* Adjust for fixed header */
     }
 }
 
