@@ -1,4 +1,6 @@
 const intro_info_cz = `
+PRACOVNI VERZE: INFO Z ROKU 2024
+
 JAK RESIT PROPOZICEH a MARATON ? - uvodni reklamni strana a odkaz na dalsi 3 stranky??<br><br>
 
 Závod na 24h je ve 4 kategoriích. Každá posádka (sólo, dvojice, trojice, tým). 
@@ -18,6 +20,8 @@ samozřejmě jako loni, každá posádka která překoná metu 200km získává 
 předloni si to vyjeli kluci ve trojici. Bude vás letos víc????<br><br>
 
 KATEGORIE 24h<br>
+
+UPDATE CENY STARTOVNEHO
 sólo - dvojice - trojice - tým<br>
 Start - 20.9.2025 ve 10:00<br>
 Konec - 21.9.2025 ve 10:00<br>
