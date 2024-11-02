@@ -1,5 +1,6 @@
-async function createOnlineTable(path) {
+async function createOnlineTable() {
     try {
+        let lang = i18next.language
 
         const racers = result_race_data.last_20
         // Create a table element
@@ -7,18 +8,27 @@ async function createOnlineTable(path) {
         table.id = 'last_table'
         table.style.borderCollapse = 'collapse'
 
-        // Create and append the header row
-        const headerRow = document.createElement('tr');
-        const headers = [
-            { text: 'Order', class: 'left-align' },
-            { text: 'Team (number)', class: 'team-name' },
-            { text: 'Name (tracker)', class: 'racer-name' },
-            { text: 'Total km', class: 'total-km' },
-            { text: 'Finish', class: 'center-align' },
-            { text: 'Last lap', class: 'center-align' }
-        ]
-        
-        headers.forEach(header => {
+        const headerRow = document.createElement('tr')
+        const headers = {
+            en: [
+                { text: 'Order', class: 'left-align' },
+                { text: 'Team (number)', class: 'team-name' },
+                { text: 'Name (tracker)', class: 'racer-name' },
+                { text: 'Total km', class: 'total-km' },
+                { text: 'Finish', class: 'center-align' },
+                { text: 'Last lap', class: 'center-align' }
+            ],
+            cz: [
+                { text: 'Pořadí', class: 'left-align' },
+                { text: 'Tým (číslo)', class: 'team-name' },
+                { text: 'Jméno (tracker)', class: 'racer-name' },
+                { text: 'Celkové km', class: 'total-km' },
+                { text: 'Cíl', class: 'center-align' },
+                { text: 'Poslední kolo', class: 'center-align' }
+            ]
+        }
+
+        headers[lang].forEach(header => {
             const th = document.createElement('th')
             th.textContent = header.text
             th.className = header.class
@@ -44,7 +54,7 @@ async function createOnlineTable(path) {
             Object.keys(racer).forEach((key, index) => {
                 const td = document.createElement('td')
                 td.style.borderBottom = '2px solid #00273265'
-                td.className = headers[index].class; // Apply the same class as header
+                td.className = headers[lang][index].class  // Apply the same class as header
                 td.textContent = racer[key]
                 row.appendChild(td)
             });
@@ -61,7 +71,7 @@ async function createOnlineTable(path) {
     }
 } 
 
-async function createSummaryTable(path) {
+async function createSummaryTable() {
     try {
         //updateLapLengths()
 
@@ -146,10 +156,10 @@ async function refreshSummaryTable() {
             oldTable.remove()
         }
         //console.log("refreshed")
-        await createSummaryTable('/api/summary')
+        await createSummaryTable()
 
     } catch (error) {
-        console.error('Error refreshing table:', error);
+        console.error('Error refreshing table:', error)
     }
 }
 
@@ -162,10 +172,10 @@ async function refreshOnlineTable() {
             oldTable.remove()
         }
         //console.log("refreshed")
-        await createOnlineTable('/api/online')
+        await createOnlineTable()
 
     } catch (error) {
-        console.error('Error refreshing table:', error);
+        console.error('Error refreshing table:', error)
     }
 }
 

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     i18next.init({
-        lng: 'en',
+        lng: 'cz',
         resources: {
             en: {
                 translation: {
@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     "nav": { "info": "Info", "online": "Online", "summary": "Summary", "history" : "History", "contact": "Contact" },
                     "info": { "title": "Info about race", "content": intro_info_en },
                     "history": { "title": "Race history", "content": history_info_en },
-                    "summary": { "title": "Race summary and statistics", "content": "Actual race statistics" },
-                    "contact": { "title": "Contact", "content": "How to contact us." }
+                    "summary": { "title": "Race summary and statistics" },
+                    "contact": { "title": "Contact", "content": "TODO add contact info." }
                 }
             },
             cz: {
@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     "info": { "title": "Info o  závodě", "content": intro_info_cz },
                     "history": { "title": "Historie závodu", "content": history_info_cz },
-                    "summary": { "title": "Souhrnné výsledky a statistiky", "content": "tady bude tabulka ..." },
-                    "contact": { "title": "Kontakt", "content": "tady budou kontakty..." }
+                    "summary": { "title": "Souhrnné výsledky a statistiky" },
+                    "contact": { "title": "Kontakt", "content": "TODO pridat kontaktni info." }
                 }
             }
         }
@@ -31,17 +31,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateContent() {
         document.querySelectorAll('[data-i18n]').forEach(el => {
-            el.innerHTML = i18next.t(el.getAttribute('data-i18n'));
-        });
+            el.innerHTML = i18next.t(el.getAttribute('data-i18n'))
+        })
     }
 
     window.changeLanguage = function (lng) {
         i18next.changeLanguage(lng, (err, t) => {
             if (err) return console.error(err);
-            updateContent();
-        });
-    };
-});
+            updateContent()
+
+            // Check if the "online" section is active
+            const onlineSection = document.getElementById('online');
+            if (onlineSection && onlineSection.style.display !== 'none') {
+                // Update the online table
+                document.getElementById('table-container-online').innerHTML = ''
+                createOnlineTable();
+            }
+
+        })
+    }
+})
 
 //config date to header
 document.addEventListener('DOMContentLoaded', () => { 
