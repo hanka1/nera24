@@ -244,7 +244,7 @@ nav ul li a:active, .language-switcher button:active {
 
 main {
     padding: 1rem;
-    padding-top: 200px; /* Add padding to account for the fixed header */
+    padding-top: 180px; /* Add padding to account for the fixed header */
 }
 
 
@@ -271,7 +271,7 @@ main {
     }
     
     main {
-        padding-top: 140px; /* Adjust for fixed header */
+        padding-top: 120px; /* Adjust for fixed header */
         padding-left: 5px;
         font-size: 80%;
     }
@@ -303,7 +303,9 @@ main {
     }
     
     main {
-        padding-top: 140px; /* Adjust for fixed header */
+        padding-top: 120px; /* Adjust for fixed header */
+        padding-left: 5px;
+        font-size: 80%;
     }
 }
 
