@@ -1,7 +1,7 @@
 const intro_info_cz = `
 PRACOVNI VERZE: INFO Z ROKU 2024
 
-JAK RESIT PROPOZICEH a MARATON ? - uvodni reklamni strana a odkaz na dalsi 3 stranky??<br><br>
+JAK RESIT PROPOZICE 12, 24 a MARATON ? - uvodni info strana a odkaz na dalsi 3 stranky??<br><br>
 
 Závod na 24h je ve 4 kategoriích. Každá posádka (sólo, dvojice, trojice, tým). 
 Kategorie "tým" je pro firmy nebo týmy kteří chtějí být ve větší partě. 
@@ -21,16 +21,13 @@ předloni si to vyjeli kluci ve trojici. Bude vás letos víc????<br><br>
 
 KATEGORIE 24h<br>
 
-UPDATE CENY STARTOVNEHO
+TODO - UPDATE CENY STARTOVNEHO
 sólo - dvojice - trojice - tým<br>
 Start - 20.9.2025 ve 10:00<br>
 Konec - 21.9.2025 ve 10:00<br>
 <br>
 Startovné zaplacené do 31.8.2025 (startovné po 31.8.2025)<br>
-sólo - 1300,- ( 1500,- )<br>
-dvojice - 2400,- ( 2800,- )<br>
-trojice - 3000,- ( 3600,- )<br>
-tým - 3600,- ( 4400,- )<br><br>
+
 
 Pokyny pro zaplacení vám přijdou emailem po registraci.<br>
 <br>
