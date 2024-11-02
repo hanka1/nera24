@@ -7,6 +7,8 @@ import upload_race_events from './src/upload_race_events.js'
 const app = express()
 const port = config.API_PORT
 
+const result_race_data = await upload_race_events.createListForFE()
+
 // Define __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -17,7 +19,6 @@ app.use(express.static(path.join(__dirname, 'docs')))
 // API routes for data
 app.get('/api/summary', async (req, res) => {
     try {
-        const result_race_data = await upload_race_events.createListForFE()
         res.json(result_race_data.teams)
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error", error: error.message })
@@ -26,7 +27,6 @@ app.get('/api/summary', async (req, res) => {
 
 app.get('/api/online', async (req, res) => {
     try {
-        const result_race_data = await upload_race_events.createListForFE()
         res.json(result_race_data.last_20)
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error", error: error.message })
@@ -35,7 +35,6 @@ app.get('/api/online', async (req, res) => {
 
 app.get('/api', async (req, res) => {
     try {
-        const result_race_data = await upload_race_events.createListForFE()
         res.json(result_race_data.teams)
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error", error: error.message })

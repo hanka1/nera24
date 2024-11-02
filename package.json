@@ -5,7 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "node server.js"
+    "server": "node server.js",
+    "start": "node create_data.js"
   },
   "author": "",
   "license": "ISC",

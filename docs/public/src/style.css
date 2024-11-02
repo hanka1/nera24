@@ -36,14 +36,6 @@ header h2 {
 
 }
 
-header h3 {
-    /* top | right | bottom | left */
-    padding: 0 0 0 20px; 
-    margin: 0;
-    font-size: 24px;
-
-}
-
 #lap-container {
     flex-direction: column;
     display: flex;
@@ -252,5 +244,5 @@ nav ul li a:active, .language-switcher button:active {
 
 main {
     padding: 1rem;
-    padding-top: 210px; /* Add padding to account for the fixed header */
+    padding-top: 200px; /* Add padding to account for the fixed header */
 }
