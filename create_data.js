@@ -5,9 +5,9 @@ const result_race_data = await upload_race_events.createListForFE()
 
 const saveJSONToFile = (result_race_data, filename) => {
     try {
-        const jsonString = JSON.stringify(result_race_data, null, 2)
+        const jsonString = "result_race_data = " + JSON.stringify(result_race_data, null, 2)
     
-        writeFile(`docs/public/src/data/${filename}.json`, jsonString, (err) => {
+        writeFile(`docs/public/data/${filename}.js`, jsonString, (err) => {
             if (err) {
                 console.error('Error writing file', err)
             } else {

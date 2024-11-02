@@ -1,4 +1,4 @@
-{
+result_race_data = {
   "teams": [
     {
       "team_name": "Mára Š.",

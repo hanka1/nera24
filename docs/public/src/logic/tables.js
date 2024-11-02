@@ -1,7 +1,7 @@
 async function createOnlineTable(path) {
     try {
 
-        const racers = await requestData(path)
+        const racers = result_race_data.last_20
         // Create a table element
         const table = document.createElement('table')
         table.id = 'last_table'
@@ -65,7 +65,7 @@ async function createSummaryTable(path) {
     try {
         //updateLapLengths()
 
-        const race = await requestData(path)
+        const race = result_race_data.teams
         const tableContainer = document.getElementById('table-container-summary')
         const table = document.createElement('table')
         table.id = 'last_table'
