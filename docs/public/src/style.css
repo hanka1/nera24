@@ -98,24 +98,24 @@ main {
     text-align: center;
 }
 
-table {
+.table1 {
     width: 100%;
     border-collapse: collapse;
     margin: 1rem 0;
 }
 
-th, td {
+.table1 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
 }
 
-th {
+.table1 th {
     background-color: #9bc2cd;
     color: #000000;
 }
 
-tr:nth-child(even) {
+.table1 tr:nth-child(even) {
     background-color: #6e6e6e18;
 }
 
@@ -130,6 +130,41 @@ tr:nth-child(even) {
 .gray {
     background-color: #e0e0e0;
 }
+
+/******/
+.table-container2 {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+}
+
+.table2 {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table2 th, .table2 td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.table2 th {
+    background: #f2f2f2;
+    font-weight: bold;
+}
+
+.sticky-header2 {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    left: 0;
+    background: white;
+    z-index: 2;
+    border-right: 2px solid #000;
+}
+
+
+/******/
 
 /* Basic button styling */
 .button {

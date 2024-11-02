@@ -1,3 +1,54 @@
+
+function createSummaryTable2() {
+
+    const race = result_race_data.teams
+    const tableContainer = document.getElementById('table-container-summary');
+
+    // Create a table element
+    const table = document.createElement('table');
+    table.className = 'table2';
+    table.style.borderCollapse = 'collapse';
+
+
+    // Create and append rows for each team
+    race.forEach((team) => {
+        const teamRow = document.createElement('tr');
+        
+        // Team Name Cell
+        const teamNameCell = document.createElement('th');
+        teamNameCell.textContent = team.team_name + "   " + (Math.round(team.total_km * 10) / 10).toFixed(1)  + " km"
+        teamNameCell.className = 'sticky-header';
+        teamNameCell.style.borderBottom = '2px solid #00273265';
+    
+        teamRow.appendChild(teamNameCell);
+        
+        // Lap Times Cell
+        team.lap_records.forEach((lap) => {
+            const lapTimeCell = document.createElement('td')
+            lapTimeCell.textContent = lap.racer_name + " " + lap.lap_time
+            lapTimeCell.style.borderBottom = '2px solid #00273265'
+            teamRow.appendChild(lapTimeCell);
+
+            // set row color based on buoy_time
+            if (lap.buoy_time) {
+                if (lap.buoy_time.red) {
+                    lapTimeCell.style.backgroundColor = '#FFCCCB'
+                } else if (lap.buoy_time.green) {
+                    lapTimeCell.style.backgroundColor = '#D9EBB8'
+                } else if (lap.buoy_time.gray) {
+                    lapTimeCell.style.backgroundColor = 'lightgray'
+                    lapTimeCell.style.color = 'gray'
+                }
+            }
+        })
+
+        table.appendChild(teamRow)
+    })
+
+    // Append the table to the container
+    tableContainer.appendChild(table)
+}
+
 async function createOnlineTable() {
     try {
         let lang = i18next.language

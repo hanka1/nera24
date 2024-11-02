@@ -48,6 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 createOnlineTable();
             }
 
+            /*
+            const summarySection = document.getElementById('summary');
+            if (summarySection && summarySection.style.display !== 'none') {
+                // Update the summary table
+                document.getElementById('table-container-summary').innerHTML = ''
+                createSummaryTable2();
+            }
+            */
         })
     }
 })

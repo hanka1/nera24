@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-
 })
 
 function removeOldTable() {
@@ -58,6 +57,8 @@ async function fetchDataAndUpdateTable(targetId) {
         await createSummaryTable('/api/summary')
         console.log("Summary info.")
     } else if (targetId === 'online') {
+
+
         await createOnlineTable('/api/online')
         console.log("Online info.")
         // Automatically update every 20 seconds
