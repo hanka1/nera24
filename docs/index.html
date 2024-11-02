@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Nera 24 Race</title>
     <link rel="stylesheet" href="./public/src/style.css">
 </head>
@@ -16,6 +16,7 @@
                 <li><a href="#info" class="nav-link" data-target="info" data-i18n="nav.info">Info</a></li>
                 <li><a href="#online" class="nav-link" data-target="online" data-i18n="nav.online">Online</a></li>
                 <li><a href="#summary" class="nav-link" data-target="summary" data-i18n="nav.summary">Summary</a></li>
+                <li><a href="#history" class="nav-link" data-target="history" data-i18n="nav.history">History</a></li>
                 <li><a href="#contact" class="nav-link" data-target="contact" data-i18n="nav.contact">Contact</a></li>
             
                 <li class="language-switcher">
@@ -31,7 +32,7 @@
     </header>
     <main>
         <section id="info" class="content-section">
-            <h2 data-i18n="info.title">Info</h2>
+            <h2 data-i18n="info.title"></h2>
             <p data-i18n="info.content">Info about Race!</p>
         </section>
         <section id="online" class="content-section" style="display: none;">
@@ -40,17 +41,22 @@
             </div>
         </section>
         <section id="summary" class="content-section" style="display: none;">
-            <h2>Summary</h2>
+            <h2 data-i18n="summary.title"></h2>
             <div id="table-container-summary">
                 <!-- Table will be dynamically generated here -->
             </div>
         </section>
+        <section id="history" class="content-section" style="display: none;">
+            <h2 data-i18n="history.title"></h2>
+            <p data-i18n="history.content">History info</p>
+        </section>
         <section id="contact" class="content-section" style="display: none;">
-            <h2>Contact</h2>
-            <p>How to contact us.</p>
+            <h2 data-i18n="contact.title"></h2>
+            <p data-i18n="contact.content"></p>
         </section>
         <script src="./public/src/config.js"></script>
         <script src="./public/src/data/intro_info.js"></script>
+        <script src="./public/src/data/history_info.js"></script>
         <script src="./public/src/logic/app_nav_bar.js"></script>
         <script src="./public/src/logic/app.js"></script>
         <script src="./public/src/logic/tables.js"></script>

@@ -18,26 +18,24 @@ document.addEventListener('DOMContentLoaded', () => {
         resources: {
             en: {
                 translation: {
-                    "header": { "title": "My Website" },
+                    "header": { "title": "Nera24" },
 
-                    "nav": { "info": "Info", "online": "Online", "summary": "Summary", "contact": "Contact" },
-
+                    "nav": { "info": "Info", "online": "Online", "summary": "Summary", "history" : "History", "contact": "Contact" },
                     "info": { "title": "Info about race", "content": intro_info_en },
-
-                    "about": { "title": "About", "content": "About us content goes here." },
-                    "services": { "title": "Services", "content": "Details about services offered." },
+                    "history": { "title": "Race history", "content": history_info_en },
+                    "summary": { "title": "Race summary and statistics", "content": "Actual race statistics" },
                     "contact": { "title": "Contact", "content": "How to contact us." }
                 }
             },
             cz: {
                 translation: {
-                    "header": { "title": "Mon Site Web" },
-                    "nav": { "info": "Info", "online": "Online", "summary": "Souhrn", "contact": "Kontakt" },
+                    "header": { "title": "Nera24" },
+                    "nav": { "info": "Info", "online": "Online", "summary": "Souhrn", "history" : "Historie", "contact": "Kontakt" },
 
                     "info": { "title": "Info o  závodě", "content": intro_info_cz },
-                    "about": { "title": "À propos", "content": "Le contenu à propos de nous va ici." },
-                    "services": { "title": "Services", "content": "Détails des services offerts." },
-                    "contact": { "title": "Contact", "content": "Comment nous contacter." }
+                    "history": { "title": "Historie závodu", "content": history_info_cz },
+                    "summary": { "title": "Souhrnné výsledky a statistiky", "content": "tady bude tabulka ..." },
+                    "contact": { "title": "Kontakt", "content": "tady budou kontakty..." }
                 }
             }
         }

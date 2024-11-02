@@ -56,9 +56,10 @@ async function fetchDataAndUpdateTable(targetId) {
 
     if (targetId === 'summary') {
         await createSummaryTable('/api/summary')
+        console.log("Summary info.")
     } else if (targetId === 'online') {
         await createOnlineTable('/api/online')
-
+        console.log("Online info.")
         // Automatically update every 20 seconds
         refreshInterval = setInterval(() => {
             if (document.getElementById('last_table')) {
@@ -67,10 +68,13 @@ async function fetchDataAndUpdateTable(targetId) {
         }, 20 * 1000);
     } else if (targetId === 'info') {
         // TODO: Decide what will be there
-        console.log("To decide what will be there")
+        console.log("Race info.")
+    } else if (targetId === 'history') {
+        // TODO: Decide what will be there
+        console.log("Race history.")
     } else if (targetId === 'contact') {
-        await createContactTable('/api/contact') // TODO
+        console.log("Contact.") // TODO
     } else {
-        await createSummaryTable('/api/info') // Default endpoint
+        console.log("Not defined.") // Default endpoint
     }
 }

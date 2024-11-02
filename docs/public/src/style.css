@@ -22,7 +22,7 @@ header {
 
 header h1 {
     /* top | right | bottom | left */
-    padding: 20px 20px 0 20px; 
+    padding: 20px 20px 0 15px; 
     margin: 0;
     font-size: 40px;
 
@@ -30,7 +30,7 @@ header h1 {
 
 header h2 {
     /* top | right | bottom | left */
-    padding: 5px 20px 20px 20px; 
+    padding: 5px 20px 20px 15px; 
     margin: 0;
     font-size: 24px;
 
@@ -160,7 +160,7 @@ tr:nth-child(even) {
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding-left: 5px;
 
     list-style-type: none;
     margin: 0 0 0 0;
@@ -246,3 +246,45 @@ main {
     padding: 1rem;
     padding-top: 200px; /* Add padding to account for the fixed header */
 }
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1, header h2 {
+        font-size: 1.5em;
+        padding-left: 5px;
+    }
+    
+    nav ul li a {
+        padding: 0.3em 0.5em; /* Reduced padding */
+        font-size: 0.9em;
+    }
+    
+    main {
+        padding-top: 120px; /* Adjust for fixed header */
+        padding-left: 5px;
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1, header h2 {
+        font-size: 0.8em;
+        padding-left: 5px;
+    }
+    
+    nav ul li {
+        flex: 1 1 100%; /* Each item takes full width */
+    }
+    
+    nav ul li a {
+        padding: 0.2em 0.4em; /* Further reduced padding */
+        font-size: 0.8em;
+    }
+    
+    main {
+        padding-top: 120px; /* Adjust for fixed header */
+    }
+}
+
