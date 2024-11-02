@@ -11,8 +11,8 @@ const port = config.API_PORT
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-// Serve static files from the 'public' directory
-app.use('/public', express.static(path.join(__dirname, 'public')))
+// Serve static files from the 'docs' directory
+app.use(express.static(path.join(__dirname, 'docs')))
 
 // API routes for data
 app.get('/api/summary', async (req, res) => {
