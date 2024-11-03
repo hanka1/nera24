@@ -5,7 +5,6 @@ body {
     background-color: #f4f4f4;
 }
 
-
 header {
 
     background-color: #9bc2cd;
@@ -36,176 +35,20 @@ header h2 {
 
 }
 
-#lap-container {
-    flex-direction: column;
-    display: flex;
-    align-items: left;
-    text-align: left;
-    justify-content: left;
-    margin-top: 10px;
-    padding-left: 2rem;
-}
-
-#lapG {
-    margin-top: 10px;
-    color: green; /* Green color for green lap */
-}
-
-#lapR {
-    margin-top: 10px;
-    color: red; /* Red color for red lap */
-}
-
-#summary-data-btn {
-    margin-left: 20px; /* Adjust the space between the heading and the button */
-}
-
-#online-data-btn {
-    margin-left: 20px; /* Adjust the space between the heading and the button */
-}
-
 main {
     padding: 1rem;
 }
 
-#table-container-online {
-    overflow-x: auto;
-}
-
-#table-container-summary {
-    overflow-x: auto;
-}
-
-.left-align {
-    text-align: left;
-}
-
-.total-km {
-    color: rgb(1, 48, 68);
-    text-align: right;
-}
-
-.racer-name {
-    text-align: left;
-}
-
-.team-name {
-    color: rgb(1, 48, 68);
-    text-align: left;
-}
-
-.center-align {
-    text-align: center;
-}
-
-.table1 {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-}
-
-.table1 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-.table1 th {
-    background-color: #9bc2cd;
-    color: #000000;
-}
-
-.table1 tr:nth-child(even) {
-    background-color: #6e6e6e18;
-}
-
-.light-red {
-    background-color: #ffcccc;
-}
-
-.light-green {
-    background-color: #ccffcc;
-}
-
-.gray {
-    background-color: #e0e0e0;
-}
-
-/******/
-.table-container2 {
-    display: flex;
-    overflow: auto;
-    width: 100%;
-}
-
-.table2 {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.table2 th, .table2 td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-}
-
-.table2 th {
-    background: #f2f2f2;
-    font-weight: bold;
-}
-
-.sticky-header2 {
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    left: 0;
-    background: white;
-    z-index: 2;
-    border-right: 2px solid #000;
-}
-
-
-/******/
-
-/* Basic button styling */
-.button {
-    background-color: #025a80; /* Sets the background color to a specific shade of blue */
-    border: rgb(1, 48, 68); /* Sets the border color to a darker shade of blue */
-    color: white; /* Sets the text color to white */
-    padding: 10px 20px; /* Adds 20px padding on the top and bottom, and 45px on the left and right */
-    text-align: center; /* Centers the text within the button */
-    text-decoration: none; /* Removes any text decoration (like underlines) */
-    display: inline-block; /* Makes the element an inline-block, allowing it to have both inline and block properties */
-    font-size: 20px; /* Sets the font size to 20 pixels */
-    margin: 1px 1px; /* Adds a margin of 4px on the top and bottom, and 2px on the left and right */
-    cursor: pointer; /* Changes the cursor to a pointer when hovered over */
-    transition: background-color 0.3s ease; /* Adds a smooth transition effect for the background color change over 0.3 seconds */
-    border-radius: 12px; /* Rounds the corners of the button with a 12px radius */
-}
-
-  
-  /* Change color on hover */
-  .button:hover {
-    background-color: #50888c; /* Darker green */
-  }
-  
-  /* Change color on click  */
-  .button:active {
-    background-color: #025a80; /* Even darker green */
-  }
-
 nav ul {
     list-style: none;
     padding-left: 5px;
-
     list-style-type: none;
     margin: 0 0 0 0;
-
     overflow: hidden;
     background-color: #025a80; /* Sets the background color to a specific shade of blue */
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
-
     display: flex;
     align-items: center;
 }
@@ -213,7 +56,6 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 1rem;
-
     float: left;
 }
 
@@ -223,9 +65,7 @@ nav ul li a {
     border: rgb(1, 48, 68); /* Sets the border color to a darker shade of blue */
     color: white; /* Sets the text color to white */
     font-size: 24px;
-
     text-decoration: none;
-
     display: block;
     text-align: center;
     padding: 14px 16px;
@@ -281,8 +121,6 @@ main {
     padding: 1rem;
     padding-top: 180px; /* Add padding to account for the fixed header */
 }
-
-
 
 /* Responsive Design */
 @media (max-width: 768px) {

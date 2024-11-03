@@ -1,0 +1,96 @@
+#table-container-online {
+    overflow-x: auto;
+}
+
+#table-container-summary {
+    overflow-x: auto;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.total-km {
+    color: rgb(1, 48, 68);
+    text-align: right;
+}
+
+.racer-name {
+    text-align: left;
+}
+
+.team-name {
+    color: rgb(1, 48, 68);
+    text-align: left;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.table1 {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.table1 th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.table1 th {
+    background-color: #9bc2cd;
+    color: #000000;
+}
+
+.table1 tr:nth-child(even) {
+    background-color: #6e6e6e18;
+}
+
+.light-red {
+    background-color: #ffcccc;
+}
+
+.light-green {
+    background-color: #ccffcc;
+}
+
+.gray {
+    background-color: #e0e0e0;
+}
+
+/******/
+.table-container2 {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+}
+
+.table2 {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table2 th, .table2 td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    
+}
+
+.table2 th {
+    background: #f2f2f2;
+    font-weight: bold;
+}
+
+.sticky-header2 {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    left: 0;
+    
+    background-color: #9bc2cd;
+    z-index: 2;
+    border-right: 2px solid #000;
+}
