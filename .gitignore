@@ -7,3 +7,23 @@
 
 **test*.js
 **todo.js
+
+Update Details	05.11.2024 20:57:01	row-add		*|300|AAAA|2a02:2b88:1:4::16	 
+Update Details	05.11.2024 20:57:01	row-add		|300|AAAA|2a02:2b88:1:4::16	 
+Update Details	05.11.2024 20:57:01	row-delete	*|300|AAAA|2a02:2b88:1:4::16		 
+Update Details	05.11.2024 20:57:01	row-delete	|300|AAAA|2a02:2b88:1:4::16		 
+Update Details	05.11.2024 20:57:01	row-add		*|300|A|46.28.105.2	 
+Update Details	05.11.2024 20:57:01	row-add		|300|A|46.28.105.2	 
+Update Details	05.11.2024 20:57:01	row-delete	*|300|A|46.28.105.2		 
+Update Details	05.11.2024 20:57:01	row-delete	|300|A|46.28.105.2		 
+Update Details	05.11.2024 20:57:01	row-delete	|300|A|185.199.111.153		 
+Update Details	05.11.2024 20:57:01	row-delete	|300|A|185.199.110.153		 
+Update Details	05.11.2024 20:57:01	row-delete	|300|A|185.199.110.153		 
+Update Details	05.11.2024 20:57:01	row-delete	|300|A|185.199.109.153		 
+Update Details	05.11.2024 20:57:01	row-delete	|300|A|185.199.108.153		 
+Update Details	05.11.2024 20:51:44	row-add		w|300|CNAME|hanka1.github.io	 
+Update Details	02.11.2024 08:18:11	row-add		|300|A|185.199.111.153	 
+Update Details	02.11.2024 08:17:51	row-add		|300|A|185.199.110.153	 
+Update Details	02.11.2024 08:17:51	row-add		|300|A|185.199.110.153	 
+Update Details	02.11.2024 08:17:32	row-add		|300|A|185.199.109.153	 
+Update Details	02.11.2024 08:17:08	row-add		|300|A|185.199.108.153
