@@ -4,6 +4,25 @@ const intro_info = {
 
         JAK RESIT PROPOZICE 12, 24 a MARATON ? - uvodni info strana a odkaz na dalsi 3 stranky??<br><br>
 
+        Závod se koná vždy v září, tento rok to bude 21.9-22.9.
+
+        Jedná se o jedinečný závod v ČR na 24h, který se jede na Labi v Neratovicích. 
+        Závodu se mohou zúčastnit jak jednotlivci, dvojice, trojice, tak i týmy, ať už začátečníků nebo v rámci teambuildingu.
+        Závod se jede přes den i noc a záleží na každém, kdy a jak dlouho odpočívá. 
+        Důležitý je počet najetých km v době závěrečného gongu. Někomu však jde
+         třeba jen i o zážitek a zkusit si vyzkoušet něco nového a trochu extrémního.<br><br>
+        Závod se snažíme každý rok vylepšovat. Myslím, že účastníci si již 
+        oblíbili naši občerstvovací stanici, která je k dispozici celých 24h, včetně teplých jídel a je vcelku vyhlášená.
+        Loňský rok jsme díky naši člence poprvé vyzkoušeli trackery a
+         v tom bychom letos rádi udělali ještě nějaká vylepšení, aby 
+         závodníci mohli své průběžné výsledky sledovat online na obra
+         zovce v  zázemí. Také došlo k vytvoření webových stránek, kde
+          již teď je možná online registrace a dají se zde najít i 
+          veškeré informace a fotky z minulých ročníků.
+        Novinkou letošního ročníku budou i dva podzávody a to závod
+         na 12h pro jednotlivce a „maraton na vodě“, což bude cca 45km. 
+         Tak se otevírají dvěře i dalším závodníkům, kteří si netroufnou rovnou na 24h.<br><br>
+
         Závod na 24h je ve 4 kategoriích. Každá posádka (sólo, dvojice, trojice, tým). 
         Kategorie "tým" je pro firmy nebo týmy kteří chtějí být ve větší partě. 
         “Tým” je možné složit z 1 až 5 členů. Je zajištěné místo ve vnitřních prostorách pro spánek a uložení věcí. 
