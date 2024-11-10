@@ -1,3 +1,7 @@
+main {
+    padding: 1rem;
+}
+
 #table-container-online {
     overflow-x: auto;
 }
@@ -93,4 +97,8 @@
     background-color: #9bc2cd;
     z-index: 2;
     border-right: 2px solid #000;
+}
+
+main {
+    padding: 1rem;
 }

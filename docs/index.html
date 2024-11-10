@@ -12,14 +12,25 @@
         <h1 id="header-race-name"></h1>
         <h2 id="header-race-date"></h2>
         <nav>
-            <ul>
+            <ul class="menu">
+                <li><a href="#" data-content="Info" data-target="info" data-i18n="nav.info">Info Nera24</a>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="Info 1" data-target="info_1" data-i18n="nav.info1" >Info 1</a></li>
+                        <li><a href="#" data-content="Info 2" data-target="info_2" data-i18n="nav.info2" >Info 2</a></li>
+                        <li><a href="#" data-content="Info 3" data-target="info_3" data-i18n="nav.info3" >Info 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-content="Summary" data-target="summary" data-i18n="nav.summary">Summary</a>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="Summary 1" data-target="summary_1" data-i18n="nav.summary1" >Summary 1</a></li>
+                        <li><a href="#" data-content="Summary 2" data-target="summary_2" data-i18n="nav.summary2" >Summary 2</a></li>
+                        <li><a href="#" data-content="Summary 3" data-target="summary_3" data-i18n="nav.summary3" >Summary 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-content="Content for Main Item 3" data-target="online" data-i18n="nav.online">Online</a></li>
+                <li><a href="#" data-content="Content for Main Item 4" data-target="history" data-i18n="nav.history">History</a></li>
+                <li><a href="#" data-content="Content for Main Item 4" data-target="contact" data-i18n="nav.contact">Contact</a></li>
 
-                <li><a href="#info" class="nav-link" data-target="info" data-i18n="nav.info">Info</a></li>
-                <li><a href="#online" class="nav-link" data-target="online" data-i18n="nav.online">Online</a></li>
-                <li><a href="#summary" class="nav-link" data-target="summary" data-i18n="nav.summary">Summary</a></li>
-                <li><a href="#history" class="nav-link" data-target="history" data-i18n="nav.history">History</a></li>
-                <li><a href="#contact" class="nav-link" data-target="contact" data-i18n="nav.contact">Contact</a></li>
-            
                 <li class="language-switcher">
                     <button onclick="changeLanguage('cz')">
                         <img src="./public/img/cz-flag.png" alt="CZ" class="flag-icon"> CZ
@@ -28,41 +39,23 @@
                         <img src="./public/img/en-flag.png" alt="EN" class="flag-icon"> EN
                     </button>
                 </li>
+
             </ul>
         </nav>
     </header>
     <main>
-        <section id="info" class="content-section">
-            <h2 data-i18n="info.title"></h2>
-            <p data-i18n="info.content">Info about Race!</p>
-        </section>
-        <section id="online" class="content-section" style="display: none;">
-            <div id="table-container-online" class="table1">
-                <!-- Table will be dynamically generated here -->
-            </div>
-        </section>
-        <section id="summary" class="content-section" style="display: none;">
-            <h2 data-i18n="summary.title"></h2>
-            <div id="table-container-summary" class="table-container2">
-                <!-- Table will be dynamically generated here -->
-            </div>
-        </section>
-        <section id="history" class="content-section" style="display: none;">
-            <h2 data-i18n="history.title"></h2>
-            <p data-i18n="history.content">History info</p>
-        </section>
-        <section id="contact" class="content-section" style="display: none;">
-            <h2 data-i18n="contact.title"></h2>
-            <p data-i18n="contact.content"></p>
-        </section>
-        <script src="./public/src/config.js"></script>
-        <script src="./public/data/intro_info.js"></script>
-        <script src="./public/data/history_info.js"></script>
-        <script src="./public/data/result_race_data.js"></script>
-        <script src="./public/src/logic/app_nav_bar.js"></script>
-        <script src="./public/src/logic/app.js"></script>
-        <script src="./public/src/logic/tables.js"></script>
-        <script src="https://unpkg.com/i18next@latest/i18next.min.js"></script>
+    <div id="content" class="content"></div>
+    <div id="table-container-online" class="table1"></div>
+    <div id="table-container-summary" class="table-container2">
     </main>
+    <script src="./public/src/config.js"></script>
+    <script src="./public/data/intro_info.js"></script>
+    <script src="./public/data/history_info.js"></script>
+    <script src="./public/data/result_race_data.js"></script>
+    <script src="./public/src/logic/app_nav_bar.js"></script>
+    <script src="./public/src/logic/app_nav_bar2.js"></script>
+    <script src="./public/src/logic/app.js"></script>
+    <script src="./public/src/logic/tables.js"></script>
+    <script src="https://unpkg.com/i18next@latest/i18next.min.js"></script>
 </body>
 </html>

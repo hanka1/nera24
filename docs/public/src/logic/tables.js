@@ -1,11 +1,14 @@
 
 function createSummaryTable2() {
 
+    deleteOldContent() 
+
     const race = result_race_data.teams
     const tableContainer = document.getElementById('table-container-summary');
 
     // Create a table element
     const table = document.createElement('table');
+    table.id = 'last_table'
     table.className = 'table2';
     table.style.borderCollapse = 'collapse';
 
@@ -51,6 +54,9 @@ function createSummaryTable2() {
 
 async function createOnlineTable() {
     try {
+
+        deleteOldContent() 
+
         let lang = i18next.language
 
         const racers = result_race_data.last_20
@@ -124,6 +130,9 @@ async function createOnlineTable() {
 
 async function createSummaryTable() {
     try {
+
+        deleteOldContent() 
+        
         //updateLapLengths()
 
         const race = result_race_data.teams
@@ -202,10 +211,7 @@ async function createSummaryTable() {
 async function refreshSummaryTable() {
     try {
         //to remove the old table if it exists
-        const oldTable = document.getElementById('last_table')
-        if (oldTable) {
-            oldTable.remove()
-        }
+        deleteOldContent()
         //console.log("refreshed")
         await createSummaryTable()
 
@@ -218,10 +224,7 @@ async function refreshSummaryTable() {
 async function refreshOnlineTable() {
     try {
         //to remove the old table if it exists
-        const oldTable = document.getElementById('last_table')
-        if (oldTable) {
-            oldTable.remove()
-        }
+        deleteOldContent()
         //console.log("refreshed")
         await createOnlineTable()
 
@@ -229,6 +232,25 @@ async function refreshOnlineTable() {
         console.error('Error refreshing table:', error)
     }
 }
+
+//delete old contentd
+function deleteOldContent() {
+    try {
+
+        //to remove the old table if it exists
+        const oldTable = document.getElementById('last_table')
+        if (oldTable) {
+            oldTable.remove()
+        }
+
+
+    } catch (error) {
+        console.error('Error refreshing table:', error)
+    }
+}
+
+
+
 
 // Set interval to summary table every 5 minutes
 //setInterval(refreshSummaryTable, 300000); // 300000 milliseconds = 5 minutes

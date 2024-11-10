@@ -6,17 +6,16 @@ body {
 }
 
 header {
-
+    position: sticky;
+    top: 0;
     background-color: #9bc2cd;
     color: #022b34ff;
+    z-index: 1000;
     padding: 0;
     text-align: left;
     justify-content: center;
-
-    position: fixed; 
     width: 100%; /* Ensure the header spans the full width */
     z-index: 1000; /* Ensure it stays on top of other content */
-
 }
 
 header h1 {
@@ -39,49 +38,106 @@ main {
     padding: 1rem;
 }
 
-nav ul {
-    list-style: none;
+/* Sticky navbar */
+nav {
     padding-left: 5px;
-    list-style-type: none;
-    margin: 0 0 0 0;
-    overflow: hidden;
     background-color: #025a80; /* Sets the background color to a specific shade of blue */
-    position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
+    top: 60px; /* Adjust based on the height of the header */
 }
 
-nav ul li {
+/* The main navbar menu */
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    padding-left: 0px;
+    margin: 0;
+    display: flex;
+    align-items: center;}
+
+/* Each main navbar menu item */
+ul.menu > li {
+    position: relative;
     display: inline;
     margin-right: 1rem;
     float: left;
 }
 
-nav ul li a {
-
+/* Styling for the main navbar menu items */
+ul.menu > li > a {
     background-color: #025a80; /* Sets the background color to a specific shade of blue */
     border: rgb(1, 48, 68); /* Sets the border color to a darker shade of blue */
     color: white; /* Sets the text color to white */
     font-size: 24px;
     text-decoration: none;
     display: block;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 14px 14px;
     text-decoration: none;
+    text-align: center;
 }
 
-/* Change color on hover */
-nav ul li a:hover {
+/* Submenu items */
+ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: #025a80;
+}
+
+ul.submenu li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    background: #025a80;  /* Dark gray */
+}
+
+/* Show submenu on hover or focus */
+ul.menu > li:hover ul.submenu, ul.menu > li:focus-within ul.submenu {
+    display: block;
     background-color: #50888c; /* Darker green */
 }
 
-/* Add styles for the active menu item */
-nav ul li a.active {
+/* Hover and focus state for main menu items */
+ul.menu > li > a:hover, ul.menu > li > a:focus {
+    background-color: #50888c; ;  /* Lighter green */
+}
+
+/* Active state for clicked menu items */
+ul.menu li.active > a {
+    background-color: #50888c;   /* More lighter gray */
+    color: #000;
+}
+
+/* Active state for clicked main menu items */
+li.active > a {
     background-color: #50888c; /* Darker green */
     font-weight: bold;
 }
+
+/* Hover and focus state for submenu items */
+ul.submenu li a:hover, ul.submenu li a:focus {
+    background-color: #50888c; ;  /* Lighter gray */
+}
+
+/* Active state for clicked submenu items */
+ul.submenu li.active > a {
+    background-color: #50888c; ;  /* More lighter gray */
+    color: #000;
+}
+
+/* Styling for content display */
+.content {
+    padding: 20px;
+    background: #eee;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
 
 nav ul li a, .language-switcher button {
     background-color: #025a80;

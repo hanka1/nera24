@@ -5,57 +5,60 @@ document.addEventListener('DOMContentLoaded', () => {
             en: {
                 translation: {
                     "header": { "title": "Nera24" },
-
-                    "nav": { "info": "Info", "online": "Online", "summary": "Summary", "history" : "History", "contact": "Contact" },
-                    "info": { "title": "Info about race", "content": intro_info_en },
-                    "history": { "title": "Race history", "content": history_info_en },
-                    "summary": { "title": "Race summary and statistics" },
-                    "contact": { "title": "Contact", "content": "TODO add contact info." }
+                    "nav": {
+                        "info": "Info Nera 24",
+                        "info1": "Info 1",
+                        "info2": "Info 2",
+                        "info3": "Info 3",
+                        "summary": "Summary",
+                        "summary1": "Summary 1",
+                        "summary2": "Summary 2",
+                        "summary3": "Summary 3",
+                        "online": "Online",
+                        "history": "History",
+                        "contact": "Contact"
+                    }
                 }
             },
             cz: {
                 translation: {
                     "header": { "title": "Nera24" },
-                    "nav": { "info": "Info", "online": "Online", "summary": "Souhrn", "history" : "Historie", "contact": "Kontakt" },
-
-                    "info": { "title": "Info o  závodě", "content": intro_info_cz },
-                    "history": { "title": "Historie závodu", "content": history_info_cz },
-                    "summary": { "title": "Souhrnné výsledky a statistiky" },
-                    "contact": { "title": "Kontakt", "content": "TODO pridat kontaktni info." }
+                    "nav": {
+                        "info": "Info Nera 24",
+                        "info1": "Info 1",
+                        "info2": "Info 2",
+                        "info3": "Info 3",
+                        "summary": "Souhrn",
+                        "summary1": "Souhrn 1",
+                        "summary2": "Souhrn 2",
+                        "summary3": "Souhrn 3",
+                        "online": "Online",
+                        "history": "Historie",
+                        "contact": "Kontakt"
+                    }
                 }
             }
         }
+
     }, function(err, t) {
         updateContent();
+
     });
 
     function updateContent() {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             el.innerHTML = i18next.t(el.getAttribute('data-i18n'))
+            
         })
+        showContent(lastActiveElement);
+        
     }
 
     window.changeLanguage = function (lng) {
         i18next.changeLanguage(lng, (err, t) => {
             if (err) return console.error(err);
+            console.log(lng)
             updateContent()
-
-            // Check if the "online" section is active
-            const onlineSection = document.getElementById('online');
-            if (onlineSection && onlineSection.style.display !== 'none') {
-                // Update the online table
-                document.getElementById('table-container-online').innerHTML = ''
-                createOnlineTable();
-            }
-
-            /*
-            const summarySection = document.getElementById('summary');
-            if (summarySection && summarySection.style.display !== 'none') {
-                // Update the summary table
-                document.getElementById('table-container-summary').innerHTML = ''
-                createSummaryTable2();
-            }
-            */
         })
     }
 })
