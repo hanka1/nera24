@@ -9,27 +9,31 @@
 </head>
 <body>
     <header>
-        <h1 id="header-race-name"></h1>
-        <h2 id="header-race-date"></h2>
+
+    <header>
+        <div class="header-wrapper">
+            <div class="header-content">
+                <h1 id="header-race-name"></h1>
+                <h2 id="header-race-date"></h2>
+            </div>
+            <div class="header-buttons">
+                <button id="online-data-btn" class="button">ONLINE</button>
+            </div>
+        </div>
+        
         <nav>
             <ul class="menu">
-                <li><a href="#" data-content="Info" data-target="info" data-i18n="nav.info">Info Nera24</a>
+                <li><a href="#" data-content="info" data-target="info" data-i18n="nav.info">Info Nera24</a></li>
+                <li><a href="#" data-content="proposition" data-target="proposition" data-i18n="nav.proposition">Proposition</a></li>
+                <li><a href="#" data-content="registration" data-target="registration" data-i18n="nav.registration">Registration</a></li>
+                <li><a href="#" data-content="history" data-target="history" data-i18n="nav.history">History</a>
                     <ul class="submenu">
-                        <li><a href="#" data-content="Info 1" data-target="info_1" data-i18n="nav.info1" >Info 1</a></li>
-                        <li><a href="#" data-content="Info 2" data-target="info_2" data-i18n="nav.info2" >Info 2</a></li>
-                        <li><a href="#" data-content="Info 3" data-target="info_3" data-i18n="nav.info3" >Info 3</a></li>
+                        <li><a href="#" data-content="about_race" data-target="about_race" data-i18n="nav.about_race" >About race</a></li>
+                        <li><a href="#" data-content="results" data-target="results" data-i18n="nav.results" >Resuts</a></li>
+                        <li><a href="#" data-content="photos" data-target="photos" data-i18n="nav.photos" >Photos</a></li>
                     </ul>
                 </li>
-                <li><a href="#" data-content="Summary" data-target="summary" data-i18n="nav.summary">Summary</a>
-                    <ul class="submenu">
-                        <li><a href="#" data-content="Summary 1" data-target="summary_1" data-i18n="nav.summary1" >Summary 1</a></li>
-                        <li><a href="#" data-content="Summary 2" data-target="summary_2" data-i18n="nav.summary2" >Summary 2</a></li>
-                        <li><a href="#" data-content="Summary 3" data-target="summary_3" data-i18n="nav.summary3" >Summary 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" data-content="Content for Main Item 3" data-target="online" data-i18n="nav.online">Online</a></li>
-                <li><a href="#" data-content="Content for Main Item 4" data-target="history" data-i18n="nav.history">History</a></li>
-                <li><a href="#" data-content="Content for Main Item 4" data-target="contact" data-i18n="nav.contact">Contact</a></li>
+                <li><a href="#" data-content="content" data-target="contact" data-i18n="nav.contact">Contact</a></li>
 
                 <li class="language-switcher">
                     <button onclick="changeLanguage('cz')">
@@ -44,13 +48,16 @@
         </nav>
     </header>
     <main>
-    <div id="content" class="content"></div>
-    <div id="table-container-online" class="table1"></div>
-    <div id="table-container-summary" class="table-container2">
+        <div id="content" class="content"></div>
+        <div id="table-container-online" class="table1"></div>
+        <div id="table-container-summary" class="table-container2">
     </main>
     <script src="./public/src/config.js"></script>
     <script src="./public/data/intro_info.js"></script>
+    <script src="./public/data/propositions.js"></script>
+    <script src="./public/data/registration.js"></script>
     <script src="./public/data/history_info.js"></script>
+    <script src="./public/data/contacts.js"></script>
     <script src="./public/data/result_race_data.js"></script>
     <script src="./public/src/logic/app_nav_bar.js"></script>
     <script src="./public/src/logic/app_nav_bar2.js"></script>

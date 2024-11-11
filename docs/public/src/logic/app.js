@@ -6,16 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 translation: {
                     "header": { "title": "Nera24" },
                     "nav": {
-                        "info": "Info Nera 24",
-                        "info1": "Info 1",
-                        "info2": "Info 2",
-                        "info3": "Info 3",
-                        "summary": "Summary",
-                        "summary1": "Summary 1",
-                        "summary2": "Summary 2",
-                        "summary3": "Summary 3",
-                        "online": "Online",
+                        "info": "Info",
+                        "proposition": "Proposition",
+                        "registration": "Registration",
                         "history": "History",
+                        "about_race": "About Race",
+                        "results": "Results",
+                        "photos": "Photos",
                         "contact": "Contact"
                     }
                 }
@@ -24,16 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 translation: {
                     "header": { "title": "Nera24" },
                     "nav": {
-                        "info": "Info Nera 24",
-                        "info1": "Info 1",
-                        "info2": "Info 2",
-                        "info3": "Info 3",
-                        "summary": "Souhrn",
-                        "summary1": "Souhrn 1",
-                        "summary2": "Souhrn 2",
-                        "summary3": "Souhrn 3",
-                        "online": "Online",
+                        "info": "Info",
+                        "proposition": "Propozice",
+                        "registration": "Registrace",
                         "history": "Historie",
+                        "about_race": "O Závodě",
+                        "results": "Výsledky",
+                        "photos": "Fotky",
                         "contact": "Kontakt"
                     }
                 }

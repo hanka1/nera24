@@ -12,6 +12,17 @@ function removeActiveClass() {
     });
 }
 
+/*document.querySelectorAll('a[data-content]').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        const content = this.getAttribute('data-content');
+        showContent(content);
+    });
+});
+
+function showContent(content) {
+    let contentToShow = '';*/
+
 // Function to show content in the container
 function showContent(content) {
 
@@ -27,38 +38,29 @@ function showContent(content) {
         case 'nav.info':
             contentToShow = intro_info[lang]
             break;
-        case 'nav.summary':
-            contentToShow = "summary";
+        case 'nav.proposition':
+            contentToShow = proposition_info[lang]
             break;
-        case 'nav.online':
-            contentToShow = createOnlineTable() ;
+        case 'nav.registration':
+            contentToShow = registration_info[lang]
             break;
         case 'nav.history':
-            contentToShow = '<p>This is some content for Main Item 4.</p>';
+            contentToShow = history_info[lang]
+            break;
+        case 'nav.about_race':
+            contentToShow = about_race[lang];
+            break;
+        case 'nav.results':
+            contentToShow = results_info[lang];
+            break;
+        case 'nav.photos':
+            contentToShow = photos[lang];
             break;
         case 'nav.contact':
-                contentToShow = '<p>contact</p>';
-                break;
-        case 'nav.info1':
-            contentToShow = '<p>This is some Info 1.</p>';
-            break;
-        case 'nav.info2':
-            contentToShow = '<table border="1"><tr><th>Header 1</th><th>Header 2</th></tr><tr><td>Data 1</td><td>Data 2</td></tr></table>';
-            break;
-        case 'nav.info3':
-            contentToShow = '<p>Info 3 go here.</p>';
-            break;
-        case 'nav.summary1':
-            contentToShow = createSummaryTable(lang);
-            break;
-        case 'nav.summary2':
-            contentToShow = createSummaryTable2(lang);
-            break;
-        case 'nav.summary3':
-            contentToShow = '<p>Summary 3 go here.</p>';
+            contentToShow = contact[lang];
             break;
         default:
-            contentToShow = '<p>Default content goes here.</p>';
+            contentToShow = intro_info[lang]; // Handle any default or undefined cases
             break;
     }
     contentContainer.innerHTML = contentToShow;
