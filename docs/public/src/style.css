@@ -2,14 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: rgb(213, 211, 211);
 }
 
 header {
     position: sticky;
     top: 0;
-    background-color: #9bc2cd;
-    color: #022b34ff;
+    background-color: rgb(195, 224, 242);
+    color: rgb(28, 54, 98);
     z-index: 1000;
     padding: 0;
    
@@ -55,9 +55,9 @@ header h2 {
 
 /* Basic button styling */
 .button {
-    background-color: #1da804; /* Green background */
-    border: 2px solid #0f7400; /* Dark green border with 2px width */
-    color: white; /* White text */
+    background-color: rgb(98, 171, 218); /* Green background */
+    border: 2px solid rgb(13, 119, 189); /* Dark green border with 2px width */
+    color: rgb(28, 54, 98); /* White text */
     padding: 25px 45px;
     text-align: center;
     text-decoration: none;
@@ -71,12 +71,12 @@ header h2 {
 
 /* Change color on hover */
 .button:hover {
-background-color: #50888c; /* Darker green */
+background-color: rgb(13, 119, 189); /* Darker green */
 }
 
 /* Change color on click  */
 .button:active {
-background-color: #025a80; /* Even darker green */
+background-color: rgb(13, 119, 189); /* Even darker green */
 }
 
 main {
@@ -86,7 +86,7 @@ main {
 /* Sticky navbar */
 nav {
     padding-left: 5px;
-    background-color: #025a80; /* Sets the background color to a specific shade of blue */
+    background-color: rgb(1, 48, 68);/* Sets the background color to a specific shade of blue */
     position: sticky;
     top: 60px; /* Adjust based on the height of the header */
 }
@@ -110,9 +110,9 @@ ul.menu > li {
 
 /* Styling for the main navbar menu items */
 ul.menu > li > a {
-    background-color: #025a80; /* Sets the background color to a specific shade of blue */
+    background-color: rgb(1, 48, 68);; /* Sets the background color to a specific shade of blue */
     border: rgb(1, 48, 68); /* Sets the border color to a darker shade of blue */
-    color: white; /* Sets the text color to white */
+    color: rgb(213, 211, 211); /* Sets the text color to white */
     font-size: 24px;
     text-decoration: none;
     display: block;
@@ -130,65 +130,65 @@ ul.submenu {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background: #025a80;
+    background: rgb(1, 48, 68);
 }
 
 ul.submenu li a {
     padding: 10px 15px;
     text-decoration: none;
-    color: #fff;
+    color: rgb(213, 211, 211);
     display: block;
-    background: #025a80;  /* Dark gray */
+    background: rgb(1, 48, 68);  /* Dark gray */
 }
 
 /* Show submenu on hover or focus */
 ul.menu > li:hover ul.submenu, ul.menu > li:focus-within ul.submenu {
     display: block;
-    background-color: #50888c; /* Darker green */
+    background-color: rgb(13, 119, 189); /* Darker green */
 }
 
 /* Hover and focus state for main menu items */
 ul.menu > li > a:hover, ul.menu > li > a:focus {
-    background-color: #50888c; ;  /* Lighter green */
+    background-color: rgb(13, 119, 189);  /* Lighter green */
 }
 
 /* Active state for clicked menu items */
 ul.menu li.active > a {
-    background-color: #50888c;   /* More lighter gray */
-    color: #000;
+    background-color: rgb(13, 119, 189);   /* More lighter gray */
+    color: rgb(1, 48, 68);
 }
 
 /* Active state for clicked main menu items */
 li.active > a {
-    background-color: #50888c; /* Darker green */
+    background-color: rgb(13, 119, 189); /* Darker green */
     font-weight: bold;
 }
 
 /* Hover and focus state for submenu items */
 ul.submenu li a:hover, ul.submenu li a:focus {
-    background-color: #50888c; ;  /* Lighter gray */
+    background-color: rgb(13, 119, 189); ;  /* Lighter gray */
 }
 
 /* Active state for clicked submenu items */
 ul.submenu li.active > a {
-    background-color: #50888c; ;  /* More lighter gray */
-    color: #000;
+    background-color: rgb(13, 119, 189);  /* More lighter gray */
+    color: rgb(1, 48, 68);
 }
 
 /* Styling for content display */
 .content {
     padding: 20px;
-    background: #eee;
+    background: rgb(213, 211, 211);
     margin-top: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(175, 175, 175);
 }
 
 
 nav ul li a, .language-switcher button {
-    background-color: #025a80;
+    background-color: rgb(1, 48, 68);
     
     border: none;
-    color: white;
+    color: rgb(213, 211, 211);
     text-decoration: none;
     display: block;
     text-align: center;
@@ -197,11 +197,11 @@ nav ul li a, .language-switcher button {
 }
 
 nav ul li a:hover, .language-switcher button:hover {
-    background-color: #50888c;
+    background-color: rgb(13, 119, 189);
 }
 
 nav ul li a:active, .language-switcher button:active {
-    background-color: #50888c;
+    background-color: rgb(13, 119, 189);
 }
 
 .language-switcher button {

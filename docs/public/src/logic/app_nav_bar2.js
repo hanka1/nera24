@@ -29,6 +29,7 @@ function showContent(content) {
     deleteOldContent()
     
     const contentContainer = document.getElementById('content')
+ 
     let lang = i18next.language
 
     // Define your content based on the data-content attribute
@@ -52,12 +53,18 @@ function showContent(content) {
             break;
         case 'nav.results':
             contentToShow = results_info[lang];
+            createSummaryTable2()
             break;
         case 'nav.photos':
             contentToShow = photos[lang];
             break;
         case 'nav.contact':
             contentToShow = contact[lang];
+            break;
+        case 'online-data-btn':
+            contentToShow = online_tabel_text[lang];
+            createOnlineTable();
+            console.log('switch');
             break;
         default:
             contentToShow = intro_info[lang]; // Handle any default or undefined cases

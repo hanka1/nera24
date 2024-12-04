@@ -45,12 +45,12 @@ main {
 }
 
 .table1 th {
-    background-color: #9bc2cd;
+    background-color: rgb(195, 224, 242);
     color: #000000;
 }
 
 .table1 tr:nth-child(even) {
-    background-color: #6e6e6e18;
+    background-color: rgb(98, 171, 218);
 }
 
 .light-red {
@@ -62,7 +62,7 @@ main {
 }
 
 .gray {
-    background-color: #e0e0e0;
+    background-color: rgb(175, 175, 175);
 }
 
 /******/
@@ -94,7 +94,7 @@ main {
     position: sticky;
     left: 0;
     
-    background-color: #9bc2cd;
+    background-color: rgb(195, 224, 242);
     z-index: 2;
     border-right: 2px solid #000;
 }

@@ -40,12 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateContent() {
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            el.innerHTML = i18next.t(el.getAttribute('data-i18n'))
-            
-        })
-        showContent(lastActiveElement);
-        
+        if (document.getElementById('last_table')){
+            showContent('online-data-btn');
+        } else {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                el.innerHTML = i18next.t(el.getAttribute('data-i18n'))
+                
+            })
+            showContent(lastActiveElement);
+        }
     }
 
     window.changeLanguage = function (lng) {
@@ -60,12 +63,31 @@ document.addEventListener('DOMContentLoaded', () => {
 //config date to header
 document.addEventListener('DOMContentLoaded', () => { 
     document.getElementById('header-race-date').textContent = config.RACE_DATE; 
-});
+})
 
 //config date to header
 document.addEventListener('DOMContentLoaded', () => { 
     document.getElementById('header-race-name').textContent = config.RACE_NAME; 
-});
+})
 
+//respond to btn clic
+document.getElementById('online-data-btn').addEventListener('click', async () => {
+    try {
+
+        updateContent('online-data-btn')
+
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                el.innerHTML = i18next.t(el.getAttribute('data-i18n'))
+                
+            })
+            showContent('online-data-btn');
+            
+        }
+
+    } catch (err) {
+        console.log(err)
+    }
+})
 
 

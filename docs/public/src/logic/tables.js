@@ -1,3 +1,11 @@
+const online_tabel_text = {
+    cz: `
+        <b>Online sledování výsledků</b>
+        `,
+    en: `        
+        <b>online results</b>
+        `
+} 
 
 function createSummaryTable2() {
 
@@ -237,6 +245,8 @@ async function refreshOnlineTable() {
 function deleteOldContent() {
     try {
 
+
+        //const content = document.getElementById('last_table')
         //to remove the old table if it exists
         const oldTable = document.getElementById('last_table')
         if (oldTable) {
