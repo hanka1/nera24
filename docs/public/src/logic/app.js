@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         "about_race": "About Race",
                         "results": "Results",
                         "photos": "Photos",
+                        "online": "Online",
+                        "online24": "Online 24",
+                        "online12": "Online 12",
+                        "onlineM": "Online marathon",
                         "contact": "Contact"
                     }
                 }
@@ -28,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         "about_race": "O Závodě",
                         "results": "Výsledky",
                         "photos": "Fotky",
+                        "online": "Online",
+                        "online24": "Online 24",
+                        "online12": "Online 12",
+                        "onlineM": "Online maraton",
                         "contact": "Kontakt"
                     }
                 }

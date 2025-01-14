@@ -58,6 +58,18 @@ function showContent(content) {
         case 'nav.photos':
             contentToShow = photos[lang];
             break;
+        case 'nav.online':
+            contentToShow = online[lang];
+            break;
+        case 'nav.online24':
+            contentToShow = online24[lang];
+            break;
+        case 'nav.online12':
+            contentToShow = online12[lang];
+            break;
+        case 'nav.onlineM':
+            contentToShow = onlineM[lang];
+            break;
         case 'nav.contact':
             contentToShow = contact[lang];
             break;
