@@ -22,7 +22,7 @@ export default {
     }
 }
 
-// Function to create array in format as xls_data_zone_events, to add yone mane instead of number, to get tracker insted of obj_id
+//to create array in format as xls_data_zone_events, to add yone mane instead of number, to get tracker insted of obj_id
 async function getProcessedZoneEvents(uploaded_zone_events, racers_list) {
     try {
 
@@ -43,7 +43,7 @@ async function getProcessedZoneEvents(uploaded_zone_events, racers_list) {
     }
 }
 
-// Function to fetch and parse XML response
+//to fetch and parse XML response
 function getTrackerId(idobj, racers_list) {
     try {
 
@@ -61,11 +61,11 @@ function getTrackerId(idobj, racers_list) {
     }
 }
 
-// Function to fetch and parse XML response
+//to fetch and parse XML response
 async function fetchAndParseXML() {
     try {
 
-        // Fetch the XML response
+        //Fetch the XML response
         const response = await fetch(config.ONI_URL, {
             method: 'POST',
             headers: config.ONI_HEADERS,
@@ -73,7 +73,7 @@ async function fetchAndParseXML() {
         })
         const responseBody = await response.text()
 
-        // Parse the XML response
+        //Parse the XML response
         const parser = new xml2js.Parser({ explicitArray: false })
         const result_arr = []
         parser.parseString(responseBody, (err, result) => {

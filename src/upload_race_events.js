@@ -163,7 +163,6 @@ function loadTrackerMissingData(){
         array.forEach(record => {
             //console.log(record.color)
             //console.log(typeof(record.color))
-            //let color = (record.color == "green" || record.color == ("red")) ? record.color : "grey"
             missing_laps_array.push({
                 racer_name: record.name ? record.name : "",
                 tracker_id: record.tracker_id ? record.tracker_id :  "",
@@ -189,13 +188,13 @@ function calculateTimeDifference(start_time, finish_time) {
         let start = new Date(start_time)
         let end = new Date(finish_time)
     
-        // to calculate the difference in milliseconds
+        //to calculate the difference in milliseconds
         let differenceInMs = end - start
     
-        // milliseconds to minutes
+        //milliseconds to minutes
         let differenceInMinutes = differenceInMs / (1000 * 60)
     
-        // hours and remaining minutes
+        //hours and remaining minutes
         let hours = Math.floor(differenceInMinutes / 60)
         let minutes = differenceInMinutes % 60;
         minutes = Math.round(minutes)

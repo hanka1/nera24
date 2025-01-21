@@ -33,7 +33,7 @@ export default {
     //upload data from excel zonehist.xls - to be replaced with direct upload from oni web page
     createJSONfromZonesEventsOniWeb: async (racers_list) => {
         try {
-            ///upload data directly from oni web page
+            //upload data directly from oni web page
             const zone_hist_json = await upload.getZoneEvents(racers_list)
             return zone_hist_json
 
@@ -81,6 +81,7 @@ function readXlsFile (path){
 }
 
 /*
+//example
 {
     'Typ události': 'Vjezd do zóny',
     'Zóna': 'start',

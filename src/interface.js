@@ -1,5 +1,5 @@
 //DATA FORMAT upload_from_json.js
-// to be send from BE to FE
+//to be send from BE to FE
 const result_race_data = [ //array of teams
   {
     team_name: '1 Martin',

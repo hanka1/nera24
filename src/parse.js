@@ -19,6 +19,7 @@ export default {
             console.log(err)
         }
     },
+    //to parse bouya zones
     parseZone: (zone_cz) => {
         try {
             if (zone_cz == "start")

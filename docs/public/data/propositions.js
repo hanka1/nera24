@@ -29,9 +29,9 @@ Pro sólo - dvojice - trojice - tým<br>
 Start - 10:00 20.9.2025 <br>
 Konec - 10:00 21.9.2025 <br>
 <br>
-Startovné zaplacené do 31.7.2025 (startovné po 31.7.2025)<br>
-sólo - 2 000 Kč (2 800 Kč)
-týmy - DOPLNIT
+Startovné zaplacené do 31.7.2025 <span style="color: rgb(13, 119, 189);">(startovné po 31.7.2025)</span><br>
+sólo: 2 000 Kč <span style="color: rgb(13, 119, 189);">(2 800 Kč)</span><br>
+týmy (každý člen týmu): 1 800 Kč <span style="color: rgb(13, 119, 189);">(2 600 Kč)</span> - TODO KONTROLA<br>
 <br><br>
 
 <b>KATEGORIE 12h </b><br><br>
@@ -40,9 +40,11 @@ Jen pro sólo a dvojice <br>
 Start - 10:00 20.9.2025 <br>
 Konec - 22:00 21.9.2025 <br>
 <br>
-Startovné zaplacené do 31.7.2025 (startovné po 31.7.2025)<br>
-1 600 Kč (2 200 Kč)
-týmy - DOPLNIT
+Startovné zaplacené do 31.7.2025 <span style="color:rgb(13, 119, 189);">(startovné po 31.7.2025)</span><br>
+sólo: 1 600 Kč 
+<span style="color: rgb(13, 119, 189);">(2 200 Kč)</span><br>
+týmy (každý člen týmu): 1 400 Kč
+<span style="color: rgb(13, 119, 189);">(2 400 Kč)</span> - TODO KONTROLA<br>
 <br><br>
 
 <b> KATEGORIE MARATON 43,2 km (3 * 12,8 km + 4,8 km) </b> <br><br>
@@ -51,9 +53,9 @@ Pouze sólo <br>
 Start - 20.9.2025 ve 10:00<br>
 Konec - 21.9.2025 ve 10:00<br>
 <br>
-Startovné zaplacené do 31.7.2025 (startovné po 31.7.2025)<br>
-1 600 Kč (2 200 Kč)
-týmy - DOPLNIT
+Startovné zaplacené do 31.7.2025 <span style="color:rgb(13, 119, 189);">(startovné po 31.7.2025)</span><br>
+1 600 Kč
+<span style="color: rgb(13, 119, 189);">(2 200 Kč)</span><br>
 <br><br>
 
 
