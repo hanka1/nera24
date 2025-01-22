@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         "online24": "Online 24",
                         "online12": "Online 12",
                         "onlineM": "Online marathon",
-                        "contact": "Contact"
+                        "contact": "Contact",
+                        "online_button": "Online results"
                     }
                 }
             },
@@ -36,7 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         "online24": "Online 24",
                         "online12": "Online 12",
                         "onlineM": "Online maraton",
-                        "contact": "Kontakt"
+                        "contact": "Kontakt",
+                        "online_button": "Průběžné výsledky online"
                     }
                 }
             }

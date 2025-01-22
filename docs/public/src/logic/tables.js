@@ -1,9 +1,9 @@
 const online_tabel_text = {
     cz: `
-        <b>Online sledování výsledků</b>
+        <b>Průběžné výsledky online</b>
         `,
     en: `        
-        <b>online results</b>
+        <b>Online results</b>
         `
 } 
 

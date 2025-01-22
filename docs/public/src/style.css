@@ -63,15 +63,15 @@ header h2 {
     background-color: var(--primary-medium-blue);
     border: 2px solid var(--primary-bright-blue);
     color: var(--primary-dark-blue);
-    padding: 25px 45px;
+    padding: 12px 25px;  
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 25px;
+    font-size: 16px; 
     margin: 4px 2px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 12px;
+    border-radius: 8px;  
 }
 
 .button:hover {
