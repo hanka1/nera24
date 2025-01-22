@@ -88,9 +88,10 @@ main {
 
 nav {
     padding-left: 5px;
-    background-color: var(--primary-dark-blue);
+    background-color: var(--primary-medium-blue);
     position: sticky;
     top: 60px;
+    height: 40px; /* Added fixed height for thinner nav */
 }
 
 ul.menu {
@@ -99,6 +100,7 @@ ul.menu {
     margin: 0;
     display: flex;
     align-items: center;
+    height: 100%; /* Make menu fill nav height */
 }
 
 ul.menu > li {
@@ -109,39 +111,41 @@ ul.menu > li {
 }
 
 ul.menu > li > a {
-    background-color: var(--primary-dark-blue);
+    background-color: var(--primary-medium-blue);
     border: none;
-    color: var(--secondary-light-gray);
-    font-size: 24px;
+    color: var(--primary-dark-blue);
+    font-size: 16px; /* Reduced from 24px */
     text-decoration: none;
     display: block;
-    padding: 14px 14px;
+    padding: 8px 12px; /* Reduced padding */
     text-align: center;
+    line-height: 24px; /* Added to help vertical centering */
 }
 
 ul.submenu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 40px; /* Match nav height */
     left: 0;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background: var(--primary-dark-blue);
+    background: var(--primary-medium-blue);
 }
 
 ul.submenu li a {
-    padding: 10px 15px;
+    padding: 8px 12px; /* Match main menu padding */
+    font-size: 16px; /* Match main menu font size */
     text-decoration: none;
-    color: var(--secondary-light-gray);
+    color: var(--primary-dark-blue);
     display: block;
-    background: var(--primary-dark-blue);
+    background: var(--primary-medium-blue);
 }
 
 ul.menu > li:hover ul.submenu,
 ul.menu > li:focus-within ul.submenu {
     display: block;
-    background-color: var(--primary-bright-blue);
+    background-color: var(--primary-light-blue);
 }
 
 ul.menu > li > a:hover,
@@ -161,30 +165,31 @@ ul.submenu li a:focus {
 
 .content {
     padding: 20px;
-    background: var(--secondary-light-gray);
+    background: var(--primary-light-blue);
     margin-top: 20px;
-    border: 1px solid var(--secondary-dark-gray);
 }
 
 .language-switcher button {
-    background-color: var(--primary-dark-blue);
+    background-color: var(--primary-medium-blue);
     border: none;
-    color: var(--secondary-light-gray);
-    display: flex;
+    color: var(--primary-dark-blue);
+    /*display: flex;*/
     align-items: center;
-    padding: 0 5px;
+    padding: 8px 12px; /* Matched padding with menu items */
     margin-right: 5px;
-    font-size: 20px;
+    font-size: 16px; /* Reduced from 20px */
     cursor: pointer;
+    height: 40px; /* Match nav height */
 }
+
 
 .language-switcher button:hover {
     background-color: var(--primary-bright-blue);
 }
 
 .language-switcher button img.flag-icon {
-    width: 30px;
-    height: 30px;
+    width: 20px; /* Reduced from 30px */
+    height: 20px; /* Reduced from 30px */
     margin-right: 5px;
 }
 
