@@ -1,16 +1,23 @@
 const intro_info = {
     cz: `
-        Termín konání: ${config.RACE_DATE} <br>
-        <br>Místo konání: <a href="https://mapy.cz/s/kunomocona" target="_blank">Veslařská loděnice - Neratovice</a><br>
-        <br><a href="#" data-content="nav.proposition" data-i18n="nav.proposition" onclick="showContent('nav.proposition')">Propozice závodů Nera 24h / 12h / maraton</a><br>
-        <br><a href=${config.RACE_REGISTRATION_FORM} target="_blank">Registrační formulář</a><br>
-        <br><a href="#" data-content="nav.online" data-i18n="nav.online" onclick="showContent('nav.online')">Výsledky online</a><br>
-        `,
+        <div class="heading1">Termín konání: ${config.RACE_DATE}</div>
+        <div class="heading1">Info k závodu:</div>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Místo konání: Veslařská loděnice Neratovice - <a href="https://mapy.cz/s/kunomocona" target="_blank" class="href1">odkaz na mapu</a><br></li>
+            <li>Závod 24h / 12h / maraton - <a href="#" data-content="nav.proposition" data-i18n="nav.proposition" onclick="showContent('nav.proposition')" class="href1">odkaz na propozice</a></li>
+            <li>Zaregistrujte se <a href=${config.RACE_REGISTRATION_FORM} target="_blank" class="href1">na tomto formuláři</a></li>
+            <li>Tady můžete sledovat <a href="#" data-content="nav.online" data-i18n="nav.online" onclick="showContent('nav.online')" class="href1">průběžné výsledky online</a></li>
+        </ul>
+        `
+    ,
     en: `        
-        Event date: ${config.RACE_DATE} <br>
-        <br>Location: <a href="https://mapy.cz/s/kunomocona" target="_blank">Rowing Boathouse (veslařská loděnice) - Neratovice</a><br>
-        <br><a href="#" data-content="nav.proposition" data-i18n="nav.proposition" onclick="showContent('nav.proposition')">Races proposition Nera 24h / 12h / marathon</a><br>
-        <br><a href=${config.RACE_REGISTRATION_FORM} target="_blank">Registration form</a><br>
-        <br><a href="#" data-content="nav.online" data-i18n="nav.online" onclick="showContent('nav.online')">Online results</a><br>
+        <div class="heading1">Event date: ${config.RACE_DATE}</div>
+        <div class="heading1">Race information:</div>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Location: Rowing Boathouse Neratovice - <a href="https://mapy.cz/s/kunomocona" target="_blank" class="href1">link to map</a></li>
+            <li>Race 24h / 12h / marathon - <a href="#" data-content="nav.proposition" data-i18n="nav.proposition" onclick="showContent('nav.proposition')" class="href1">link to proposition</a></li>
+            <li>Register <a href=${config.RACE_REGISTRATION_FORM} target="_blank" class="href1">using this form</a></li>
+            <li>You can follow <a href="#" data-content="nav.online" data-i18n="nav.online" onclick="showContent('nav.online')" class="href1">live results online here</a></li>
+        </ul>
         `
 }

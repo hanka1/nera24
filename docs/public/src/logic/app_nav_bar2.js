@@ -42,9 +42,9 @@ function showContent(content) {
         case 'nav.proposition':
             contentToShow = proposition_info[lang]
             break;
-        case 'nav.registration':
-            contentToShow = registration_info[lang]
-            break;
+        // case 'nav.registration':
+            // contentToShow = registration_info[lang]
+            // break;
         case 'nav.history':
             contentToShow = history_info[lang]
             break;

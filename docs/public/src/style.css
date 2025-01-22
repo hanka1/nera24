@@ -211,4 +211,34 @@ ul.submenu li a:focus {
     margin-right: 5px;
 }
 
+
+/* Additional styles for headings and custom links */
+
+.heading1 {
+    font-weight: 750;  /* Bold text */
+    font-size: 18px;   /* Larger font size */
+    color: var(--primary-dark-blue);
+    margin-bottom: 1rem;
+}
+
+.heading2 {
+    font-weight: 700;  /* Bold text */
+    font-size: 16px;   /* Larger font size */
+    color: var(--primary-dark-blue);
+    margin-bottom: 1rem;
+}
+
+.href1 {
+    text-decoration: none;  /* Removes underline */
+    color: var(--primary-bright-blue);
+    transition: color 0.3s ease;  /* Smooth color transition */
+}
+
+.href1:hover,
+.href1:active,
+.href1:focus {
+    color: var(--primary-medium-blue);  /* Brighter color on interaction */
+    text-decoration: none;  /* Ensures no underline appears */
+}
+
 /* Responsive Design TODO*/

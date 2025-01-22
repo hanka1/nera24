@@ -43,11 +43,11 @@ Each year, the number of participants slightly increases, and the race is becomi
 } 
 
 const results_info= {
-    cz: `TODO Výsledky`,
-    en: `TODO Results`
+    cz: `TODO odkaz na výsledky`,
+    en: `TODO results`
 } 
 
 const photos = {
-    cz: `TODO Foto`,
-    en: `TODO Photos`
+    cz: `TODO odkaz na foto`,
+    en: `TODO photos`
 } 

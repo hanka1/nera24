@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     "nav": {
                         "info": "Info",
                         "proposition": "Proposition",
-                        "registration": "Registration",
+                        //"registration": "Registration",
                         "history": "History",
                         "about_race": "About Race",
                         "results": "Results",
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     "nav": {
                         "info": "Info",
                         "proposition": "Propozice",
-                        "registration": "Registrace",
+                        //"registration": "Registrace",
                         "history": "Historie",
                         "about_race": "O Závodu",
                         "results": "Výsledky",
@@ -43,10 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
-
     }, function(err, t) {
         updateContent();
-
     });
 
     function updateContent() {
@@ -55,49 +53,36 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 el.innerHTML = i18next.t(el.getAttribute('data-i18n'))
-                
             })
             showContent(lastActiveElement);
         }
     }
-
+ 
     window.changeLanguage = function (lng) {
         i18next.changeLanguage(lng, (err, t) => {
             if (err) return console.error(err);
-            console.log(lng)
             updateContent()
         })
     }
-})
-
-//config date to header
-document.addEventListener('DOMContentLoaded', () => { 
-    document.getElementById('header-race-date').textContent = config.RACE_DATE; 
-})
-
-//config date to header
-document.addEventListener('DOMContentLoaded', () => { 
-    document.getElementById('header-race-name').textContent = config.RACE_NAME; 
-})
-
-//respond to btn clic
-document.getElementById('online-data-btn').addEventListener('click', async () => {
-    try {
-
-        updateContent('online-data-btn')
-
-        function updateContent() {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                el.innerHTML = i18next.t(el.getAttribute('data-i18n'))
-                
-            })
-            showContent('online-data-btn');
-            
+ 
+    // Set header content
+    document.getElementById('header-race-date').textContent = config.RACE_DATE;
+    document.getElementById('header-race-name').textContent = config.RACE_NAME;
+ 
+    // Online data button click handler
+    document.getElementById('online-data-btn').addEventListener('click', async () => {
+        try {
+            updateContent('online-data-btn')
+ 
+            function updateContent() {
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    el.innerHTML = i18next.t(el.getAttribute('data-i18n'))
+                })
+                showContent('online-data-btn');
+            }
+        } catch (err) {
+            console.log(err)
         }
-
-    } catch (err) {
-        console.log(err)
-    }
-})
-
+    })
+ });
 
