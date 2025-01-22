@@ -14,9 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         "results": "Results",
                         "photos": "Photos",
                         "online": "Online",
-                        "online24": "Online 24",
-                        "online12": "Online 12",
-                        "onlineM": "Online marathon",
+                        "online24": "24 actual",
+                        "online24s": "24 summary",
+                        "online12": "12 actual",
+                        "online12s": "12 summary",
+                        "onlineM": "marathon actual",
+                        "onlineMs": "marathon summary",
                         "contact": "Contact",
                         "online_button": "Online results"
                     }
@@ -34,9 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         "results": "Výsledky",
                         "photos": "Fotky",
                         "online": "Online",
-                        "online24": "Online 24",
-                        "online12": "Online 12",
-                        "onlineM": "Online maraton",
+                        "online24": "24 aktuální",
+                        "online24s": "24 souhrn",
+                        "online12": "12 aktuální",
+                        "online12s": "12 souhrn",
+                        "onlineM": "marathon aktuální",
+                        "onlineMs": "marathon souhrn",
                         "contact": "Kontakt",
                         "online_button": "Průběžné výsledky online"
                     }

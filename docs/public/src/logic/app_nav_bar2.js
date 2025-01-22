@@ -59,16 +59,28 @@ function showContent(content) {
             contentToShow = photos[lang];
             break;
         case 'nav.online':
-            contentToShow = online[lang];
+            contentToShow = online24[lang];
+            createOnlineTable();
             break;
         case 'nav.online24':
             contentToShow = online24[lang];
+            createSummaryTable2()
+            break;
+        case 'nav.online24s':
+            contentToShow = online24s[lang];
+            createOnlineTable();
             break;
         case 'nav.online12':
             contentToShow = online12[lang];
             break;
+        case 'nav.online12s':
+            contentToShow = online12s[lang];
+            break;
         case 'nav.onlineM':
             contentToShow = onlineM[lang];
+            break;
+        case 'nav.onlineMs':
+            contentToShow = onlineMs[lang];
             break;
         case 'nav.contact':
             contentToShow = contact[lang];
