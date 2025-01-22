@@ -1,3 +1,13 @@
+/* Brand Colors */
+:root {
+    --primary-dark-blue: rgb(28, 54, 98);
+    --primary-bright-blue: rgb(13, 119, 189);
+    --primary-medium-blue: rgb(98, 171, 218);
+    --primary-light-blue: rgb(195, 224, 242);
+    --secondary-dark-gray: rgb(175, 175, 175);
+    --secondary-light-gray: rgb(213, 211, 211);
+}
+
 main {
     padding: 1rem;
 }
@@ -15,7 +25,7 @@ main {
 }
 
 .total-km {
-    color: rgb(1, 48, 68);
+    color: var(--primary-dark-blue);
     text-align: right;
 }
 
@@ -24,7 +34,7 @@ main {
 }
 
 .team-name {
-    color: rgb(1, 48, 68);
+    color: var(--primary-dark-blue);
     text-align: left;
 }
 
@@ -39,18 +49,18 @@ main {
 }
 
 .table1 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--secondary-dark-gray);
     padding: 8px;
     text-align: center;
 }
 
 .table1 th {
-    background-color: rgb(195, 224, 242);
-    color: #000000;
+    background-color: var(--primary-light-blue);
+    color: var(--primary-dark-blue);
 }
 
 .table1 tr:nth-child(even) {
-    background-color: rgb(98, 171, 218);
+    background-color: var(--primary-medium-blue);
 }
 
 .light-red {
@@ -62,10 +72,9 @@ main {
 }
 
 .gray {
-    background-color: rgb(175, 175, 175);
+    background-color: var(--secondary-dark-gray);
 }
 
-/******/
 .table-container2 {
     display: flex;
     overflow: auto;
@@ -78,27 +87,22 @@ main {
 }
 
 .table2 th, .table2 td {
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary-dark-gray);
     padding: 8px;
     text-align: left;
-    
 }
 
 .table2 th {
-    background: #f2f2f2;
+    background: var(--primary-light-blue);
+    color: var(--primary-dark-blue);
     font-weight: bold;
 }
 
 .sticky-header2 {
-    position: -webkit-sticky; /* For Safari */
+    position: -webkit-sticky;
     position: sticky;
     left: 0;
-    
-    background-color: rgb(195, 224, 242);
+    background-color: var(--primary-light-blue);
     z-index: 2;
-    border-right: 2px solid #000;
-}
-
-main {
-    padding: 1rem;
+    border-right: 2px solid var(--primary-dark-blue);
 }

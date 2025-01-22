@@ -1,43 +1,49 @@
+/* Brand Colors */
+:root {
+    --primary-dark-blue: rgb(28, 54, 98);
+    --primary-bright-blue: rgb(13, 119, 189);
+    --primary-medium-blue: rgb(98, 171, 218);
+    --primary-light-blue: rgb(195, 224, 242);
+    --secondary-dark-gray: rgb(175, 175, 175);
+    --secondary-light-gray: rgb(213, 211, 211);
+    --accent-blue: rgb(144, 189, 217);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(213, 211, 211);
+    background-color: var(--secondary-light-gray);
 }
 
 header {
     position: sticky;
     top: 0;
-    background-color: rgb(195, 224, 242);
-    color: rgb(28, 54, 98);
+    background-color: var(--primary-light-blue);
+    color: var(--primary-dark-blue);
     z-index: 1000;
     padding: 0;
-   
-
-    width: 100%; /* Ensure the header spans the full width */
-    z-index: 1000; /* Ensure it stays on top of other content */
+    width: 100%;
 }
+
 .header-wrapper { 
     display: flex; 
-    align-items: center; /* Center align items vertically */ 
-
+    align-items: center;
     padding: 0 15px; 
 }
 
 header h1 {
-    /* top | right | bottom | left */
     padding: 20px 20px 0 15px; 
     margin: 0;
     font-size: 40px;
-
+    color: var(--primary-dark-blue);
 }
 
 header h2 {
-    /* top | right | bottom | left */
     padding: 5px 20px 20px 15px; 
     margin: 0;
     font-size: 24px;
-
+    color: var(--primary-dark-blue);
 }
 
 .header-content { 
@@ -50,14 +56,13 @@ header h2 {
     display: flex; 
     justify-content: center; 
     gap: 10px; 
-    padding: 0px 0; 
+    padding: 0; 
 }
 
-/* Basic button styling */
 .button {
-    background-color: rgb(98, 171, 218); /* Green background */
-    border: 2px solid rgb(13, 119, 189); /* Dark green border with 2px width */
-    color: rgb(28, 54, 98); /* White text */
+    background-color: var(--primary-medium-blue);
+    border: 2px solid var(--primary-bright-blue);
+    color: var(--primary-dark-blue);
     padding: 25px 45px;
     text-align: center;
     text-decoration: none;
@@ -65,42 +70,37 @@ header h2 {
     font-size: 25px;
     margin: 4px 2px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease;
     border-radius: 12px;
 }
 
-/* Change color on hover */
 .button:hover {
-background-color: rgb(13, 119, 189); /* Darker green */
+    background-color: var(--primary-bright-blue);
 }
 
-/* Change color on click  */
 .button:active {
-background-color: rgb(13, 119, 189); /* Even darker green */
+    background-color: var(--primary-bright-blue);
 }
 
 main {
     padding: 1rem;
 }
 
-/* Sticky navbar */
 nav {
     padding-left: 5px;
-    background-color: rgb(1, 48, 68);/* Sets the background color to a specific shade of blue */
+    background-color: var(--primary-dark-blue);
     position: sticky;
-    top: 60px; /* Adjust based on the height of the header */
+    top: 60px;
 }
 
-/* The main navbar menu */
 ul.menu {
     list-style-type: none;
     padding: 0;
-    padding-left: 0px;
     margin: 0;
     display: flex;
-    align-items: center;}
+    align-items: center;
+}
 
-/* Each main navbar menu item */
 ul.menu > li {
     position: relative;
     display: inline;
@@ -108,20 +108,17 @@ ul.menu > li {
     float: left;
 }
 
-/* Styling for the main navbar menu items */
 ul.menu > li > a {
-    background-color: rgb(1, 48, 68);; /* Sets the background color to a specific shade of blue */
-    border: rgb(1, 48, 68); /* Sets the border color to a darker shade of blue */
-    color: rgb(213, 211, 211); /* Sets the text color to white */
+    background-color: var(--primary-dark-blue);
+    border: none;
+    color: var(--secondary-light-gray);
     font-size: 24px;
     text-decoration: none;
     display: block;
     padding: 14px 14px;
-    text-decoration: none;
     text-align: center;
 }
 
-/* Submenu items */
 ul.submenu {
     display: none;
     position: absolute;
@@ -130,86 +127,59 @@ ul.submenu {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background: rgb(1, 48, 68);
+    background: var(--primary-dark-blue);
 }
 
 ul.submenu li a {
     padding: 10px 15px;
     text-decoration: none;
-    color: rgb(213, 211, 211);
+    color: var(--secondary-light-gray);
     display: block;
-    background: rgb(1, 48, 68);  /* Dark gray */
+    background: var(--primary-dark-blue);
 }
 
-/* Show submenu on hover or focus */
-ul.menu > li:hover ul.submenu, ul.menu > li:focus-within ul.submenu {
+ul.menu > li:hover ul.submenu,
+ul.menu > li:focus-within ul.submenu {
     display: block;
-    background-color: rgb(13, 119, 189); /* Darker green */
+    background-color: var(--primary-bright-blue);
 }
 
-/* Hover and focus state for main menu items */
-ul.menu > li > a:hover, ul.menu > li > a:focus {
-    background-color: rgb(13, 119, 189);  /* Lighter green */
+ul.menu > li > a:hover,
+ul.menu > li > a:focus {
+    background-color: var(--primary-bright-blue);
 }
 
-/* Active state for clicked menu items */
 ul.menu li.active > a {
-    background-color: rgb(13, 119, 189);   /* More lighter gray */
-    color: rgb(1, 48, 68);
+    background-color: var(--primary-bright-blue);
+    color: var(--primary-dark-blue);
 }
 
-/* Active state for clicked main menu items */
-li.active > a {
-    background-color: rgb(13, 119, 189); /* Darker green */
-    font-weight: bold;
+ul.submenu li a:hover,
+ul.submenu li a:focus {
+    background-color: var(--primary-bright-blue);
 }
 
-/* Hover and focus state for submenu items */
-ul.submenu li a:hover, ul.submenu li a:focus {
-    background-color: rgb(13, 119, 189); ;  /* Lighter gray */
-}
-
-/* Active state for clicked submenu items */
-ul.submenu li.active > a {
-    background-color: rgb(13, 119, 189);  /* More lighter gray */
-    color: rgb(1, 48, 68);
-}
-
-/* Styling for content display */
 .content {
     padding: 20px;
-    background: rgb(213, 211, 211);
+    background: var(--secondary-light-gray);
     margin-top: 20px;
-    border: 1px solid rgb(175, 175, 175);
-}
-
-
-nav ul li a, .language-switcher button {
-    background-color: rgb(1, 48, 68);
-    
-    border: none;
-    color: rgb(213, 211, 211);
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    cursor: pointer;
-}
-
-nav ul li a:hover, .language-switcher button:hover {
-    background-color: rgb(13, 119, 189);
-}
-
-nav ul li a:active, .language-switcher button:active {
-    background-color: rgb(13, 119, 189);
+    border: 1px solid var(--secondary-dark-gray);
 }
 
 .language-switcher button {
+    background-color: var(--primary-dark-blue);
+    border: none;
+    color: var(--secondary-light-gray);
     display: flex;
     align-items: center;
     padding: 0 5px;
     margin-right: 5px;
     font-size: 20px;
+    cursor: pointer;
+}
+
+.language-switcher button:hover {
+    background-color: var(--primary-bright-blue);
 }
 
 .language-switcher button img.flag-icon {
@@ -220,7 +190,7 @@ nav ul li a:active, .language-switcher button:active {
 
 main {
     padding: 1rem;
-    padding-top: 180px; /* Add padding to account for the fixed header */
+    padding-top: 180px;
 }
 
 /* Responsive Design */
@@ -231,7 +201,7 @@ main {
     }
     
     nav ul li a {
-        padding: 0.3em 0.5em; /* Reduced padding */
+        padding: 0.3em 0.5em;
         font-size: 0.9em;
     }
 
@@ -245,7 +215,7 @@ main {
     }
     
     main {
-        padding-top: 120px; /* Adjust for fixed header */
+        padding-top: 120px;
         padding-left: 5px;
         font-size: 80%;
     }
@@ -258,28 +228,12 @@ main {
     }
     
     nav ul li {
-        flex: 1 1 100%; /* Each item takes full width */
+        flex: 1 1 100%;
     }
     
     nav ul li a {
-        padding: 0.2em 0.4em; /* Further reduced padding */
+        padding: 0.2em 0.4em;
         font-size: 0.8em;
-    }
-
-
-    .language-switcher button {
-        font-size: 0.9em;
-    }
-    
-    .language-switcher button img.flag-icon {
-        width: 0.8em;
-        height: 0.8em;
-    }
-    
-    main {
-        padding-top: 120px; /* Adjust for fixed header */
-        padding-left: 5px;
-        font-size: 80%;
     }
 }
 
