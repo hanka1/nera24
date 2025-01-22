@@ -106,7 +106,7 @@ nav {
     background-color: var(--primary-medium-blue);
     position: sticky;
     top: 60px;
-    height: 40px;
+    height: 32px;
 }
 
 ul.menu {
@@ -132,7 +132,7 @@ ul.menu > li > a {
     font-size: 16px;
     text-decoration: none;
     display: block;
-    padding: 8px 12px;
+    padding: 4px 12px;
     text-align: center;
     line-height: 24px;
 }
@@ -140,7 +140,7 @@ ul.menu > li > a {
 ul.submenu {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 32px;
     left: 0;
     list-style-type: none;
     padding: 0;
@@ -194,11 +194,11 @@ ul.submenu li a:focus {
     border: none;
     color: var(--primary-dark-blue);
     align-items: center;
-    padding: 8px 12px;
+    padding: 4px 12px;
     margin-right: 5px;
     font-size: 16px;
     cursor: pointer;
-    height: 40px;
+    height: 32px;
 }
 
 .language-switcher button:hover {
