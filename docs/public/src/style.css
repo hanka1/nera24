@@ -14,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('../img/background_main.jpg');
+    color: var(--primary-dark-blue);
 }
 
 header {
@@ -37,7 +38,7 @@ header {
 
 .header-logo {
     margin-right: 15px;
-    min-width: 60px; /* Ensures the logo maintains its size */
+    min-width: 60px;
     height: auto;
 }
 
@@ -76,14 +77,14 @@ header h2 {
     padding: 12px 25px;  
     text-align: center;
     text-decoration: none;
-    
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 8px;
-    float: right; /* Add this to align the button to the right */
+    float: right;
 }
+
 .button:hover {
     background-color: var(--primary-bright-blue);
 }
@@ -94,6 +95,10 @@ header h2 {
 
 main {
     padding: 1rem;
+    padding-top: 180px;
+    padding-bottom: 5px;
+    background-size: cover;
+    background-position: center;
 }
 
 nav {
@@ -101,7 +106,7 @@ nav {
     background-color: var(--primary-medium-blue);
     position: sticky;
     top: 60px;
-    height: 40px; /* Added fixed height for thinner nav */
+    height: 40px;
 }
 
 ul.menu {
@@ -110,13 +115,13 @@ ul.menu {
     margin: 0;
     display: flex;
     align-items: center;
-    height: 100%; /* Make menu fill nav height */
+    height: 100%;
 }
 
 ul.menu > li {
     position: relative;
     display: inline;
-    margin-right: 1rem;
+    margin-right: 0.5rem; /* Reduced from 1rem */
     float: left;
 }
 
@@ -124,32 +129,37 @@ ul.menu > li > a {
     background-color: var(--primary-medium-blue);
     border: none;
     color: var(--primary-dark-blue);
-    font-size: 16px; /* Reduced from 24px */
+    font-size: 16px;
     text-decoration: none;
     display: block;
-    padding: 8px 12px; /* Reduced padding */
+    padding: 8px 12px;
     text-align: center;
-    line-height: 24px; /* Added to help vertical centering */
+    line-height: 24px;
 }
 
 ul.submenu {
     display: none;
     position: absolute;
-    top: 40px; /* Match nav height */
+    top: 40px;
     left: 0;
     list-style-type: none;
     padding: 0;
     margin: 0;
     background: var(--primary-medium-blue);
+    min-width: 100px;
+    white-space: normal;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 ul.submenu li a {
-    padding: 8px 12px; /* Match main menu padding */
-    font-size: 16px; /* Match main menu font size */
+    padding: 8px 12px;
+    font-size: 14px;
     text-decoration: none;
     color: var(--primary-dark-blue);
     display: block;
     background: var(--primary-medium-blue);
+    line-height: 1.4;
+    word-wrap: break-word;
 }
 
 ul.menu > li:hover ul.submenu,
@@ -183,33 +193,22 @@ ul.submenu li a:focus {
     background-color: var(--primary-medium-blue);
     border: none;
     color: var(--primary-dark-blue);
-    /*display: flex;*/
     align-items: center;
-    padding: 8px 12px; /* Matched padding with menu items */
+    padding: 8px 12px;
     margin-right: 5px;
-    font-size: 16px; /* Reduced from 20px */
+    font-size: 16px;
     cursor: pointer;
-    height: 40px; /* Match nav height */
+    height: 40px;
 }
-
 
 .language-switcher button:hover {
     background-color: var(--primary-bright-blue);
 }
 
 .language-switcher button img.flag-icon {
-    width: 20px; /* Reduced from 30px */
-    height: 20px; /* Reduced from 30px */
+    width: 20px;
+    height: 20px;
     margin-right: 5px;
-}
-
-main {
-    padding: 1rem;
-    padding-top: 180px;
-    padding-bottom: 5px;
-    
-    background-size: cover;
-    background-position: center;
 }
 
 /* Responsive Design TODO*/

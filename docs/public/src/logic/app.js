@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         "proposition": "Propozice",
                         "registration": "Registrace",
                         "history": "Historie",
-                        "about_race": "O Závodě",
+                        "about_race": "O Závodu",
                         "results": "Výsledky",
                         "photos": "Fotky",
                         "online": "Online",
