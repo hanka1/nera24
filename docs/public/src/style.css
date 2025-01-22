@@ -13,13 +13,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--secondary-light-gray);
+    background-image: url('../img/background_main.jpg');
 }
 
 header {
     position: sticky;
     top: 0;
     background-color: var(--primary-light-blue);
+    background-image: url('../img/background_header.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--primary-dark-blue);
     z-index: 1000;
     padding: 0;
@@ -30,6 +33,12 @@ header {
     display: flex; 
     align-items: center;
     padding: 0 15px; 
+}
+
+.header-logo {
+    margin-right: 15px;
+    min-width: 60px; /* Ensures the logo maintains its size */
+    height: auto;
 }
 
 header h1 {
@@ -57,6 +66,7 @@ header h2 {
     justify-content: center; 
     gap: 10px; 
     padding: 0; 
+    float: right; 
 }
 
 .button {
@@ -66,14 +76,14 @@ header h2 {
     padding: 12px 25px;  
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px; 
+    
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 8px;  
+    border-radius: 8px;
+    float: right; /* Add this to align the button to the right */
 }
-
 .button:hover {
     background-color: var(--primary-bright-blue);
 }
@@ -196,49 +206,10 @@ ul.submenu li a:focus {
 main {
     padding: 1rem;
     padding-top: 180px;
+    padding-bottom: 5px;
+    
+    background-size: cover;
+    background-position: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1, header h2 {
-        font-size: 1.5em;
-        padding-left: 5px;
-    }
-    
-    nav ul li a {
-        padding: 0.3em 0.5em;
-        font-size: 0.9em;
-    }
-
-    .language-switcher button {
-        font-size: 0.9em;
-    }
-    
-    .language-switcher button img.flag-icon {
-        width: 0.8em;
-        height: 0.8em;
-    }
-    
-    main {
-        padding-top: 120px;
-        padding-left: 5px;
-        font-size: 80%;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1, header h2 {
-        font-size: 0.8em;
-        padding-left: 5px;
-    }
-    
-    nav ul li {
-        flex: 1 1 100%;
-    }
-    
-    nav ul li a {
-        padding: 0.2em 0.4em;
-        font-size: 0.8em;
-    }
-}
-
+/* Responsive Design TODO*/
