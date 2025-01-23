@@ -1,4 +1,5 @@
-/* Brand Colors */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 :root {
     --primary-dark-blue: rgb(28, 54, 98);
     --primary-bright-blue: rgb(13, 119, 189);
@@ -10,7 +11,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('../img/background_main.jpg');
@@ -106,7 +107,7 @@ nav {
     background-color: var(--primary-medium-blue);
     position: sticky;
     top: 60px;
-    height: 32px;
+    height: 28px;
 }
 
 ul.menu {
@@ -132,7 +133,7 @@ ul.menu > li > a {
     font-size: 16px;
     text-decoration: none;
     display: block;
-    padding: 4px 12px;
+    padding: 2px 12px;
     text-align: center;
     line-height: 24px;
 }
@@ -140,7 +141,7 @@ ul.menu > li > a {
 ul.submenu {
     display: none;
     position: absolute;
-    top: 32px;
+    top: 28px;
     left: 0;
     list-style-type: none;
     padding: 0;
@@ -187,6 +188,7 @@ ul.submenu li a:focus {
     padding: 20px;
     background: var(--primary-light-blue);
     margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.5); 
 }
 
 .language-switcher button {
@@ -194,11 +196,13 @@ ul.submenu li a:focus {
     border: none;
     color: var(--primary-dark-blue);
     align-items: center;
-    padding: 4px 12px;
-    margin-right: 5px;
-    font-size: 16px;
+    padding: 2px 4px;
+
+    font-size: 12px;
     cursor: pointer;
-    height: 32px;
+    height: 28px;
+
+    justify-content: center;
 }
 
 .language-switcher button:hover {
@@ -208,7 +212,8 @@ ul.submenu li a:focus {
 .language-switcher button img.flag-icon {
     width: 20px;
     height: 20px;
-    margin-right: 5px;
+    margin-right: 2px;
+    vertical-align: middle; 
 }
 
 
