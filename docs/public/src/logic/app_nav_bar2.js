@@ -53,7 +53,7 @@ function showContent(content) {
             break;
         case 'nav.results':
             contentToShow = results_info[lang];
-            createSummaryTable2()
+            //createSummaryTable2()
             break;
         case 'nav.photos':
             contentToShow = photos[lang];
