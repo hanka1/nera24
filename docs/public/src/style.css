@@ -188,7 +188,7 @@ ul.submenu li a:focus {
     padding: 20px;
     background: var(--primary-light-blue);
     margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.5); 
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 
 .language-switcher button {
