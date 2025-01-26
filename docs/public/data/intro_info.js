@@ -24,7 +24,7 @@ const intro_info = {
             </div>
             <div>
                 <div class="heading3">Event date: ${config.RACE_DATE}<br></div>
-                <div class="heading3">Race information:</div>
+                <div class="heading3"><br>Race information:</div>
                 <ul>
                     <li>Location: Rowing Boathouse Neratovice - <a href="https://mapy.cz/s/kunomocona" target="_blank" class="href1">map</a></li>
                     <li>Race 24h / 12h / marathon - <a href="#" data-content="nav.proposition" data-i18n="nav.proposition" onclick="showContent('nav.proposition')" class="href1">proposition</a></li>
