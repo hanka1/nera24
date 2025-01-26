@@ -1,6 +1,6 @@
 const history_info = {
     cz: `
-        <div class="race-history-container" style="display: flow-root; overflow: hidden;">
+        <div class="container-left-photo" >
             <div class="image-container-left">
                     <img src="./public/img/labe.jpg" alt="Závod" class="rounded-image" ">
             </div>
@@ -17,7 +17,7 @@ const history_info = {
         </div>
     `,
     en: `
-        <div class="race-history-container" style="display: flow-root; overflow: hidden;">
+        <div class="container-left-photo" >
                 <div class="image-container-left">
                     <img src="./public/img/labe.jpg" alt="Závod" class="rounded-image" ">
                 </div> 
@@ -38,14 +38,14 @@ const history_info = {
 const about_race = history_info 
 const results_info = {
     cz: `
-        <div class="race-history-container" style="display: flow-root; overflow: hidden;">
+        <div class="container-left-photo" >
             <div class="image-container-left">
                     <img src="./public/img/final.jpg" alt="Závod" class="rounded-image" ">
             </div> 
 
             <div>
-                <div class="heading1" style="margin-left: 50px;">Výsledky:</div>
-                <ul style="list-style-type: disc; padding-left: 50px;">
+                <div class="heading3" >Výsledky:</div>
+                <ul>
                     <li><a href="https://docs.google.com/spreadsheets/d/1rCFwHoUcMOnfS-81gat8BVxhZZgkeIWeWFDfG4WkiHw/edit?usp=sharing" target="_blank" class="href1">Výsledky 2024</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1PumHXszi7Ee-3SODAVlfnbxn2rmRogyFSK-8GyH9LVQ/edit?usp=sharing" target="_blank" class="href1">Výsledky 2023</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1y6QPgx4pIPdzh-dAwatlkJtTYBNM_sVdyJa8srZhQLg/edit?usp=sharing" target="_blank" class="href1">Výsledky 2022</a></li>
@@ -55,13 +55,13 @@ const results_info = {
         </div>
     `,
     en: `
-        <div class="race-history-container" style="display: flow-root; overflow: hidden;">
+        <div class="container-left-photo" >
                 <div class="image-container-left">
                     <img src="./public/img/final.jpg" alt="Závod" class="rounded-image" ">
                 </div>
                 <div>
-                <div class="heading1" style="margin-left: 50px;">Results:</div>
-                <ul style="list-style-type: disc; padding-left: 50px;">
+                <div class="heading3" >Results:</div>
+                <ul>
                     <li><a href="https://docs.google.com/spreadsheets/d/1rCFwHoUcMOnfS-81gat8BVxhZZgkeIWeWFDfG4WkiHw/edit?usp=sharing" target="_blank" class="href1">Results 2024</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1PumHXszi7Ee-3SODAVlfnbxn2rmRogyFSK-8GyH9LVQ/edit?usp=sharing" target="_blank" class="href1">Results 2023</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1y6QPgx4pIPdzh-dAwatlkJtTYBNM_sVdyJa8srZhQLg/edit?usp=sharing" target="_blank" class="href1">Results 2022</a></li>

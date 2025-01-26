@@ -20,7 +20,7 @@ header {
     top: 0;
     background-image: url('../img/background_header.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center -25px; 
     color: white;
     z-index: 1000;
     padding: 0;
@@ -43,7 +43,7 @@ header {
 header h1 {
     padding: 0 120px 10px 35px; 
     margin: 0;
-    font-size: 24px;
+    font-size: 22.5px;
     /*color: var(--primary-dark-blue);*/
     color: white;
 }
@@ -55,10 +55,9 @@ header h1 {
 }
 
 .header-buttons { 
-    display: flex; 
     justify-content: center; 
     gap: 10px; 
-    padding: 0; 
+    padding: 85px 0 0 0; 
     float: right; 
 }
 
@@ -69,7 +68,7 @@ header h1 {
     padding: 8px 10px;  
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     margin: 4px 2px;
     cursor: pointer;
     /*transition: background-color 0.3s ease;*/
@@ -236,6 +235,13 @@ ul.submenu li a:focus {
     margin-bottom: 1rem;
 }
 
+.heading3 {
+    font-weight: 750;  /* Bold text */
+    font-size: 18px;   /* Larger font size */
+    color: var(--primary-dark-blue);
+    margin-bottom: -0.5rem;
+}
+
 .href1 {
     text-decoration: none;  /* Removes underline */
     color: var(--primary-bright-blue);
@@ -261,17 +267,14 @@ ul.submenu li a:focus {
 }
 
 .image-container-left {
-    max-width: 320px; 
+    flex-shrink: 0;
+    max-width: 340px;
     height: auto;
     padding: 1px;
     border: 4px solid var(--primary-medium-blue);
     border-radius: 20px;
     overflow: hidden;
-    float: left;
-    object-fit: contain;
     margin-right: 20px;
-
-    
 }
 
 .rounded-image {
@@ -280,4 +283,15 @@ ul.submenu li a:focus {
     border-radius: 15px;
     display: block;
 }
+
+.container-left-photo {
+    display: flex;
+}
+
+
+ul {
+    padding-left: 15px;
+}
+
+
 /* Responsive Design TODO*/
