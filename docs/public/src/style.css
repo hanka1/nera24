@@ -12,20 +12,16 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('../img/background_main.jpg');
     color: var(--primary-dark-blue);
 }
 
 header {
     position: sticky;
     top: 0;
-    background-color: var(--primary-light-blue);
     background-image: url('../img/background_header.jpg');
     background-size: cover;
     background-position: center;
-    color: var(--primary-dark-blue);
+    color: white;
     z-index: 1000;
     padding: 0;
     width: 100%;
@@ -34,7 +30,7 @@ header {
 .header-wrapper { 
     display: flex; 
     align-items: center;
-    padding: 0 15px; 
+
 }
 
 .header-logo {
@@ -43,18 +39,13 @@ header {
     height: auto;
 }
 
-header h1 {
-    padding: 20px 20px 0 15px; 
-    margin: 0;
-    font-size: 40px;
-    color: var(--primary-dark-blue);
-}
 
-header h2 {
-    padding: 5px 20px 20px 15px; 
+header h1 {
+    padding: 0 120px 10px 35px; 
     margin: 0;
     font-size: 24px;
-    color: var(--primary-dark-blue);
+    /*color: var(--primary-dark-blue);*/
+    color: white;
 }
 
 .header-content { 
@@ -72,35 +63,54 @@ header h2 {
 }
 
 .button {
-    background-color: var(--primary-medium-blue);
-    border: 2px solid var(--primary-bright-blue);
+    background-color: white;
+    border: 4px solid var(--primary-medium-blue);
     color: var(--primary-dark-blue);
-    padding: 12px 25px;  
+    padding: 8px 10px;  
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    /*transition: background-color 0.3s ease;*/
     border-radius: 8px;
     float: right;
 }
 
 .button:hover {
-    background-color: var(--primary-bright-blue);
+    background-color: var(--primary-medium-blue);
 }
 
 .button:active {
-    background-color: var(--primary-bright-blue);
+    background-color: var(--primary-medium-blue);
 }
 
 main {
-    padding: 1rem;
-    padding-top: 180px;
+    padding: 0rem;
+    padding-top: 0px;
     padding-bottom: 5px;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
+  
+main::before {
+    content: '';
+    position: fixed;
+    top: 20px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/patternS.jpg');
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Ensure content stays above the pattern */
+#content, #table-container-online, #table-container-summary {
+    z-index: 1;
+}
+
 
 nav {
     padding-left: 5px;
@@ -184,13 +194,6 @@ ul.submenu li a:focus {
     background-color: var(--primary-bright-blue);
 }
 
-.content {
-    padding: 20px;
-    background: var(--primary-light-blue);
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.1); 
-}
-
 .language-switcher button {
     background-color: var(--primary-medium-blue);
     border: none;
@@ -246,4 +249,35 @@ ul.submenu li a:focus {
     text-decoration: none;  /* Ensures no underline appears */
 }
 
+
+.image-container-right {
+    max-width: 300px; 
+    height: auto;
+    padding: 1px;
+    border: 4px solid var(--primary-medium-blue);
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+
+.image-container-left {
+    max-width: 320px; 
+    height: auto;
+    padding: 1px;
+    border: 4px solid var(--primary-medium-blue);
+    border-radius: 20px;
+    overflow: hidden;
+    float: left;
+    object-fit: contain;
+    margin-right: 20px;
+
+    
+}
+
+.rounded-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: block;
+}
 /* Responsive Design TODO*/

@@ -10,7 +10,9 @@ const intro_info = {
                     <li>Tady můžete sledovat <a href="#" data-content="nav.online" data-i18n="nav.online" onclick="showContent('nav.online')" class="href1">průběžné výsledky online</a></li>
                 </ul>
             </div>
-            <img src="./public/img/Mara.jpg" alt="" style="max-width: 300px; height: auto;">
+                <div class="image-container-right">
+                    <img src="./public/img/Mara.jpg" alt="" class="rounded-image">
+                </div>
         </div>
         `,
     en: `        
@@ -24,7 +26,9 @@ const intro_info = {
                     <li>You can follow <a href="#" data-content="nav.online" data-i18n="nav.online" onclick="showContent('nav.online')" class="href1">live results online here</a></li>
                 </ul>
             </div>
-            <img src="./public/img/Mara.jpg" alt="" style="max-width: 300px; height: auto;">
+                <div class="image-container-right">
+                    <img src="./public/img/Mara.jpg" alt="" class="rounded-image">
+                </div>
         </div>
         `
 }

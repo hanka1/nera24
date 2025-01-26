@@ -1,7 +1,10 @@
 const history_info = {
     cz: `
         <div class="race-history-container" style="display: flow-root; overflow: hidden;">
-            <img src="./public/img/labe.jpg" alt="Závod" style="float: left; max-width: 300px; margin-right: 15px; margin-bottom: 10px; object-fit: contain;">
+            <div class="image-container-left">
+                    <img src="./public/img/labe.jpg" alt="Závod" class="rounded-image" ">
+            </div>
+            
             <div>
                 Závod na 24h se konal poprvé v roce 2021, kdy ještě zhruba třetina závodníků jela celý závod na nafukovacích boardech. Dnes je to už spíše výjimka.
                 <br><br>
@@ -15,8 +18,11 @@ const history_info = {
     `,
     en: `
         <div class="race-history-container" style="display: flow-root; overflow: hidden;">
-            <img src="./public/img/labe.jpg" alt="Race" style="float: left; max-width: 300px; margin-right: 15px; margin-bottom: 10px; object-fit: contain;">
-            <div>
+                <div class="image-container-left">
+                    <img src="./public/img/labe.jpg" alt="Závod" class="rounded-image" ">
+                </div> 
+
+                <div>
                 The 24-hour race was first held in 2021, when about one-third of the racers completed the entire race on inflatable boards. Today, this is more of an exception.
                 <br><br>
                 Since 2023, our handicapped friends have been regularly participating in the race. They have our great respect, as they always competed as solo riders.
@@ -33,7 +39,10 @@ const about_race = history_info
 const results_info = {
     cz: `
         <div class="race-history-container" style="display: flow-root; overflow: hidden;">
-            <img src="./public/img/final.jpg" alt="Závod" style="float: left; max-width: 300px; margin-right: 50px; margin-bottom: 10px; object-fit: contain;">
+            <div class="image-container-left">
+                    <img src="./public/img/final.jpg" alt="Závod" class="rounded-image" ">
+            </div> 
+
             <div>
                 <div class="heading1" style="margin-left: 50px;">Výsledky:</div>
                 <ul style="list-style-type: disc; padding-left: 50px;">
@@ -47,8 +56,10 @@ const results_info = {
     `,
     en: `
         <div class="race-history-container" style="display: flow-root; overflow: hidden;">
-            <img src="./public/img/final.jpg" alt="Race" style="float: left; max-width: 300px; margin-right: 50px; margin-bottom: 10px; object-fit: contain;">
-            <div>
+                <div class="image-container-left">
+                    <img src="./public/img/final.jpg" alt="Závod" class="rounded-image" ">
+                </div>
+                <div>
                 <div class="heading1" style="margin-left: 50px;">Results:</div>
                 <ul style="list-style-type: disc; padding-left: 50px;">
                     <li><a href="https://docs.google.com/spreadsheets/d/1rCFwHoUcMOnfS-81gat8BVxhZZgkeIWeWFDfG4WkiHw/edit?usp=sharing" target="_blank" class="href1">Results 2024</a></li>
