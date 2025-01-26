@@ -326,3 +326,94 @@ ul {
 
 
 /* Responsive Design TODO*/
+/* Base mobile styles (320px and up) */
+@media screen and (max-width: 480px) {
+    .header-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header h1 {
+      font-size: 18px;
+      padding: 5px 15px;
+      text-align: center;
+    }
+  
+    .header-buttons {
+      padding: 20px 0;
+      float: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    nav {
+      height: auto;
+      position: static;
+    }
+  
+    ul.menu {
+      flex-direction: column;
+    }
+  
+    ul.menu > li {
+      width: 100%;
+      margin: 0;
+    }
+  
+    ul.submenu {
+      position: static;
+      width: 100%;
+    }
+  
+    .container-left-photo, .container-right-photo {
+      flex-direction: column;
+    }
+  
+    .image-container-right, .image-container-left {
+      float: none;
+      width: 100%;
+      max-width: 100%;
+      margin: 10px 0;
+    }
+  }
+  
+  /* Tablet styles */
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    header h1 {
+      font-size: 20px;
+    }
+  
+    .header-buttons {
+      padding: 30px 0;
+    }
+  
+    .image-container-right, .image-container-left {
+      max-width: 250px;
+    }
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 769px) {
+    .header-wrapper {
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+  }
+  
+  /* General responsive utilities */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .content {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  
