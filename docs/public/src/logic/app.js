@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
  
     // Set header content
     document.getElementById('header-race-date').textContent = config.RACE_DATE;
-    document.getElementById('header-race-name').textContent = config.RACE_NAME;
  
     // Online data button click handler
     document.getElementById('online-data-btn').addEventListener('click', async () => {

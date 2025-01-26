@@ -1,7 +1,7 @@
 const history_info = {
     cz: `
-        <div class="container-left-photo" >
-            <div class="image-container-left">
+        <div class="container-right-photo" >
+            <div class="image-container-right">
                     <img src="./public/img/labe.jpg" alt="Závod" class="rounded-image" ">
             </div>
             
@@ -17,8 +17,8 @@ const history_info = {
         </div>
     `,
     en: `
-        <div class="container-left-photo" >
-                <div class="image-container-left">
+        <div class="container-right-photo" >
+                <div class="image-container-right">
                     <img src="./public/img/labe.jpg" alt="Závod" class="rounded-image" ">
                 </div> 
 

@@ -41,23 +41,28 @@ header {
 
 
 header h1 {
-    padding: 0 120px 10px 35px; 
+    padding: 0 0px 10px 35px; 
     margin: 0;
     font-size: 22.5px;
     /*color: var(--primary-dark-blue);*/
     color: white;
 }
 
+header h4 {
+    font-size: 6px;
+}
+
 .header-content { 
     display: flex; 
     flex-direction: column; 
     padding: 0; 
+    
 }
 
 .header-buttons { 
     justify-content: center; 
     gap: 10px; 
-    padding: 85px 0 0 0; 
+    padding: 65px 0 0 0; 
     float: right; 
 }
 
@@ -91,6 +96,10 @@ main {
     background-size: cover;
     background-position: center;
     position: relative;
+}
+
+.content {
+    padding-top: 18px;
 }
   
 main::before {
@@ -256,25 +265,36 @@ ul.submenu li a:focus {
 }
 
 
-.image-container-right {
-    max-width: 300px; 
+.container-right-photo {
+    display: block
+ }
+ 
+ .image-container-right {
+    float: right;
+    width: 300px;
+    min-width: 300px;
     height: auto;
     padding: 1px;
     border: 4px solid var(--primary-medium-blue);
     border-radius: 20px;
     overflow: hidden;
-    
-}
+    margin-left: 20px;
+ }
+ 
+.container-right-photo > div:last-child {
+    flex: 1;
+  
+ }
 
 .image-container-left {
-    flex-shrink: 0;
+    flex: 0 0 340px; 
+    width: 100%;
     max-width: 340px;
     height: auto;
     padding: 1px;
     border: 4px solid var(--primary-medium-blue);
     border-radius: 20px;
     overflow: hidden;
-    margin-right: 20px;
 }
 
 .rounded-image {
@@ -286,6 +306,8 @@ ul.submenu li a:focus {
 
 .container-left-photo {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Replaces margin-right on image container */
 }
 
 
