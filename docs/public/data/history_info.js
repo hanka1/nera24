@@ -50,7 +50,9 @@ const results_info = {
                     <li><a href="https://docs.google.com/spreadsheets/d/1rCFwHoUcMOnfS-81gat8BVxhZZgkeIWeWFDfG4WkiHw/edit?usp=sharing" target="_blank" class="href1">Výsledky 2024</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1PumHXszi7Ee-3SODAVlfnbxn2rmRogyFSK-8GyH9LVQ/edit?usp=sharing" target="_blank" class="href1">Výsledky 2023</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1y6QPgx4pIPdzh-dAwatlkJtTYBNM_sVdyJa8srZhQLg/edit?usp=sharing" target="_blank" class="href1">Výsledky 2022</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/2021-results" target="_blank" class="href1">Výsledky 2021</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1Aark6yyfHcNGHX6J0owfLNLiv2nxFXfQHPsaigzNt7s/edit?usp=sharing" target="_blank" class="href1">Výsledky 2021</a></li>
+                
+                    
                 </ul>
             </div>
         </div>
@@ -65,9 +67,10 @@ const results_info = {
                 <ul>
 
                     <li><a href="https://docs.google.com/spreadsheets/d/1f1InGrIuMGPgiae7j_GfwCf2-YlZ3uGqghaTo3yMOsw/edit?usp=sharing" target="_blank" class="href1">Best results</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1rCFwHoUcMOnfS-81gat8BVxhZZgkeIWeWFDfG4WkiHw/edit?usp=sharing" target="_blank" class="href1">Results 2024</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1PumHXszi7Ee-3SODAVlfnbxn2rmRogyFSK-8GyH9LVQ/edit?usp=sharing" target="_blank" class="href1">Results 2023</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1y6QPgx4pIPdzh-dAwatlkJtTYBNM_sVdyJa8srZhQLg/edit?usp=sharing" target="_blank" class="href1">Results 2022</a></li>
-                    <li><a href="https://docs.google.com/spreadsheets/d/2021-results" target="_blank" class="href1">Results 2021</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1Aark6yyfHcNGHX6J0owfLNLiv2nxFXfQHPsaigzNt7s/edit?usp=sharing" target="_blank" class="href1">Results 2021</a></li>
                 </ul>
             </div>
         </div>
