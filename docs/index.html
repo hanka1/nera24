@@ -6,6 +6,11 @@
     <title>Nera24</title>
     <link rel="stylesheet" href="./public/src/style.css">
     <link rel="stylesheet" href="./public/src/table.css">
+    <script>
+        if (window.location.hostname === "nera24.cz") {
+            window.location.href = "https://www.nera24.cz" + window.location.pathname + window.location.search;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -77,6 +82,7 @@
     <script src="./public/data/result_race_data.js"></script>
     <script src="./public/src/logic/app_nav_bar.js"></script>
     <script src="./public/src/logic/app_nav_bar2.js"></script>
+    <script src="./public/src/logic/app_nav_bar_mobile.js"></script>
     <script src="./public/src/logic/app.js"></script>
     <script src="./public/src/logic/tables.js"></script>
     <script src="https://unpkg.com/i18next@latest/i18next.min.js"></script>
