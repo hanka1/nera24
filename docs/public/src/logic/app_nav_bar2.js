@@ -60,15 +60,15 @@ function showContent(content) {
             break;
         case 'nav.online':
             contentToShow = online24[lang];
-            createOnlineTable();
+            //createOnlineTable();
             break;
         case 'nav.online24':
             contentToShow = online24[lang];
-            createSummaryTable2()
+            //createSummaryTable2()
             break;
         case 'nav.online24s':
             contentToShow = online24s[lang];
-            createOnlineTable();
+            //createOnlineTable();
             break;
         case 'nav.online12':
             contentToShow = online12[lang];
@@ -87,7 +87,7 @@ function showContent(content) {
             break;
         case 'online-data-btn':
             contentToShow = online_tabel_text[lang];
-            createOnlineTable();
+            //createOnlineTable();
             console.log('switch');
             break;
         default:

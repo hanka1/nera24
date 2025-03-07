@@ -1,29 +1,29 @@
 const online24 = {
-    cz: `todo<br>`,
-    en: `todo <br>`
+    cz: `Průběžné výsledky`,
+    en: `Online results`
 } 
 
 const online24s = {
-    cz: `todo<br>`,
-    en: `todo <br>`
+    cz: `Průběžné výsledky`,
+    en: `Online results`
 } 
 
 const online12 = {
-    cz: `todo<br>`,
-    en: `todo <br>`
+    cz: `Průběžné výsledky`,
+    en: `Online results`
 } 
 
 const online12s = {
-    cz: `todo<br>`,
-    en: `todo <br>`
+    cz: `Průběžné výsledky`,
+    en: `Online results`
 } 
 
 const onlineM = {
-    cz: `todo<br>`,
-    en: `todo <br>`
+    cz: `Průběžné výsledky`,
+    en: `Online results`
 } 
 
 const onlineMs = {
-    cz: `todo<br>`,
-    en: `todo <br>`
+    cz: `Průběžné výsledky`,
+    en: `Online results`
 } 

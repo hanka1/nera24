@@ -78,6 +78,6 @@ const results_info = {
 }
 
 const photos = {
-    cz: `TODO odkaz na foto`,
-    en: `TODO photos`
+    cz: `Foto <a href="https://eu.zonerama.com/konelupy/Album/12112517" target="_blank" class="href1">2024</a></li>`,
+    en: `Photos <a href="https://eu.zonerama.com/konelupy/Album/12112517" target="_blank" class="href1">2024</a></li>`
 }
