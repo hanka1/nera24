@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Domovská stránka -->
+  <url>
+    <loc>https://www.nera24.cz/</loc>
+    <lastmod>2025-03-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.nera24.cz/?lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nera24.cz/?lang=en"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Informace o závodu -->
+  <url>
+    <loc>https://www.nera24.cz/?content=info</loc>
+    <lastmod>2025-03-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.nera24.cz/?content=info&amp;lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nera24.cz/?content=info&amp;lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Propozice -->
+  <url>
+    <loc>https://www.nera24.cz/?content=proposition</loc>
+    <lastmod>2025-03-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.nera24.cz/?content=proposition&amp;lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nera24.cz/?content=proposition&amp;lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Historie -->
+  <url>
+    <loc>https://www.nera24.cz/?content=history</loc>
+    <lastmod>2025-03-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.nera24.cz/?content=history&amp;lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nera24.cz/?content=history&amp;lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Výsledky -->
+  <url>
+    <loc>https://www.nera24.cz/?content=results</loc>
+    <lastmod>2025-03-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.nera24.cz/?content=results&amp;lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nera24.cz/?content=results&amp;lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Kontakt -->
+  <url>
+    <loc>https://www.nera24.cz/?content=contact</loc>
+    <lastmod>2025-03-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.nera24.cz/?content=contact&amp;lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nera24.cz/?content=contact&amp;lang=en"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

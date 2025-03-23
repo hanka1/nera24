@@ -1,14 +1,85 @@
 <!DOCTYPE html>
-<html lang="cz">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="Nera24" content="Nera24 hours paddleboard race in Neratovice">
-    <meta name="keywords" content="nera24, Nera24, paddleboard, race, Neratovice, závod">
-
-    <title>Nera24</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Nera24 - 24hodinový paddleboardový závod v Neratovicích | 24 Hour Paddleboard Race</title>
+    
+    <meta name="description" content="Nera24 - 24hodinový paddleboardový vytrvalostní závod v Neratovicích na řece Labi. Závoďte sólo nebo v týmech.">
+    <meta name="description" content="Nera24 - 24-hour paddleboard endurance race in Neratovice on the Elbe River. Compete solo or in teams." lang="en">
+    <meta name="keywords" content="paddleboardový závod, SUP závod, vytrvalostní závod, Neratovice, vodní sporty Česká republika, paddleboarding, závod na Labi, 24hodinový závod, nera24, paddleboard race">
+    
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://www.nera24.cz/">
+    
+    <link rel="alternate" hreflang="cs" href="https://www.nera24.cz/?lang=cs">
+    <link rel="alternate" hreflang="en" href="https://www.nera24.cz/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://www.nera24.cz/">
+    
+    <!-- Open Graph / Facebook - For social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nera24.cz/">
+    <meta property="og:title" content="Nera24 - 24hodinový paddleboardový závod v Neratovicích">
+    <meta property="og:description" content="Vytrvalostní paddleboardový závod na řece Labi. Závoďte sólo nebo v týmech po dobu 24 hodin.">
+    <meta property="og:image" content="https://www.nera24.cz/public/img/og-image.jpg">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:locale:alternate" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.nera24.cz/">
+    <meta property="twitter:title" content="Nera24 - 24hodinový paddleboardový závod">
+    <meta property="twitter:description" content="Vytrvalostní paddleboardový závod na řece Labi. Závoďte sólo nebo v týmech po dobu 24 hodin.">
+    <meta property="twitter:image" content="https://www.nera24.cz/public/img/og-image.jpg">
+    
+    <!-- Favicon and Apple Touch Icon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Stylesheet Links -->
     <link rel="stylesheet" href="./public/src/style.css">
     <link rel="stylesheet" href="./public/src/table.css">
+    
+    <!-- Preconnect to speed up loading -->
+    <link rel="preconnect" href="https://unpkg.com">
+    
+    <!-- Structured Data - Event Information -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsEvent",
+        "name": "Nera24 - Paddleboardový závod",
+        "description": "24hodinový paddleboardový vytrvalostní závod v Neratovicích na řece Labi",
+        "startDate": "2025-06-15T10:00",
+        "endDate": "2025-06-16T10:00",
+        "location": {
+        "@type": "Place",
+        "name": "Neratovice",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Neratovice",
+            "addressRegion": "Středočeský kraj",
+            "addressCountry": "CZ"
+        }
+        },
+        "organizer": {
+        "@type": "Organization",
+        "name": "Nera24 Race Team",
+        "url": "https://www.nera24.cz"
+        },
+        "image": "https://www.nera24.cz/public/img/og-image.jpg",
+        "url": "https://www.nera24.cz",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "sport": "Paddleboarding",
+        "alternateName": "Nera24 - 24 Hour Paddleboard Race"
+    }
+    </script>
     <script>
         if (window.location.hostname === "nera24.cz") {
             window.location.href = "https://www.nera24.cz" + window.location.pathname + window.location.search;

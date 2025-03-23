@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow access to internal scripts
+Disallow: /public/src/
+
+Sitemap: https://www.nera24.cz/sitemap.xml
