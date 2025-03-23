@@ -38,10 +38,12 @@ const proposition_info = {
             <li>Konec: 21.9.2025  10:00 </li>
         </ul>
 
-        <div class="heading4">Startovné 24h zaplacené do 31.7.2025 <span style="color: rgb(13, 119, 189);">(po 31.7.2025)</span></div>
+        <div class="heading4">Startovné 24h zaplacené</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Sólo: 2 000 Kč <span style="color: rgb(13, 119, 189);">(2 800 Kč)</span></li>
-            <li>Týmy (každý člen): 1 800 Kč <span style="color: rgb(13, 119, 189);">(2 600 Kč)</span></li>
+            <li>Sólo do 31.7.2025: 2 000 Kč</li>
+            <li><span style="color: rgb(13, 119, 189);">Sólo po 31.7.2025: 2 800 Kč</span></li>
+            <li>Týmy (každý člen) do 31.7.2025: 1 800 Kč</li>
+            <li><span style="color: rgb(13, 119, 189);">Týmy (každý člen) po 31.7.2025: 2 600 Kč</span></li>
         </ul>
 
         <br><div class="heading1">Kategorie 12h:</div>
@@ -50,10 +52,13 @@ const proposition_info = {
             <li>Start: 20.9.2025  10:00 </li>
             <li>Konec: 20.9.2025  22:00 </li>
         </ul>
-        <div class="heading4">Startovné 12h zaplacené do 31.7.2025 <span style="color: rgb(13, 119, 189);">(po 31.7.2025)</span></div>
+        <div class="heading4">Startovné 12h</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Sólo: 1 600 Kč <span style="color: rgb(13, 119, 189);">(2 200 Kč)</span></li>
-            <li>Týmy (každý člen): 1 400 Kč <span style="color: rgb(13, 119, 189);">(2 400 Kč)</span></li>
+            <li>Sólo do 31.7.2025: 1 600 Kč</span></li>
+            <li><span style="color: rgb(13, 119, 189);">Sólo po 31.7.2025: 2 400 Kč</span></li>
+
+            <li>Týmy (každý člen) do 31.7.2025: 1 400 Kč</li>
+            <li><span style="color: rgb(13, 119, 189);">Týmy (každý člen) po 31.7.2025: 2 200 Kč</span></li>
         </ul>
 
         <br><div class="heading1">Kategorie Maraton 43,2 km:</div>
@@ -61,7 +66,8 @@ const proposition_info = {
             <li>Pouze sólo !</li>
             <li>Start: 20.9.2025  10:00 </li>
             <li>Konec: definováno délkou trati (3 * 12,8 km + 4,8 km)</li>
-            <li>Startovné do 31.7.2025: 1 600 Kč <span style="color: rgb(13, 119, 189);">(po 31.7.2025: 2 200 Kč)</span></li>
+            <li>Startovné do 31.7.2025: 1 600 Kč</li>
+            <li><span style="color: rgb(13, 119, 189);">Startovné po 31.7.2025: 2 400 Kč</li>
         </ul>
         `,
     en: `
@@ -101,10 +107,12 @@ const proposition_info = {
             <li>End: September 21, 2025  10:00</li>
         </ul>
 
-        <div class="heading4">24h entry fee paid by July 31, 2025 <span style="color: rgb(13, 119, 189);">(after July 31, 2025)</span></div>
+        <div class="heading4">24h entry fee</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Solo: 2,000 CZK <span style="color: rgb(13, 119, 189);">(2,800 CZK)</span></li>
-            <li>Teams (per member): 1,800 CZK <span style="color: rgb(13, 119, 189);">(2,600 CZK)</span></li>
+            <li>Solo by July 31, 2025: 2,000 CZK</li>
+            <li><span style="color: rgb(13, 119, 189);">Solo after July 31, 2025: 2,800 CZK</span></li>
+            <li>Teams (per member) by July 31, 2025: 1,800 CZK</li>
+            <li><span style="color: rgb(13, 119, 189);">Teams (per member) after July 31, 2025: 2,600 CZK</span></li>
         </ul>
 
         <br><div class="heading1">12h Category:</div>
@@ -114,10 +122,12 @@ const proposition_info = {
             <li>End: September 20, 2025  22:00</li>
         </ul>
 
-        <div class="heading4">12h entry fee paid by July 31, 2025 <span style="color: rgb(13, 119, 189);">(after July 31, 2025)</span></div>
+        <div class="heading4">12h entry fee</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Solo: 1,600 CZK <span style="color: rgb(13, 119, 189);">(2,200 CZK)</span></li>
-            <li>Teams (per member): 1,400 CZK <span style="color: rgb(13, 119, 189);">(2,400 CZK)</span></li>
+            <li>Solo by July 31, 2025: 1,600 CZK</li>
+            <li><span style="color: rgb(13, 119, 189);">Solo after July 31, 2025: 2,400 CZK</span></li>
+            <li>Teams (per member) by July 31, 2025: 1,400 CZK</li>
+            <li><span style="color: rgb(13, 119, 189);">Teams (per member) after July 31, 2025: 2,200 CZK</span></li>
         </ul>
 
         <br><div class="heading1">Marathon Category 43.2 km:</div>
@@ -125,7 +135,8 @@ const proposition_info = {
             <li>Solo only!</li>
             <li>Start: September 20, 2025  10:00</li>
             <li>End: determined by course length (3 * 12.8 km + 4.8 km)</li>
-            <li>Entry fee by July 31, 2025: 1,600 CZK <span style="color: rgb(13, 119, 189);">(after July 31, 2025: 2,200 CZK)</span></li>
+            <li>Entry fee by July 31, 2025: 1,600 CZK</li>
+            <li><span style="color: rgb(13, 119, 189);">Entry fee after July 31, 2025: 2,400 CZK</span></li>
         </ul>
         `
 }
