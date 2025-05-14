@@ -78,6 +78,15 @@ const results_info = {
 }
 
 const photos = {
-    cz: `Foto <a href="https://eu.zonerama.com/konelupy/Album/12112517" target="_blank" class="href1">2024</a></li>`,
-    en: `Photos <a href="https://eu.zonerama.com/konelupy/Album/12112517" target="_blank" class="href1">2024</a></li>`
+    cz: 
+    `
+    Foto <a href="https://eu.zonerama.com/konelupy/Album/12112517" target="_blank" class="href1">2024</a></li>
+    </br>
+    Foto <a href="https://www.rajce.idnes.cz/konelupy/album/supnera24" target="_blank" class="href1">2023</a></li>
+    `,
+    en: `
+    Photos <a href="https://eu.zonerama.com/konelupy/Album/12112517" target="_blank" class="href1">2024</a></li>
+    </br>
+    Photos <a href="https://www.rajce.idnes.cz/konelupy/album/supnera24" target="_blank" class="href1">2023</a></li>
+    `
 }

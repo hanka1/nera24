@@ -8,7 +8,7 @@ const proposition_info = {
     
         <div class="heading2">Základní informace:</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Termín konání: 21.9-22.9.2025</li>
+            <li>Termín konání: ${config.RACE_DATE}</li>
             <li>Místo konání: Veslařská loděnice Neratovice - <a href="https://mapy.cz/s/kunomocona" target="_blank" class="href1">odkaz na mapu</a></li>
             <li>Registrace: <a href=${config.RACE_REGISTRATION_FORM} target="_blank" class="href1">registrační formulář</a></li>
             <li>Pokyny pro zaplacení obdržíte emailem po registraci</li>
@@ -78,7 +78,7 @@ const proposition_info = {
     
         <div class="heading2">Basic information:</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Date: September 21-22, 2025</li>
+            <li>Date: ${config.RACE_DATE}</li>
             <li>Location: Rowing Boathouse Neratovice - <a href="https://mapy.cz/s/kunomocona" target="_blank" class="href1">link to map</a></li>
             <li>Registration: <a href=${config.RACE_REGISTRATION_FORM} target="_blank" class="href1">registration form</a></li>
             <li>Payment instructions will be sent by email after registration</li>
