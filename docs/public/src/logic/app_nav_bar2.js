@@ -27,9 +27,9 @@ function showContent(content) {
 function showContent(content) {
 
     deleteOldContent()
-    
+
     const contentContainer = document.getElementById('content')
- 
+
     let lang = i18next.language
 
     // Define your content based on the data-content attribute
@@ -58,30 +58,6 @@ function showContent(content) {
         case 'nav.photos':
             contentToShow = photos[lang];
             break;
-        case 'nav.online':
-            contentToShow = online24[lang];
-            //createOnlineTable();
-            break;
-        case 'nav.online24':
-            contentToShow = online24[lang];
-            //createSummaryTable2()
-            break;
-        case 'nav.online24s':
-            contentToShow = online24s[lang];
-            //createOnlineTable();
-            break;
-        case 'nav.online12':
-            contentToShow = online12[lang];
-            break;
-        case 'nav.online12s':
-            contentToShow = online12s[lang];
-            break;
-        case 'nav.onlineM':
-            contentToShow = onlineM[lang];
-            break;
-        case 'nav.onlineMs':
-            contentToShow = onlineMs[lang];
-            break;
         case 'nav.contact':
             contentToShow = contact[lang];
             break;
@@ -99,7 +75,7 @@ function showContent(content) {
 
 // Add click event listeners to menu and submenu items
 document.querySelectorAll('.menu > li > a, .submenu > li > a').forEach(menuItem => {
-    
+
     menuItem.addEventListener('click', (e) => {
         e.preventDefault();
         const submenu = menuItem.nextElementSibling;
@@ -113,10 +89,10 @@ document.querySelectorAll('.menu > li > a, .submenu > li > a').forEach(menuItem 
 
         // Set active class and display content
         menuItem.parentElement.classList.add('active');
-        
+
         lastActiveElement = menuItem.attributes["data-i18n"].value
         console.log(lastActiveElement)
-        
+
         // Display content based on clicked item
         //const content = menuItem.getAttribute('data-i18n');
         showContent(lastActiveElement);

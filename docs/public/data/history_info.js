@@ -33,9 +33,9 @@ const history_info = {
             </div>
         </div>
     `
-} 
+}
 
-const about_race = history_info 
+const about_race = history_info
 const results_info = {
     cz: `
         <div class="container-left-photo" >
@@ -47,6 +47,7 @@ const results_info = {
                 <div class="heading3" >Výsledky:</div>
                 <ul>
                     <li><a href="https://docs.google.com/spreadsheets/d/1f1InGrIuMGPgiae7j_GfwCf2-YlZ3uGqghaTo3yMOsw/edit?usp=sharing" target="_blank" class="href1">Rekordy</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1RgaaoUrV5Tb91Cyl5K5u2it4agGX4sTJv_YfMOTTz18/edit?usp=sharing" target="_blank" class="href1">Výsledky 2025</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1rCFwHoUcMOnfS-81gat8BVxhZZgkeIWeWFDfG4WkiHw/edit?usp=sharing" target="_blank" class="href1">Výsledky 2024</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1PumHXszi7Ee-3SODAVlfnbxn2rmRogyFSK-8GyH9LVQ/edit?usp=sharing" target="_blank" class="href1">Výsledky 2023</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1y6QPgx4pIPdzh-dAwatlkJtTYBNM_sVdyJa8srZhQLg/edit?usp=sharing" target="_blank" class="href1">Výsledky 2022</a></li>
@@ -67,6 +68,7 @@ const results_info = {
                 <ul>
 
                     <li><a href="https://docs.google.com/spreadsheets/d/1f1InGrIuMGPgiae7j_GfwCf2-YlZ3uGqghaTo3yMOsw/edit?usp=sharing" target="_blank" class="href1">Best results</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1RgaaoUrV5Tb91Cyl5K5u2it4agGX4sTJv_YfMOTTz18/edit?usp=sharing" target="_blank" class="href1">Results 2025</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1rCFwHoUcMOnfS-81gat8BVxhZZgkeIWeWFDfG4WkiHw/edit?usp=sharing" target="_blank" class="href1">Results 2024</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1PumHXszi7Ee-3SODAVlfnbxn2rmRogyFSK-8GyH9LVQ/edit?usp=sharing" target="_blank" class="href1">Results 2023</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1y6QPgx4pIPdzh-dAwatlkJtTYBNM_sVdyJa8srZhQLg/edit?usp=sharing" target="_blank" class="href1">Results 2022</a></li>
@@ -78,13 +80,18 @@ const results_info = {
 }
 
 const photos = {
-    cz: 
+    cz:
     `
+    Foto <a href="https://eu.zonerama.com/konelupy/Album/13917715" target="_blank" class="href1">2025</a></li>
+    </br>
     Foto <a href="https://eu.zonerama.com/konelupy/Album/12112517" target="_blank" class="href1">2024</a></li>
     </br>
     Foto <a href="https://www.rajce.idnes.cz/konelupy/album/supnera24" target="_blank" class="href1">2023</a></li>
     `,
-    en: `
+    en:
+    `
+    Foto <a href="https://eu.zonerama.com/konelupy/Album/13917715" target="_blank" class="href1">2025</a></li>
+    </br>
     Photos <a href="https://eu.zonerama.com/konelupy/Album/12112517" target="_blank" class="href1">2024</a></li>
     </br>
     Photos <a href="https://www.rajce.idnes.cz/konelupy/album/supnera24" target="_blank" class="href1">2023</a></li>

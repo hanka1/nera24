@@ -9,13 +9,12 @@ const proposition_info = {
         <div class="heading2">Základní informace:</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
             <li>Termín konání: ${config.RACE_DATE}</li>
+            <li>Více informací po Novém roce</li>
             <li>Místo konání: Veslařská loděnice Neratovice - <a href="https://mapy.cz/s/kunomocona" target="_blank" class="href1">odkaz na mapu</a></li>
-            <li>Registrace: <a href=${config.RACE_REGISTRATION_FORM} target="_blank" class="href1">registrační formulář</a></li>
             <li>Pokyny pro zaplacení obdržíte emailem po registraci</li>
-            <li>Závodníci registrovaní a zaplacení do 31.7.2025 získají startovní číslo se jménem</li>
-            </ul>
-
-    
+            <li>Závodníci registrovaní a zaplacení do 31.7.2026 získají startovní číslo se jménem</li>
+        </ul>
+            
         <div class="heading2">Zázemí a vybavení:</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
             <li>Zajištěné vnitřní prostory pro spánek a uložení věcí</li>
@@ -29,14 +28,42 @@ const proposition_info = {
         Kategorie "tým" je pro firmy nebo týmy kteří chtějí být ve větší partě.</p>
         <ul style="list-style-type: disc; padding-left: 20px;">
             <li>Tým může mít 1 až 5 členů</li>
+            <li>Start: Pátek 8:00 </li>
+            <li>Konec: Sobota 20:00 </li>
             <li>Předávání "štafet" pro týmy u mola v prostoru cíle</li>
             <li>Není podmínkou, aby byl vždy někdo na vodě</li>
-            <li>Trať za světla: cca 13 km okruh</li>
-            <li>Trať po setmění: cca 5 km okruh</li>
-            <li>Bonus 5000,- za překonání mety 200km</li>
-            <li>Start: 20.9.2025  10:00 </li>
-            <li>Konec: 21.9.2025  10:00 </li>
+            <li>2 kruhy - cca 13 km okruh a cca 5 km</li>
         </ul>
+        
+        <br><div class="heading1">Kategorie 12h:</div>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Pouze pro sólo a dvojice !</li>
+            <li>Start: Sobota 8:00 </li>
+            <li>Konec: Sobota 20:00 </li>
+        </ul>
+        
+        <br><div class="heading1">Kategorie Maraton 43,2 km:</div>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Pouze sólo !</li>
+            <li>Start: Sobota 10:00 </li>
+            <li>Konec: definováno délkou trati (3 * 12,8 km + 4,8 km)</li>
+
+        </ul>
+        `,
+    en: `
+        <div class="heading1">PRELIMINARY RACE PROPOSITION</div>
+        <div class="heading2">About the race:</div>
+        <p>This is a unique 24-hour race in the Czech Republic, taking place on the Elbe River in Neratovice.
+        The race is open to individuals, pairs, trios, and teams, whether beginners or as part of team building.</p>
+        <p>More details after New Year.</p>
+    
+        `
+}
+/*
+            <li>Registrace: <a href=${config.RACE_REGISTRATION_FORM} target="_blank" class="href1">registrační formulář</a></li>
+
+
+            <li>Bonus 5000,- za překonání mety 200km</li>
 
         <div class="heading4">Startovné 24h zaplacené</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
@@ -46,12 +73,7 @@ const proposition_info = {
             <li><span style="color: rgb(13, 119, 189);">Týmy (každý člen) po 31.7.2025: 2 600 Kč</span></li>
         </ul>
 
-        <br><div class="heading1">Kategorie 12h:</div>
-        <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Pouze pro sólo a dvojice !</li>
-            <li>Start: 20.9.2025  10:00 </li>
-            <li>Konec: 20.9.2025  22:00 </li>
-        </ul>
+
         <div class="heading4">Startovné 12h</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
             <li>Sólo do 31.7.2025: 1 600 Kč</span></li>
@@ -62,29 +84,22 @@ const proposition_info = {
         </ul>
 
         <br><div class="heading1">Kategorie Maraton 43,2 km:</div>
-        <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Pouze sólo !</li>
-            <li>Start: 20.9.2025  10:00 </li>
-            <li>Konec: definováno délkou trati (3 * 12,8 km + 4,8 km)</li>
+
             <li>Startovné do 31.7.2025: 1 600 Kč</li>
             <li><span style="color: rgb(13, 119, 189);">Startovné po 31.7.2025: 2 400 Kč</li>
         </ul>
-        `,
-    en: `
-        <div class="heading1">PRELIMINARY RACE PROPOSITION</div>
-        <div class="heading2">About the race:</div>
-        <p>This is a unique 24-hour race in the Czech Republic, taking place on the Elbe River in Neratovice.
-        The race is open to individuals, pairs, trios, and teams, whether beginners or as part of team building.</p>
-    
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
         <div class="heading2">Basic information:</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
             <li>Date: ${config.RACE_DATE}</li>
+            <li>More info after New Year</li>
             <li>Location: Rowing Boathouse Neratovice - <a href="https://mapy.cz/s/kunomocona" target="_blank" class="href1">link to map</a></li>
             <li>Registration: <a href=${config.RACE_REGISTRATION_FORM} target="_blank" class="href1">registration form</a></li>
             <li>Payment instructions will be sent by email after registration</li>
             <li>Participants registered and paid by July 31, 2025, will receive a race number with their name</li>
         </ul>
-    
+
         <div class="heading2">Facilities and equipment:</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
             <li>Indoor space provided for sleeping and storage</li>
@@ -138,5 +153,4 @@ const proposition_info = {
             <li>Entry fee by July 31, 2025: 1,600 CZK</li>
             <li><span style="color: rgb(13, 119, 189);">Entry fee after July 31, 2025: 2,400 CZK</span></li>
         </ul>
-        `
-}
+ */
