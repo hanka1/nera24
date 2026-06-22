@@ -14,6 +14,7 @@ const proposition_info = {
             <li>Termín konání: ${config.RACE_DATE}</li>
             <li>Více informací po Novém roce</li>
             <li>Místo konání: Veslařská loděnice Neratovice - <a href="https://mapy.cz/s/kunomocona" target="_blank" class="href1">odkaz na mapu</a></li>
+            <li>Registrace: <a href=${config.RACE_REGISTRATION_FORM} target="_blank" class="href1">registrační formulář</a></li>
             <li>Pokyny pro zaplacení obdržíte emailem po registraci</li>
             <li>Závodníci registrovaní a zaplacení do 31.7.2026 získají startovní číslo se jménem</li>
         </ul>
@@ -85,7 +86,7 @@ const proposition_info = {
             <li>Date: ${config.RACE_DATE}</li>
             <li>More info after New Year</li>
             <li>Location: Rowing Boathouse Neratovice - <a href="https://mapy.cz/s/kunomocona" target="_blank" class="href1">link to map</a></li>
-
+            <li>Registration: <a href=${config.RACE_REGISTRATION_FORM} target="_blank" class="href1">registration form</a></li>
             <li>Payment instructions will be sent by email after registration</li>
             <li>Participants registered and paid by July 31, 2026, will receive a race number with their name</li>
         </ul>
