@@ -41,10 +41,10 @@ const proposition_info = {
         
         <div class="heading4">Startovné 24h zaplacené</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Sólo do 31.7.2026: 2 000 Kč</li>
-            <li><span style="color: rgb(13, 119, 189);">Sólo po 31.7.2026: 2 800 Kč</span></li>
-            <li>Týmy (každý člen) do 31.7.2026: 1 800 Kč</li>
-            <li><span style="color: rgb(13, 119, 189);">Týmy (každý člen) po 31.7.2026: 2 600 Kč</span></li>
+            <li>Sólo do 16.8.2026: 2 000 Kč</li>
+            <li><span style="color: rgb(13, 119, 189);">Sólo po 16.8.2026: 2 800 Kč</span></li>
+            <li>Týmy (každý člen) do 16.8.2026: 1 800 Kč</li>
+            <li><span style="color: rgb(13, 119, 189);">Týmy (každý člen) po 16.8.2026: 2 600 Kč</span></li>
         </ul>
         
         <br><div class="heading1">Kategorie 12h:</div>
@@ -56,11 +56,11 @@ const proposition_info = {
         
         <div class="heading4">Startovné 12h</div>
         <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Sólo do 31.7.2026: 1 600 Kč</span></li>
-            <li><span style="color: rgb(13, 119, 189);">Sólo po 31.7.2026: 2 400 Kč</span></li>
+            <li>Sólo do 16.8.2026: 1 600 Kč</span></li>
+            <li><span style="color: rgb(13, 119, 189);">Sólo po 16.8.2026: 2 400 Kč</span></li>
 
-            <li>Týmy (každý člen) do 31.7.2026: 1 400 Kč</li>
-            <li><span style="color: rgb(13, 119, 189);">Týmy (každý člen) po 31.7.2026: 2 200 Kč</span></li>
+            <li>Týmy (každý člen) do 16.8.2026: 1 400 Kč</li>
+            <li><span style="color: rgb(13, 119, 189);">Týmy (každý člen) po 16.8.2026: 2 200 Kč</span></li>
         </ul>
         
         <br><div class="heading1">Kategorie Maraton 43,2 km:</div>
@@ -71,8 +71,8 @@ const proposition_info = {
 
         </ul>
             <br><div class="heading1">Kategorie Maraton 43,2 km:</div>
-            <li>Startovné do 31.7.2026: 1 600 Kč</li>
-            <li><span style="color: rgb(13, 119, 189);">Startovné po 31.7.2026: 2 400 Kč</li>
+            <li>Startovné do 16.8.2026: 1 600 Kč</li>
+            <li><span style="color: rgb(13, 119, 189);">Startovné po 16.8.2026: 2 400 Kč</li>
         </ul>
         `,
     en: `
