@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         "onlineM": "marathon actual",
                         "onlineMs": "marathon summary",
                         "contact": "Contact",
-                        "online_button": "Online results"
+                        "online_button": "Online results",
+                        "results_live": "Result live"
                     }
                 }
             },
@@ -44,7 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         "onlineM": "marathon aktuální",
                         "onlineMs": "marathon souhrn",
                         "contact": "Kontakt",
-                        "online_button": "Průběžné výsledky online"
+                        "online_button": "Průběžné výsledky online",
+                        "results_live": "Výsledky live"
                     }
                 }
             }
