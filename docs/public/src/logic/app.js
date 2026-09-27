@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set header content
     document.getElementById('header-race-date').textContent = config.RACE_DATE;
  
-    // Online data button click handler
-    document.getElementById('online-data-btn').addEventListener('click', async () => {
+    // Online data button click handler (the button may not be present on the page)
+    document.getElementById('online-data-btn')?.addEventListener('click', async () => {
         try {
             updateContent('online-data-btn')
  
