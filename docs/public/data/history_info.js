@@ -47,6 +47,7 @@ const results_info = {
                 <div class="heading3" >Výsledky:</div>
                 <ul>
                     <li><a href="https://docs.google.com/spreadsheets/d/1f1InGrIuMGPgiae7j_GfwCf2-YlZ3uGqghaTo3yMOsw/edit?usp=sharing" target="_blank" class="href1">Rekordy</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1ECnVVV5-_y3BZMqqRmLo72JTpKF0OflfdwWPJiH4kJs/edit?usp=sharing" target="_blank" class="href1">Výsledky 2026</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1RgaaoUrV5Tb91Cyl5K5u2it4agGX4sTJv_YfMOTTz18/edit?usp=sharing" target="_blank" class="href1">Výsledky 2025</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1rCFwHoUcMOnfS-81gat8BVxhZZgkeIWeWFDfG4WkiHw/edit?usp=sharing" target="_blank" class="href1">Výsledky 2024</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1PumHXszi7Ee-3SODAVlfnbxn2rmRogyFSK-8GyH9LVQ/edit?usp=sharing" target="_blank" class="href1">Výsledky 2023</a></li>
@@ -68,6 +69,7 @@ const results_info = {
                 <ul>
 
                     <li><a href="https://docs.google.com/spreadsheets/d/1f1InGrIuMGPgiae7j_GfwCf2-YlZ3uGqghaTo3yMOsw/edit?usp=sharing" target="_blank" class="href1">Best results</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1ECnVVV5-_y3BZMqqRmLo72JTpKF0OflfdwWPJiH4kJs/edit?usp=sharing" target="_blank" class="href1">Results 2026</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1RgaaoUrV5Tb91Cyl5K5u2it4agGX4sTJv_YfMOTTz18/edit?usp=sharing" target="_blank" class="href1">Results 2025</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1rCFwHoUcMOnfS-81gat8BVxhZZgkeIWeWFDfG4WkiHw/edit?usp=sharing" target="_blank" class="href1">Results 2024</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1PumHXszi7Ee-3SODAVlfnbxn2rmRogyFSK-8GyH9LVQ/edit?usp=sharing" target="_blank" class="href1">Results 2023</a></li>
